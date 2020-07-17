@@ -1,16 +1,8 @@
 .top-nav {
-	padding-top: 15px;
-	// position: absolute;
-	top: 100%;
-	// @include clearfix;ss
-	z-index: 20;
-	padding-top: 3px;
-	@include mt;
-	padding-bottom: 10px;
-	top: 0;
-	left: 0;
-	width: 100%;
 
+	border-top: 1px solid rgba($color: #fff, $alpha: .2);
+	border-bottom: 1px solid rgba($color: #fff, $alpha: .2);
+	font-size: rem(15);
 	&.fixed {
 		width: 100vw;
 		bottom: auto;
@@ -21,11 +13,29 @@
 	&__nav {
 		text-align: center;
 		list-style-type: none;
+		margin-bottom: 0;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__link{
+		display: block;
+		padding: rem(19) rem(15);
+		color: #ffffff !important	;
+		border-bottom: rem(3) solid transparent;
 	}
 
+	&__item:hover &__link{
+		border-bottom-color: $primary;
+	}
 	&__item {
 		display: inline-block;
 		list-style-type: none;
+		position: relative;
+		&:hover{
+			.sub-menu{
+				display: block;
+			}
+		}
 	}
 
 	// 
@@ -63,4 +73,31 @@
 	@include media-breakpoint-down(sm) {}
 
 	@include media-breakpoint-down(xs) {}
+}
+
+.sub-menu{
+	position: absolute;
+	left: 0;
+	top: 100%;
+	border-radius: 0px 10px 10px 10px;
+	min-width: rem(209);
+	background: #FFFFFF;
+	list-style: none;
+	display: none;
+	&__link{
+		display: block;
+		padding: rem(15) rem(20);
+		font-size: $small;
+		color: #000000;
+		text-align: left;
+		text-decoration: none !important;
+		&:hover{
+			color: $primary;
+		}
+	}
+	&__item{
+		&:not(:last-child){
+			border-bottom: 1px solid rgba($color: #000000, $alpha: .1);
+		}
+	}
 }

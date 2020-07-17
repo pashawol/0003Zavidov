@@ -1,0 +1,16 @@
+mixin sAdvantages()
+	// start sAdvantages
+	+b.sAdvantages#sAdvantages&attributes(attributes)
+		.container 
+			.row
+				mixin item(i, t)
+					+e.col.col-lg-3.col-sm-6
+						+e.item
+							+e.img-wrap
+								img.lazy(src="#" data-src=`img/svg/sAdvantages-${i}.svg`, alt="")
+							p!= t
+				+item("1",`Бесплатная оценка недвижимости`)
+				+item("2",`Собственная база клиентов (более 20&nbsp;тыс. покупателей)`)
+				+item("3",`Проверка объекта и&nbsp;сбор всех документов`)
+				+item("4",`Все сделки застрахованы в&nbsp;СК&nbsp;&laquo;Ресо Гарантия&raquo;`)
+	// end sAdvantages

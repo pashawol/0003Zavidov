@@ -1,6 +1,71 @@
 
 	// start .topLine
 	.topLine {
+		padding-bottom: rem(25);
+		@include mt;
+		.row{
+				@include media-breakpoint-up(md){
+
+				}
+				// align-items: flex-end;
+				align-items: center;
+		}
+
+		&__item{
+			display: flex;
+			align-items: center;
+			line-height: 143.8%;
+			color: #ffffff;
+			text-decoration: none !important;	
+			font-size: rem(14);
+		}
+		&__icon-wrap{
+			border: 0.5px solid rgba(255, 255, 255, 0.15);
+			flex: 0 0 rem(38);
+			width: rem(38);
+			height: rem(38);
+			border-radius: 50%;
+			@include media-breakpoint-up(md) {
+
+				display: flex;
+			}
+			display: none;
+			justify-content: center;
+			align-items: center;
+			margin-right: rem(12);
+
+			.icon{
+				color: $primary;
+				font-size: 1rem;
+			}
+		}
+		&__text{
+		}
+		&__tel{
+			font-weight: bold;
+			
+			@include media-breakpoint-up(sm) {
+
+				font-size: $h6-font-size;
+			}
+			line-height: 1;
+		
+			font-size: 12px;
+			margin-bottom: 0;
+			display: block;
+		}
+		&__small-text{
+			font-size: $smaller;
+			color: rgba(255, 255, 255, 0.72);
+
+		}
+
+		&__btn{
+			@extend .btn;
+			@extend .btn-sm;
+			@extend .btn-primary;
+			width: rem(177);
+		}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -22,8 +87,49 @@
 	//
 	@include media-breakpoint-down(xl) {}
 	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(md) {
+
+		.logo{
+			top: rem(-6);
+			position: relative;
+		}
+	}
+	@include media-breakpoint-down(sm) {
+	}
 	@include media-breakpoint-down(xs) {} 
 
 } // end.topLine
+
+.logo{
+	display: flex;
+	align-items: center;
+	color: #ffffff !important; 
+	font-size: $small;
+	font-weight: 400;
+	text-decoration: none !important;
+	line-height: (18 /14);
+	img{
+		@extend .res-i; 
+	}
+	&__caption{
+		padding-left: rem(14);
+		margin-left: rem(17);
+		position: relative;
+		margin-top: em(16);
+		max-width: rem(120);
+		@include media-breakpoint-up(xl) {
+			display: block;
+		}
+		display: none;
+		&::before{
+			content: '';
+			position: absolute;
+			left: 0;
+			@include a-cent(y);
+			opacity: 0.2;
+			background-color: #ffffff;
+			width: 1px;
+			height: rem(21);
+		}
+	}
+}

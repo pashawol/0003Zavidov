@@ -1,0 +1,26 @@
+mixin sCategories()
+	// start sCategories
+	+b.SECTION.sCategories.section#sCategories&attributes(attributes)
+		.container
+			+b.section-title
+				h2.h2-sm #[strong Сопровождаем сделки &laquo;под ключ&raquo;:] покупка, продажа, аренда
+				
+			+e.slider--js.swiper-container
+				.swiper-wrapper
+					mixin slide(i, t)
+						+e.slide.swiper-slide
+							+e.item(href="#")
+								+e.img-wrap.bg-wrap
+									picture.picture-bg
+										source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/sCategories-${i}.webp`)
+										img.swiper-lazy.object-fit-js(src="#" data-src=`img/@2x/sCategories-${i}.jpg`, alt="")
+									+e.center Посмотреть предложения
+										+icon('arrow-right')
+								+e.DIV.title= t
+						// /+e.slide.swiper-slide
+					+slide("1","Вторичная недвижимость")
+					+slide("2","Загородная недвижимость")
+					+slide("3","Коммерческая недвижимость")
+					+slide("4","Зарубежная недвижимость")
+				+arrow()
+	// end sCategories

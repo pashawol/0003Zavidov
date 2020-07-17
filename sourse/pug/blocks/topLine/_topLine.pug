@@ -1,9 +1,27 @@
 mixin topLine()
 	// start topLine
-	+b.SECTION.topLine.section#topLine&attributes(attributes)
+	+b.topLine&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 topLine
-				
 			.row
+				.col-xl.col-lg-auto.col
+					+b.logo(href="/")
+						img(src="img/svg/logo.svg", alt="")
+						+e.caption Агентство  недвижимости
+				.col.d-none.d-lg-block
+					+e.item
+						+e.icon-wrap
+							+icon('mark')
+						+e.text Адрес: #[span г. Москва, Цветной бульвар, дом&nbsp;26, строение&nbsp;1]
+				.col-lg.col-auto
+					+e.item(href="tel:+7(495)660-20-21")
+						+e.icon-wrap
+							+icon('tel')
+						+e.text.text-right
+							+e.DIV.tel +7 (495) 660-20-21
+							+e.small-text Пн-Пт.&nbsp;с&nbsp;9:00 до&nbsp;18:00
+				.col-auto.d-none.d-lg-block
+					+e.btn(href="#") Заказать звонок
+				.col-auto.d-lg-none
+					+b.toggle-menu-mobile--js.d-lg-none
+						span
 	// end topLine

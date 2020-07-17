@@ -1,56 +1,65 @@
 // мобильное меню
 
 // мобильное меню
-$h: em(2);
+$h: 1px;
 
 .toggle-menu-mobile {
 	display: block;
-	height: $h* 12;
+	height: $h* 20;
 	position: relative;
-	color: $primary;
-	font-size: 32px;
-
+	color: #ffffff;
+	// font-size: 32px;
+	width: 26px;
+	cursor: pointer;
+	margin-bottom: rem(4);
+	// top: rem(-4);
 	&.on {
-		color: #ffffff;
+		color: #000;
 	}
 
 	span:after,
 	span:before {
 		content: "";
 		position: absolute;
-		left: 0;
+		right: 0;
 	}
 
 	span {
 		@include a-cent(y);
 	}
 
-	span:before {
-
-
-		top: $h * 2;
-	}
-
-	span:after {
-		bottom: $h * 2;
-	}
 
 	span {
 		position: relative;
 		display: block;
-	}
+		right: 0;
 
+		width: 21px;
+	}
+	
 	span,
 	span:after,
 	span:before {
 		// width: 32px;
-		width: 1em;
-		height: $h;
-		background-color: currentColor;
+		// width: 1em;
+		height: 2px;
+		background-color: #fff;
 		transition: all 0.3s;
-		backface-visibility: hidden;
-		border-radius: 6px;
+		backface-visibility: hidden; 
 	}
+	
+	span:before {
+		
+		
+		top: $h * 9;
+		width: 26px;
+	}
+	
+	span:after {
+		width: 16px;
+			bottom: $h * 9;
+		}
+
 
 	// &.on {
 	// 	// opacity: 0;
@@ -66,6 +75,7 @@ $h: em(2);
 		top: 0;
 		bottom: 0;
 		transform-origin: 50% 50%;
+		width: 100%;
 	}
 
 	&.on span:before {

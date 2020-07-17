@@ -1,13 +1,16 @@
 :root {
-
-	--fontSizeBase: #{$em-base};
+	
+	--fontSizeBase: 15px;
 	@include media-breakpoint-up(md) {
+		--fontSizeBase: #{$em-base};
 
-		--sPT: #{rem(80)};
-		--sPB: #{rem(90)};
-		--sTPB: #{rem(40)};
+		--sPT: #{rem(70)};
+		--sPB: #{rem(100)};
+		--sTPB: #{rem(70)};
+		--small: #{rem(14)}; 
+		--smaller: #{rem(13)};
 	}
-
+	--smaller: #{rem(8)};
 	--sPT: #{rem(80 / 2)};
 	--sPB: #{rem(90 / 2)};
 	--sTPB: #{rem(40 / 2)};
