@@ -21,6 +21,8 @@
 		<meta name="theme-color" content="#3361d8">
 		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
+		<link rel="stylesheet" href="libs/intl-tel-input/build/css/intlTelInput.min.css"/>
+		<link rel="stylesheet" href="libs/ion-rangeslider/css/ion.rangeSlider.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
 	<body><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
@@ -98,11 +100,8 @@
 				<!-- start headerBlock-->
 				<div class="headerBlock bg-wrap" id="headerBlock">
 					<!-- picture-->
-					<picture class="lazy picture-bg"> 
-						<source srcset="#" data-srcset="img/@2x/webp/head-bg.webp" type="image/webp" media="(min-width:576px)"/>
-						<source srcset="#" data-srcset="img/@1x/webp/head-bg.webp" type="image/webp"/>
-						<source srcset="#" data-srcset="img/@2x/head-bg.jpg" type="image/jpg" media="(min-width:576px)"/>
-						<source srcset="#" data-srcset="img/@1x/head-bg.jpg" type="image/jpg"/><img class="object-fit-js" src="#" data-src="img/@2x/head-bg.jpg" alt=""/>
+					<picture class="picture-bg"> 
+						<source srcset="img/@2x/webp/head-bg.webp" type="image/webp"/><img class="object-fit-js" src="img/@2x/head-bg.jpg" alt=""/>
 					</picture>
 					<!-- /picture-->
 					<div class="container">
@@ -160,7 +159,7 @@
 						<div class="swiper-wrapper">
 								<div class="sCategories__slide swiper-slide"><a class="sCategories__item" href="#"><span class="sCategories__img-wrap bg-wrap">
 									<picture class="picture-bg">
-										<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/sCategories-1.webp"/><img class="swiper-lazy object-fit-js" src="#" data-src="img/@2x/sCategories-1.jpg" alt=""/>
+										<source srcset="img/@2x/webp/sCategories-1.webp"/><img class="object-fit-js" src="img/@2x/sCategories-1.jpg" alt=""/>
 									</picture><span class="sCategories__center">Посмотреть предложения
 									<svg class="icon icon-arrow-right ">
 										<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
@@ -171,7 +170,7 @@
 								<!-- /+e.slide.swiper-slide-->
 								<div class="sCategories__slide swiper-slide"><a class="sCategories__item" href="#"><span class="sCategories__img-wrap bg-wrap">
 									<picture class="picture-bg">
-										<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/sCategories-2.webp"/><img class="swiper-lazy object-fit-js" src="#" data-src="img/@2x/sCategories-2.jpg" alt=""/>
+										<source srcset="img/@2x/webp/sCategories-2.webp"/><img class="object-fit-js" src="img/@2x/sCategories-2.jpg" alt=""/>
 									</picture><span class="sCategories__center">Посмотреть предложения
 									<svg class="icon icon-arrow-right ">
 										<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
@@ -182,7 +181,7 @@
 								<!-- /+e.slide.swiper-slide-->
 								<div class="sCategories__slide swiper-slide"><a class="sCategories__item" href="#"><span class="sCategories__img-wrap bg-wrap">
 									<picture class="picture-bg">
-										<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/sCategories-3.webp"/><img class="swiper-lazy object-fit-js" src="#" data-src="img/@2x/sCategories-3.jpg" alt=""/>
+										<source srcset="img/@2x/webp/sCategories-3.webp"/><img class="object-fit-js" src="img/@2x/sCategories-3.jpg" alt=""/>
 									</picture><span class="sCategories__center">Посмотреть предложения
 									<svg class="icon icon-arrow-right ">
 										<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
@@ -193,7 +192,7 @@
 								<!-- /+e.slide.swiper-slide-->
 								<div class="sCategories__slide swiper-slide"><a class="sCategories__item" href="#"><span class="sCategories__img-wrap bg-wrap">
 									<picture class="picture-bg">
-										<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/sCategories-4.webp"/><img class="swiper-lazy object-fit-js" src="#" data-src="img/@2x/sCategories-4.jpg" alt=""/>
+										<source srcset="img/@2x/webp/sCategories-4.webp"/><img class="object-fit-js" src="img/@2x/sCategories-4.jpg" alt=""/>
 									</picture><span class="sCategories__center">Посмотреть предложения
 									<svg class="icon icon-arrow-right ">
 										<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
@@ -203,30 +202,125 @@
 								</div>
 								<!-- /+e.slide.swiper-slide-->
 						</div>
-						<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
-							<svg class="icon icon-arrow-left ">
-								<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
-							</svg>
-						</div>
-						<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
-							<svg class="icon icon-arrow-right ">
-								<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
-							</svg>
+						<div class="d-none d-md-block">
+							<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+								<svg class="icon icon-arrow-left ">
+									<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+								</svg>
+							</div>
+							<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+								<svg class="icon icon-arrow-right ">
+									<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+								</svg>
+							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 			<!-- end sCategories-->
 			<!-- start sForm-->
-			<section class="sForm section" id="sForm">
+			<section class="sForm section bg-wrap" id="sForm">
+				<!-- picture-->
+				<picture class="picture-bg"> 
+					<source srcset="img/@2x/webp/form-bg.webp" type="image/webp"/><img class="object-fit-js" src="img/@2x/form-bg.jpg" alt=""/>
+				</picture>
+				<!-- /picture-->
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>sForm</h2>
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="section-title">
+								<h2>Консультируем бесплатно</h2>
+								<div class="section-title__text">Оставьте заявку или звоните по&nbsp;телефону&nbsp;<a href="tel:+7(495)660-20-21">+7 (495) 660-20-21</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="form-wrap">
+								<form>
+									<input type="hidden" name="example-input-field"/>
+									<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+									<input class="utm_source" type="hidden" name="utm_source"/>
+									<input class="utm_term" type="hidden" name="utm_term"/>
+									<input class="utm_medium" type="hidden" name="utm_medium"/>
+									<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше имя" name="text"/>
+									</div>
+									<!-- +e.input-wrap-->
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш номер телефона" name="tel"/>
+									</div>
+									<!-- +e.input-wrap-->
+									<button class="form-wrap__btn" type="button"> Получить консультацию
+									</button>
+									<div class="form-wrap__polite">Отправляя заявку, Вы&nbsp;соглашаетесь на&nbsp;обработку <a href="#">персональных данных </a>
+									</div>
+								</form>
+							</div>
+						</div>
 					</div>
-					<div class="row"></div>
 				</div>
 			</section>
 			<!-- end sForm-->
+			<!-- start sMap-->
+			<section class="sMap section" id="sMap">
+				<div class="container">
+					<div class="section-title">
+						<h2>Подобрать недвижимость</h2>
+					</div>
+					<div class="sMap__filter">
+						<div class="row">
+							<div class="sMap__item col-3">
+								<div class="strong mb-3">Тип недвижимости</div>
+							</div>
+							<div class="sMap__item col-3">
+								<div class="strong mb-3">Вид сделки</div>
+							</div>
+							<div class="sMap__item col-3">
+								<div class="strong mb-3">Цена (руб.):</div>
+								<div class="range-wrap price_slider_amount">
+									<div class="row">
+										<div class="col-6"> 
+											<div class="form-group"><input class="input_from form-control form-control-sm" type="text"/>
+											</div>
+										</div>
+										<div class="col-6">
+											<div class="form-group"><input class="input_to form-control form-control-sm" type="text"/>
+											</div>
+										</div>
+									</div>
+									<input class="range-slider slider-js" type="text" data-min="1000000" data-max="30000000"/>
+								</div>
+							</div>
+							<div class="sMap__item col-3">
+								<div class="strong mb-3">Общая прощадь (м2):</div>
+								<div class="range-wrap price_slider_amount">
+									<div class="row">
+										<div class="col-6"> 
+											<div class="form-group"><input class="input_from form-control form-control-sm" type="text"/>
+											</div>
+										</div>
+										<div class="col-6">
+											<div class="form-group"><input class="input_to form-control form-control-sm" type="text"/>
+											</div>
+										</div>
+									</div>
+									<input class="range-slider slider-js" type="text" data-min="20" data-max="44000"/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sMap__map-wrap bg-wrap">
+						<!-- picture-->
+						<picture class="lazy picture-bg"> 
+							<source srcset="#" data-srcset="img/@2x/webp/map.webp" type="image/webp" media="(min-width:576px)"/>
+							<source srcset="#" data-srcset="img/@1x/webp/map.webp" type="image/webp"/>
+							<source srcset="#" data-srcset="img/@2x/map.jpg" type="image/jpg" media="(min-width:576px)"/>
+							<source srcset="#" data-srcset="img/@1x/map.jpg" type="image/jpg"/><img class="object-fit-js" src="#" data-src="img/@2x/map.jpg" alt=""/>
+						</picture>
+						<!-- /picture-->
+					</div>
+				</div>
+			</section>
+			<!-- end sMap-->
 			<!-- start sCatalog-->
 			<section class="sCatalog section" id="sCatalog">
 				<div class="container">
@@ -278,12 +372,44 @@
 			</section>
 			<!-- end sTeam-->
 			<!-- start sForm-->
-			<section class="sForm section" id="sForm">
+			<section class="sForm section bg-wrap" id="sForm">
+				<!-- picture-->
+				<picture class="picture-bg"> 
+					<source srcset="img/@2x/webp/form-bg.webp" type="image/webp"/><img class="object-fit-js" src="img/@2x/form-bg.jpg" alt=""/>
+				</picture>
+				<!-- /picture-->
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>sForm</h2>
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="section-title">
+								<h2>Консультируем бесплатно</h2>
+								<div class="section-title__text">Оставьте заявку или звоните по&nbsp;телефону&nbsp;<a href="tel:+7(495)660-20-21">+7 (495) 660-20-21</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="form-wrap">
+								<form>
+									<input type="hidden" name="example-input-field"/>
+									<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+									<input class="utm_source" type="hidden" name="utm_source"/>
+									<input class="utm_term" type="hidden" name="utm_term"/>
+									<input class="utm_medium" type="hidden" name="utm_medium"/>
+									<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше имя" name="text"/>
+									</div>
+									<!-- +e.input-wrap-->
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш номер телефона" name="tel"/>
+									</div>
+									<!-- +e.input-wrap-->
+									<button class="form-wrap__btn" type="button"> Получить консультацию
+									</button>
+									<div class="form-wrap__polite">Отправляя заявку, Вы&nbsp;соглашаетесь на&nbsp;обработку <a href="#">персональных данных </a>
+									</div>
+								</form>
+							</div>
+						</div>
 					</div>
-					<div class="row"></div>
 				</div>
 			</section>
 			<!-- end sForm-->
@@ -343,9 +469,7 @@
 					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" name="tel" required="required"/>
 					</div>
 					<!-- +e.input-wrap--><input class="form-wrap__btn" type="submit" value="Рассчитать"/>
-					<div class="form-wrap__polite">
-						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
-						</label>
+					<div class="form-wrap__polite">Отправляя заявку, Вы&nbsp;соглашаетесь на&nbsp;обработку <a href="#">персональных данных </a>
 					</div>
 				</form>
 			</div>
@@ -359,8 +483,9 @@
 		<!-- modal libs-->
 		<!-- slider libs-->
 		<script src="libs/swiper/js/swiper.min.js"></script>
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
 		<!-- /slider libs-->
-		<script src="libs/inputmask/jquery.inputmask.min.js"></script>
+		<script src="libs/intl-tel-input/build/js/intlTelInput.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

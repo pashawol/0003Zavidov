@@ -52,6 +52,10 @@ html {
 			background-color: $primary;
 		}
 	}
+	&__text {
+		@extend .h5;
+		font-weight: normal;
+	}
 }
 
 body {
@@ -285,8 +289,8 @@ input::-webkit-inner-spin-button {
 		display: none;
 	}
 	@include media-breakpoint-up(lg) {
-		--size: #{rem(68)};
 	} 
+	--size: #{rem(68)};
 	--pos: calc(-1 * var(--size) / 2);
 	// --pos: -15px; 
 	&-next { 
@@ -432,6 +436,9 @@ iframe {
 		}
 		&::before{
 			opacity: 1;
+		}
+		.top-nav{
+			border-bottom-color: transparent;
 		}
 	}
 }

@@ -1,0 +1,22 @@
+mixin sMap()
+	// start sMap
+	+b.SECTION.sMap.section#sMap&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Подобрать недвижимость
+			+e.filter
+				.row
+					+e.item.col-3
+						.strong.mb-3 Тип недвижимости
+					+e.item.col-3
+						.strong.mb-3 Вид сделки
+					+e.item.col-3
+						.strong.mb-3 Цена (руб.):
+						+range("1000000", "30000000")
+					+e.item.col-3
+						.strong.mb-3 Общая прощадь (м2):
+						+range("20", "44000")
+			+e.map-wrap.bg-wrap
+				+pic("map.jpg",'bg')(class="picture-bg")
+				//- img(src="", alt="")
+	// end sMap

@@ -12,8 +12,8 @@ mixin sCategories()
 							+e.item(href="#")
 								+e.img-wrap.bg-wrap
 									picture.picture-bg
-										source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/sCategories-${i}.webp`)
-										img.swiper-lazy.object-fit-js(src="#" data-src=`img/@2x/sCategories-${i}.jpg`, alt="")
+										source(srcset=`img/@2x/webp/sCategories-${i}.webp`)
+										img.object-fit-js(src=`img/@2x/sCategories-${i}.jpg`, alt="")
 									+e.center Посмотреть предложения
 										+icon('arrow-right')
 								+e.DIV.title= t
@@ -22,5 +22,6 @@ mixin sCategories()
 					+slide("2","Загородная недвижимость")
 					+slide("3","Коммерческая недвижимость")
 					+slide("4","Зарубежная недвижимость")
-				+arrow()
+				.d-none.d-md-block
+					+arrow()
 	// end sCategories
