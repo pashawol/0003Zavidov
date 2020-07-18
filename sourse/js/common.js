@@ -135,7 +135,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>')
+	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/01-360.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -223,7 +223,15 @@ function eventHandler() {
 		}
 	});
 	// modal window
- 
+ 	//luckyone JS
+
+	$('.sContact__header').click(function () {
+		$(this).toggleClass('active');
+		$(this.parentElement).find('.sContact__txt-block').slideToggle(function () {
+			$(this).toggleClass('active');
+		});
+	});
+
 
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 	if (isIE11) {
