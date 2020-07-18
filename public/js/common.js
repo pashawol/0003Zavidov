@@ -275,10 +275,9 @@ function eventHandler() {
 			}
 		}
 	})); // modal window
-
 	// custom Select
-	var element = document.querySelector('.js-choice'); // /custom Select
-	//luckyone JS
+
+	var element = document.querySelector('.js-choice'); //luckyone JS
 
 	$('.sContact__header').click(function () {
 		$(this).toggleClass('active');
@@ -286,7 +285,6 @@ function eventHandler() {
 			$(this).toggleClass('active');
 		});
 	});
-	//end lucky
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
 	if (isIE11) {
