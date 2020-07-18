@@ -13,11 +13,12 @@ include ../blocks/sTeam/_sTeam.pug
 include ../blocks/sRews/_sRews.pug 
 include ../blocks/sVideo/_sVideo.pug 
 include ../blocks/sMap/_sMap.pug 
+include ../blocks/sArticalContent/_sArticalContent.pug 
 
 block variables
-	- let  mainPage= 'main-page'
+	- let  mainPage= null
 block title
-	- let  title= 'Главная'
+	- let  title= 'Отдельная статья'
 	title= title
 block pagecontent 
 	//- +mob-mnu()
@@ -26,19 +27,22 @@ block pagecontent
 			.container
 				+topLine()
 				+top-nav()
-		+headerBlock()
-	+sAdvantages
-	+sCategories
-	+sForm()
-	+sMap
-	+sCatalog
-	+sDo
-	+sLogos
-	+sAbout
-	+sTeam
-	+sForm()
-	+sRews
-	+sVideo
-	+sContact()
+	+breadcrumb("Главная"," Блог"," Какую квартиру выбрать: варианты планировок")
+
+	+sArticalContent
+		//- +headerBlock()
+	//- +sAdvantages
+	//- +sCategories
+	//- +sForm()
+	//- +sMap
+	//- +sCatalog
+	//- +sDo
+	//- +sLogos
+	//- +sAbout
+	//- +sTeam
+	//- +sForm()
+	//- +sRews
+	//- +sVideo
+	//- +sContact()
 	+footer()
 	

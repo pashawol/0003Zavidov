@@ -23,9 +23,10 @@
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="libs/intl-tel-input/build/css/intlTelInput.min.css"/>
 		<link rel="stylesheet" href="libs/ion-rangeslider/css/ion.rangeSlider.min.css"/>
+		<link rel="stylesheet" href="libs/choices.js/public/assets/styles/choices.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
-	<body><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
+	<body class="main-page"><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 		<div class="main-wrapper">
 			<!-- start header-->
 			<header class="header" id="header">
@@ -243,10 +244,10 @@
 									<input class="utm_term" type="hidden" name="utm_term"/>
 									<input class="utm_medium" type="hidden" name="utm_medium"/>
 									<input class="utm_campaign" type="hidden" name="utm_campaign"/>
-									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше имя" name="text"/>
+									<div class="form-wrap__input-wrap form-group form-group form-group--text"><input class="form-wrap__input form-control" type="text" placeholder="Ваше имя" name="text"/>
 									</div>
 									<!-- +e.input-wrap-->
-									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш номер телефона" name="tel"/>
+									<div class="form-wrap__input-wrap form-group form-group form-group--tel"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш номер телефона" name="tel"/>
 									</div>
 									<!-- +e.input-wrap-->
 									<button class="form-wrap__btn" type="button"> Получить консультацию
@@ -264,18 +265,38 @@
 			<section class="sMap section" id="sMap">
 				<div class="container">
 					<div class="section-title">
-						<h2>Подобрать недвижимость</h2>
+						<h2><strong>Подобрать недвижимость</strong></h2>
 					</div>
 					<div class="sMap__filter">
-						<div class="row">
-							<div class="sMap__item col-3">
-								<div class="strong mb-3">Тип недвижимости</div>
+						<div class="sMap__row row">
+							<div class="sMap__item col">
+								<div class="strong mb-2">Тип недвижимости</div>
+								<div class="sMap__input-wrap form-group form-group form-group--select">
+									<select class="sMap__input form-control form-control-sm" name="select">
+										<option value="Выбрать">Выбрать</option>
+										<option value="Выбрать1">Выбрать1</option>
+										<option value="Выбрать2">Выбрать2</option>
+										<option value="Выбрать3">Выбрать3</option>
+										<option value="Выбрать4">Выбрать4</option>
+									</select>
+								</div>
+								<!-- +e.input-wrap-->
 							</div>
-							<div class="sMap__item col-3">
-								<div class="strong mb-3">Вид сделки</div>
+							<div class="sMap__item col-xl-auto col-lg-3 col-md-6">
+								<div class="strong mb-2">Вид сделки</div>
+								<div class="sMap__input-wrap form-group form-group form-group--select">
+									<select class="sMap__input form-control form-control-sm" name="select">
+										<option value="Выбрать">Выбрать</option>
+										<option value="Выбрать1">Выбрать1</option>
+										<option value="Выбрать2">Выбрать2</option>
+										<option value="Выбрать3">Выбрать3</option>
+										<option value="Выбрать4">Выбрать4</option>
+									</select>
+								</div>
+								<!-- +e.input-wrap-->
 							</div>
-							<div class="sMap__item col-3">
-								<div class="strong mb-3">Цена (руб.):</div>
+							<div class="sMap__item col-lg-3 col-md-6">
+								<div class="strong mb-2">Цена (руб.):</div>
 								<div class="range-wrap price_slider_amount">
 									<div class="row">
 										<div class="col-6"> 
@@ -290,8 +311,8 @@
 									<input class="range-slider slider-js" type="text" data-min="1000000" data-max="30000000"/>
 								</div>
 							</div>
-							<div class="sMap__item col-3">
-								<div class="strong mb-3">Общая прощадь (м2):</div>
+							<div class="sMap__item col-lg-3 col-md-6">
+								<div class="strong mb-2">Общая прощадь (м2):</div>
 								<div class="range-wrap price_slider_amount">
 									<div class="row">
 										<div class="col-6"> 
@@ -307,17 +328,19 @@
 								</div>
 							</div>
 						</div>
+						<button class="sMap__btn" type="submit">Подобрать
+						</button>
 					</div>
-					<div class="sMap__map-wrap bg-wrap">
-						<!-- picture-->
-						<picture class="lazy picture-bg"> 
-							<source srcset="#" data-srcset="img/@2x/webp/map.webp" type="image/webp" media="(min-width:576px)"/>
-							<source srcset="#" data-srcset="img/@1x/webp/map.webp" type="image/webp"/>
-							<source srcset="#" data-srcset="img/@2x/map.jpg" type="image/jpg" media="(min-width:576px)"/>
-							<source srcset="#" data-srcset="img/@1x/map.jpg" type="image/jpg"/><img class="object-fit-js" src="#" data-src="img/@2x/map.jpg" alt=""/>
-						</picture>
-						<!-- /picture-->
-					</div>
+				</div>
+				<div class="sMap__map-wrap bg-wrap">
+					<!-- picture-->
+					<picture class="lazy picture-bg"> 
+						<source srcset="#" data-srcset="img/@2x/webp/map.webp" type="image/webp" media="(min-width:576px)"/>
+						<source srcset="#" data-srcset="img/@1x/webp/map.webp" type="image/webp"/>
+						<source srcset="#" data-srcset="img/@2x/map.jpg" type="image/jpg" media="(min-width:576px)"/>
+						<source srcset="#" data-srcset="img/@1x/map.jpg" type="image/jpg"/><img class="object-fit-js" src="#" data-src="img/@2x/map.jpg" alt=""/>
+					</picture>
+					<!-- /picture-->
 				</div>
 			</section>
 			<!-- end sMap-->
@@ -396,10 +419,10 @@
 									<input class="utm_term" type="hidden" name="utm_term"/>
 									<input class="utm_medium" type="hidden" name="utm_medium"/>
 									<input class="utm_campaign" type="hidden" name="utm_campaign"/>
-									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше имя" name="text"/>
+									<div class="form-wrap__input-wrap form-group form-group form-group--text"><input class="form-wrap__input form-control" type="text" placeholder="Ваше имя" name="text"/>
 									</div>
 									<!-- +e.input-wrap-->
-									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш номер телефона" name="tel"/>
+									<div class="form-wrap__input-wrap form-group form-group form-group--tel"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш номер телефона" name="tel"/>
 									</div>
 									<!-- +e.input-wrap-->
 									<button class="form-wrap__btn" type="button"> Получить консультацию
@@ -463,10 +486,10 @@
 						</div>
 						<p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
 					</div>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/> 
+					<div class="form-wrap__input-wrap form-group form-group form-group--text"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/> 
 					</div>
 					<!-- +e.input-wrap-->
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" name="tel" required="required"/>
+					<div class="form-wrap__input-wrap form-group form-group form-group--tel"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" name="tel" required="required"/>
 					</div>
 					<!-- +e.input-wrap--><input class="form-wrap__btn" type="submit" value="Рассчитать"/>
 					<div class="form-wrap__polite">Отправляя заявку, Вы&nbsp;соглашаетесь на&nbsp;обработку <a href="#">персональных данных </a>
@@ -484,6 +507,7 @@
 		<!-- slider libs-->
 		<script src="libs/swiper/js/swiper.min.js"></script>
 		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+		<script src="libs/choices.js/public/assets/scripts/choices.min.js"></script>
 		<!-- /slider libs-->
 		<script src="libs/intl-tel-input/build/js/intlTelInput.min.js"></script>
 		<script src="js/common.js"></script>

@@ -3,20 +3,23 @@ mixin sMap()
 	+b.SECTION.sMap.section#sMap&attributes(attributes)
 		.container
 			+b.section-title
-				h2 Подобрать недвижимость
+				h2: strong Подобрать недвижимость
 			+e.filter
-				.row
-					+e.item.col-3
-						.strong.mb-3 Тип недвижимости
-					+e.item.col-3
-						.strong.mb-3 Вид сделки
-					+e.item.col-3
-						.strong.mb-3 Цена (руб.):
+				+e.row.row
+					+e.item.col
+						.strong.mb-2 Тип недвижимости
+						+input('Выбрать','select')(class="form-control-sm ")
+					+e.item.col-xl-auto.col-lg-3.col-md-6
+						.strong.mb-2 Вид сделки
+						+input('Выбрать','select')(class="form-control-sm ")
+					+e.item.col-lg-3.col-md-6
+						.strong.mb-2 Цена (руб.):
 						+range("1000000", "30000000")
-					+e.item.col-3
-						.strong.mb-3 Общая прощадь (м2):
+					+e.item.col-lg-3.col-md-6
+						.strong.mb-2 Общая прощадь (м2):
 						+range("20", "44000")
-			+e.map-wrap.bg-wrap
-				+pic("map.jpg",'bg')(class="picture-bg")
+				+e.btn(type="submit") Подобрать
+		+e.map-wrap.bg-wrap
+			+pic("map.jpg",'bg')(class="picture-bg")
 				//- img(src="", alt="")
 	// end sMap

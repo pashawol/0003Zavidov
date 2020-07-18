@@ -208,7 +208,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>')
+	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/04.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -301,6 +301,10 @@ function eventHandler() {
 		}
 	});
 	// modal window
+
+	// custom Select
+	const element = document.querySelector('.js-choice');
+	// /custom Select
  
 
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;

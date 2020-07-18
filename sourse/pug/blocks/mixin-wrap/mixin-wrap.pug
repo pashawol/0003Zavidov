@@ -31,3 +31,7 @@ mixin range(c1, c2)
 				.form-group
 					+b.INPUT.input_to.form-control.form-control-sm(type="text" ) 
 		input.range-slider.slider-js(type='text'  data-min= c1  data-max= c2)
+mixin page-title(t)
+	.page-title
+		.container
+			h1= t

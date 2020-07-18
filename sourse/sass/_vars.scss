@@ -233,7 +233,7 @@ $border-width: 1px !default;
 $border-color: $gray-300 !default;
 
 $border-radius: rem(10) !default;
-$border-radius-sm: $border-radius !default;
+$border-radius-sm: rem(5) !default;
 $border-radius-lg: $border-radius !default;
 
 $rounded-pill: 50rem !default;
@@ -443,7 +443,7 @@ $input-btn-focus-color-opacity: .25 !default;
 $input-btn-focus-color: rgba($component-active-bg, $input-btn-focus-color-opacity) !default;
 $input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 
-$input-btn-padding-y-sm: rem(16) !default;
+$input-btn-padding-y-sm: rem(14) !default;
 $input-btn-padding-x-sm: .5rem !default;
 $input-btn-font-size-sm: $smaller !default;
 
@@ -1096,14 +1096,14 @@ $figure-caption-color: $gray-600 !default;
 
 // Breadcrumbs
 
-$breadcrumb-font-size: null !default;
-$breadcrumb-padding-y: $spacer / 2 !default;
+$breadcrumb-font-size: rem(14) !default;
+$breadcrumb-padding-y:  var(--breadcrumb-padding-y, #{rem(10)}) !default;
 $breadcrumb-padding-x: $spacer !default;
-$breadcrumb-item-padding-x: .5rem !default;
-$breadcrumb-margin-bottom: 1rem !default;
-$breadcrumb-bg: $gray-200 !default;
-$breadcrumb-divider-color: $gray-600 !default;
-$breadcrumb-active-color: $gray-600 !default;
+$breadcrumb-item-padding-x: .2rem !default;
+$breadcrumb-margin-bottom: 0 !default;
+$breadcrumb-bg: white !default;
+$breadcrumb-divider-color: #8F8F8F !default;
+$breadcrumb-active-color: $primary !default;
 $breadcrumb-divider: quote("/") !default;
 $breadcrumb-border-radius: $border-radius !default;
 

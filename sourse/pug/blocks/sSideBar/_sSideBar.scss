@@ -1,18 +1,7 @@
 
-	// start .header
-	.header {
-		background: linear-gradient(90deg, #284F70 0%, #3F6E96 100%);
-		color: #fff;
-		@include media-breakpoint-up(lg) { 
-			min-height: rem(175);
-		}
-		@include media-breakpoint-up(md) { 
-			min-height: rem(120);
-		}
-		@include media-breakpoint-up(sm) { 
-		}
-		min-height: rem(95);
-
+	// start .sSideBar
+	.sSideBar {
+		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -37,4 +26,4 @@
 	@include media-breakpoint-down(sm) {}
 	@include media-breakpoint-down(xs) {} 
 
-} // end.header
+} // end.sSideBar

@@ -65,6 +65,7 @@
 			@extend .btn-sm;
 			@extend .btn-primary;
 			width: rem(177);
+			padding: rem(17) rem(10);
 		}
 		 
 	@include media-breakpoint-up(xl) {}
