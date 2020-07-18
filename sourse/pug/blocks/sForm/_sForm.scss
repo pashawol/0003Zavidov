@@ -1,6 +1,55 @@
 
 	// start .sForm
 	.sForm {
+		--sPT: #{rem(55)};
+		--sPB: #{rem(50)};
+		.section-title{
+			color: #ffffff;
+			@include media-breakpoint-up(xl) {
+			margin-left: rem(70);
+			}
+			max-width: rem(390);
+				@include media-breakpoint-up(lg) {
+
+					--sTPB: 0;
+				}
+			h2{
+				font-weight: bold;
+				@extend .h1;
+				margin-bottom: rem(38);
+			}
+			&__text{
+			 
+				max-width: rem(320);
+				opacity: 0.8;
+				a{
+					font-weight: bold;
+					color: #ffffff !important;
+				}
+			}
+		}
+		.row{
+			align-items: center;
+		}
+		.form-wrap{
+			background: rgba($color: #FFFFFF, $alpha: .2);
+			// opacity: 0.2;
+			border-radius: 15px;
+			@include media-breakpoint-down(sm) {
+				margin-left: -15px;
+				margin-right: -15px;
+			}
+			@include media-breakpoint-up(md)  {
+
+				max-width: rem(458);
+			}
+			padding: rem(43);
+			padding-bottom: rem(25);
+			@include media-breakpoint-up(xl) {
+
+				margin-left: rem(10);
+			}
+		}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

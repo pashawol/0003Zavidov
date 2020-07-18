@@ -20,3 +20,18 @@ mixin ie11()
 	//- modernizer and for ie11
 	 
 	<!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
+
+mixin range(c1, c2)
+	.range-wrap.price_slider_amount
+		.row
+			.col-6 
+				.form-group
+					+b.INPUT.input_from.form-control.form-control-sm(type="text" )  
+			.col-6
+				.form-group
+					+b.INPUT.input_to.form-control.form-control-sm(type="text" ) 
+		input.range-slider.slider-js(type='text'  data-min= c1  data-max= c2)
+mixin page-title(t)
+	.page-title
+		.container
+			h1= t

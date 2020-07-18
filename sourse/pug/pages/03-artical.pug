@@ -1,0 +1,48 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/sAdvantages/_sAdvantages.pug 
+include ../blocks/sCategories/_sCategories.pug 
+include ../blocks/sCatalog/_sCatalog.pug 
+include ../blocks/sDo/_sDo.pug 
+include ../blocks/sLogos/_sLogos.pug 
+include ../blocks/sAbout/_sAbout.pug 
+include ../blocks/sTeam/_sTeam.pug 
+include ../blocks/sRews/_sRews.pug 
+include ../blocks/sVideo/_sVideo.pug 
+include ../blocks/sMap/_sMap.pug 
+include ../blocks/sArticalContent/_sArticalContent.pug 
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Отдельная статья'
+	title= title
+block pagecontent 
+	//- +mob-mnu()
+	+header()
+		.fixed-line
+			.container
+				+topLine()
+				+top-nav()
+	+breadcrumb("Главная"," Блог"," Какую квартиру выбрать: варианты планировок")
+
+	+sArticalContent
+		//- +headerBlock()
+	//- +sAdvantages
+	//- +sCategories
+	//- +sForm()
+	//- +sMap
+	//- +sCatalog
+	//- +sDo
+	//- +sLogos
+	//- +sAbout
+	//- +sTeam
+	//- +sForm()
+	//- +sRews
+	//- +sVideo
+	//- +sContact()
+	+footer()
+	

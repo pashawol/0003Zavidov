@@ -1,9 +1,18 @@
 mixin sForm()
 	// start sForm
-	+b.SECTION.sForm.section#sForm&attributes(attributes)
+	+b.SECTION.sForm.section.bg-wrap#sForm&attributes(attributes)
+		+pic("form-bg.jpg",'bg','','')(class="picture-bg")
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
 			.row
+				.col-lg-6
+					+b.section-title
+						h2 Консультируем бесплатно
+						+e.text Оставьте заявку или звоните по&nbsp;телефону&nbsp;#[a(href="tel:+7(495)660-20-21") +7 (495) 660-20-21]
+				.col-lg-6
+					+form-wrap
+						+input('Ваше имя')
+						+input('Ваш номер телефона','tel')
+						+e.btn(type="button")  Получить консультацию
+						+polite
+
 	// end sForm

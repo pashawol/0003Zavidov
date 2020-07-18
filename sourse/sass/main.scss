@@ -40,12 +40,25 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/bootstrap/scss/card";
 @import "./node_modules/bootstrap/scss/breadcrumb";
 .breadcrumb {
+	display: block;
+	&-item{
+		display: inline;
+	}
+	&-item:not(.active):not(:hover) {
+		a{ 
+			color: #8F8F8F;
+		}
+	}
 	.active {
 		a {
 			// color: $breadcrumb-active-color;
 			pointer-events: none;
 		}
 	}
+}
+.breadcrumb-wrap{
+	background-color: #ffffff;
+	margin-bottom: rem(45);
 }
 @import "./node_modules/bootstrap/scss/pagination";
 

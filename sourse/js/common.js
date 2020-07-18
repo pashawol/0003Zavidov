@@ -118,10 +118,82 @@ const JSCCommon = {
 	// /табы  
 	inputMask() {
 		// mask for input
-		$('input[type="tel"]').attr("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+9(999)999-99-99");
-	}
-	// /inputMask
+		var input = document.querySelector('[type="tel"]');
+		window.intlTelInput(input, {
+			preferredCountries: ["ru", "by"],
 
+			// any initialisation options go here
+		});
+	},
+	// /inputMask
+	customRange() {
+
+		$(".range-wrap").each(function () {
+			let _this = $(this);
+			var $range= _this.find(".slider-js");
+			var $inputFrom = _this.find(".input_from");
+			var $inputTo = _this.find(".input_to");
+			var instance, from, to,
+				min = $range.data('min'),
+				max = $range.data('max');
+			$range.ionRangeSlider({
+				skin: "round",
+				type: "double",
+				grid: false,
+				grid_snap: false,
+				hide_min_max: true,
+				hide_from_to: true,
+				onStart: updateInputs,
+				onChange: updateInputs,
+				onFinish: updateInputs
+			});
+			instance = $range.data("ionRangeSlider");
+
+			function updateInputs(data) {
+				from = data.from;
+				to = data.to;
+
+				$inputFrom.prop("value", from);
+				$inputTo.prop("value", to);
+			}
+
+			$inputFrom.on("change", function () {
+				var val = $(this).prop("value");
+
+				// validate
+				if (val < min) {
+					val = min;
+				} else if (val > to) {
+					val = to;
+				}
+
+				instance.update({
+					from: val
+				});
+
+				$(this).prop("value", val);
+
+			});
+
+			$inputTo.on("change", function () {
+				var val = $(this).prop("value");
+
+				// validate
+				if (val < from) {
+					val = from;
+				} else if (val > max) {
+					val = max;
+				}
+
+				instance.update({
+					to: val
+				});
+
+				$(this).prop("value", val);
+			});
+
+		})
+	},
 };
 
 function eventHandler() { 
@@ -132,6 +204,7 @@ function eventHandler() {
 	JSCCommon.mobileMenu();
 
 	JSCCommon.inputMask();
+	JSCCommon.customRange();
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
@@ -165,18 +238,18 @@ function eventHandler() {
 		let stickyElement = document.querySelector('.fixed-line');
 
 		function lineTop() {
+			if ($(window).scrollTop() > topH) {
+
+				stickyElement.classList.add('fixed');
+			} else {
+				stickyElement.classList.remove('fixed');
+			}
 		}
-		if ($(window).scrollTop() > topH) {
-	
-			stickyElement.classList.add('fixed');
-		} else {
-			stickyElement.classList.remove('fixed');
-		}
-		lineTop();
- 
 		window.onscroll = () => {
+
 			lineTop();
 		};
+		lineTop();
 		// конец добавил
 		if (window.matchMedia("(min-width: 992px)").matches) {
 			JSCCommon.closeMenu();
@@ -210,19 +283,28 @@ function eventHandler() {
 		// slidesPerView: 5,
 		...defaultSl,
 		watchOverflow: true,
-		slidesPerView: 'auto',
-		spaceBetween: 44,
+		slidesPerView: 1,
+		spaceBetween: 20,
 		breakpoints: {
-			992: {
+
+			768: {
 				slidesPerView: 2,
 				navigation: {
 					nextEl: '.sCategories .swiper-button-next',
 					prevEl: '.sCategories .swiper-button-prev',
 				},
+				992: {
+
+					spaceBetween: 44,
+				}
 			}
 		}
 	});
 	// modal window
+
+	// custom Select
+	const element = document.querySelector('.js-choice');
+
  	//luckyone JS
 
 	$('.sContact__header').click(function () {
@@ -231,7 +313,6 @@ function eventHandler() {
 			$(this).toggleClass('active');
 		});
 	});
-
 
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 	if (isIE11) {

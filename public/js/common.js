@@ -119,16 +119,86 @@ var JSCCommon = {
 	// /табы  
 	inputMask: function inputMask() {
 		// mask for input
-		$('input[type="tel"]').attr("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+9(999)999-99-99");
-	} // /inputMask
+		var input = document.querySelector('[type="tel"]');
+		window.intlTelInput(input, {
+			preferredCountries: ["ru", "by"] // any initialisation options go here
 
+		});
+	},
+	// /inputMask
+	customRange: function customRange() {
+		$(".range-wrap").each(function () {
+			var _this = $(this);
+
+			var $range = _this.find(".slider-js");
+
+			var $inputFrom = _this.find(".input_from");
+
+			var $inputTo = _this.find(".input_to");
+
+			var instance,
+					from,
+					to,
+					min = $range.data('min'),
+					max = $range.data('max');
+			$range.ionRangeSlider({
+				skin: "round",
+				type: "double",
+				grid: false,
+				grid_snap: false,
+				hide_min_max: true,
+				hide_from_to: true,
+				onStart: updateInputs,
+				onChange: updateInputs,
+				onFinish: updateInputs
+			});
+			instance = $range.data("ionRangeSlider");
+
+			function updateInputs(data) {
+				from = data.from;
+				to = data.to;
+				$inputFrom.prop("value", from);
+				$inputTo.prop("value", to);
+			}
+
+			$inputFrom.on("change", function () {
+				var val = $(this).prop("value"); // validate
+
+				if (val < min) {
+					val = min;
+				} else if (val > to) {
+					val = to;
+				}
+
+				instance.update({
+					from: val
+				});
+				$(this).prop("value", val);
+			});
+			$inputTo.on("change", function () {
+				var val = $(this).prop("value"); // validate
+
+				if (val < from) {
+					val = from;
+				} else if (val > max) {
+					val = max;
+				}
+
+				instance.update({
+					to: val
+				});
+				$(this).prop("value", val);
+			});
+		});
+	}
 };
 
 function eventHandler() {
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
-	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
+	JSCCommon.inputMask();
+	JSCCommon.customRange(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
 	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/01-360.jpg);"></div>'); // /добавляет подложку для pixel perfect
@@ -150,20 +220,19 @@ function eventHandler() {
 		var topH = 0;
 		var stickyElement = document.querySelector('.fixed-line');
 
-		function lineTop() {}
-
-		if ($(window).scrollTop() > topH) {
-			stickyElement.classList.add('fixed');
-		} else {
-			stickyElement.classList.remove('fixed');
+		function lineTop() {
+			if ($(window).scrollTop() > topH) {
+				stickyElement.classList.add('fixed');
+			} else {
+				stickyElement.classList.remove('fixed');
+			}
 		}
-
-		lineTop();
 
 		window.onscroll = function () {
 			lineTop();
-		}; // конец добавил
+		};
 
+		lineTop(); // конец добавил
 
 		if (window.matchMedia("(min-width: 992px)").matches) {
 			JSCCommon.closeMenu();
@@ -191,18 +260,24 @@ function eventHandler() {
 	};
 	var swiper4 = new Swiper('.sCategories__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
 		watchOverflow: true,
-		slidesPerView: 'auto',
-		spaceBetween: 44,
+		slidesPerView: 1,
+		spaceBetween: 20,
 		breakpoints: {
-			992: {
+			768: {
 				slidesPerView: 2,
 				navigation: {
 					nextEl: '.sCategories .swiper-button-next',
 					prevEl: '.sCategories .swiper-button-prev'
+				},
+				992: {
+					spaceBetween: 44
 				}
 			}
 		}
 	})); // modal window
+
+	// custom Select
+	var element = document.querySelector('.js-choice'); // /custom Select
 	//luckyone JS
 
 	$('.sContact__header').click(function () {
@@ -211,6 +286,7 @@ function eventHandler() {
 			$(this).toggleClass('active');
 		});
 	});
+	//end lucky
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
 	if (isIE11) {

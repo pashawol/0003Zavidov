@@ -235,7 +235,7 @@ $border-width: 1px !default;
 $border-color: $gray-300 !default;
 
 $border-radius: rem(10) !default;
-$border-radius-sm: $border-radius !default;
+$border-radius-sm: rem(5) !default;
 $border-radius-lg: $border-radius !default;
 
 $rounded-pill: 50rem !default;
@@ -445,7 +445,7 @@ $input-btn-focus-color-opacity: .25 !default;
 $input-btn-focus-color: rgba($component-active-bg, $input-btn-focus-color-opacity) !default;
 $input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 
-$input-btn-padding-y-sm: rem(16) !default;
+$input-btn-padding-y-sm: rem(14) !default;
 $input-btn-padding-x-sm: .5rem !default;
 $input-btn-font-size-sm: $smaller !default;
 
@@ -517,10 +517,10 @@ $form-label-font-weight: null !default;
 $form-label-color: null !default;
 
 $input-padding-y: $input-btn-padding-y !default;
-$input-padding-x: $input-btn-padding-x !default;
+$input-padding-x: rem(34) !default;
 $input-font-family: $input-btn-font-family !default;
 $input-font-size: $input-btn-font-size !default;
-$input-font-weight: $font-weight-base !default;
+$input-font-weight: 500 !default;
 $input-line-height: $input-btn-line-height !default;
 
 $input-padding-y-sm: $input-btn-padding-y-sm !default;
@@ -536,7 +536,7 @@ $input-disabled-bg: $gray-200 !default;
 $input-disabled-border-color: null !default;
 
 $input-color: $gray-700 !default;
-$input-border-color: $gray-400 !default;
+$input-border-color: #E7E7E7 !default;
 $input-border-width: $input-btn-border-width !default;
 $input-box-shadow: $box-shadow-inset !default;
 
@@ -545,12 +545,13 @@ $input-border-radius-sm: $border-radius-sm !default;
 $input-border-radius-lg: $border-radius-lg !default;
 
 $input-focus-bg: $input-bg !default;
-$input-focus-border-color: lighten($component-active-bg, 25%) !default;
+$input-focus-border-color: #66A5D9
+ !default;
 $input-focus-color: $input-color !default;
 $input-focus-width: $input-btn-focus-width !default;
-$input-focus-box-shadow: $input-btn-focus-box-shadow !default;
+$input-focus-box-shadow: none !default;
 
-$input-placeholder-color: $gray-600 !default;
+$input-placeholder-color: rgba($color: #000, $alpha: .3)  !default;
 $input-plaintext-color: $body-color !default;
 
 $input-height-border: $input-border-width * 2 !default;
@@ -1097,14 +1098,14 @@ $figure-caption-color: $gray-600 !default;
 
 // Breadcrumbs
 
-$breadcrumb-font-size: null !default;
-$breadcrumb-padding-y: $spacer / 2 !default;
+$breadcrumb-font-size: rem(14) !default;
+$breadcrumb-padding-y:  var(--breadcrumb-padding-y, #{rem(10)}) !default;
 $breadcrumb-padding-x: $spacer !default;
-$breadcrumb-item-padding-x: .5rem !default;
-$breadcrumb-margin-bottom: 1rem !default;
-$breadcrumb-bg: $gray-200 !default;
-$breadcrumb-divider-color: $gray-600 !default;
-$breadcrumb-active-color: $gray-600 !default;
+$breadcrumb-item-padding-x: .2rem !default;
+$breadcrumb-margin-bottom: 0 !default;
+$breadcrumb-bg: white !default;
+$breadcrumb-divider-color: #8F8F8F !default;
+$breadcrumb-active-color: $primary !default;
 $breadcrumb-divider: quote("/") !default;
 $breadcrumb-border-radius: $border-radius !default;
 
