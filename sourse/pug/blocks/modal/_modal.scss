@@ -2,6 +2,7 @@
 	// display: block;
 	width: 100%;
 	position: relative;
+	border-radius: rem(15);
 
 	.modal-content {
 		// max-width: 485px;
@@ -12,6 +13,32 @@
 		color: $primary;
 		font-size: 40px;
 		font-weight: 100;
+	}
+
+
+	.form-wrap {
+		&__title {
+			font-weight: bold;
+		}
+
+		&__polite {
+			text-align: left;
+			color: rgba($color: #000000, $alpha: 0.7);
+		}
+	}
+
+	p {
+		max-width: rem(600);
+		color: rgba($color: $body-color, $alpha: 0.5);
+	}
+
+	&--lg {
+		max-width: rem(931);
+		.form-wrap__btn {
+			@include media-breakpoint-up(lg) {
+				margin-bottom: 0;
+			}
+		}
 	}
 }
 

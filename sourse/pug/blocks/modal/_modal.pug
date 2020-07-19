@@ -42,5 +42,24 @@ mixin modal()
 			//- +text( "Комментарий")
 			+e.INPUT.btn(type="submit" value="Рассчитать") 
 			+polite()
+
+		+form-wrap()(id="modal-call-lg" class=" modal-win modal-win--lg modal-form" )
+			+e.title.h3 Задать вопрос
+			p Менеджеры компании с&nbsp;радостью ответят на&nbsp;ваши вопросы и&nbsp;произведут расчет стоимости услуг и&nbsp;подготовят индивидуальное коммерческое предложение.
+			.row
+				.col-lg-6
+					+input("*Ваше Имя")(required) 
+				.col-lg-6
+					+input('Ваш номер телефона','tel')(required)
+				.col-lg-6
+					+input("Ваше email","email")(required)
+				.col-lg-6
+					+input("Интересующий товар/услуга:","text")
+			+input("*Ваш вопрос","textarea")
+			.row.align-items-center
+				.col-lg-6
+					+e.INPUT.btn(type="submit" value="Отправить") 
+				.col-lg-6
+					+polite()
 		// #modal-call
 	// modal
