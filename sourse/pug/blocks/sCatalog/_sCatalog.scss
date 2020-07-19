@@ -18,7 +18,7 @@
 		 }
 		 .control-wrap{
 			 position: relative;
-			 max-width: 115px;
+			 max-width: calc(var(--swiperArrowSize) * 2 + 15px);
 			 height:var(--swiperArrowSize);
 			 @include media-breakpoint-down(sm) {
 				 margin-left: auto;

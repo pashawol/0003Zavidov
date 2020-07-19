@@ -16,7 +16,7 @@ html {
 	//background-position: center -6284px;
 	//background-position: center -10021px;//-9888px
 	opacity: 0;
-	opacity: 0.7;
+	// opacity: 0.7;
 }
 @include media-breakpoint-up(xl) {
 
@@ -58,9 +58,27 @@ html {
 		@extend .h5;
 		font-weight: normal;
 	}
+	&.text-center{
+		h2{
+			&::after{
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+	&.h2-sm{
+		h2{
+			@extend .h2-sm;
+		}
+	}
 }
+
 .page-title{
-	padding-bottom: rem(50);
+		@include media-breakpoint-up(sm){
+
+			padding-bottom: rem(50);
+		}
+		padding-bottom: rem(50 / 2);
 	h1{
 		// @include rfs(rem(45));
 		margin-bottom: 0;
@@ -319,7 +337,8 @@ input::-webkit-inner-spin-button {
 	width: var(--swiperArrowSize);
 	height: var(--swiperArrowSize);
 	border-radius: 50%;
-	background-color: #ffffff;
+	background-color: var(--swiperBgDef);
+	border: 2px solid var(--swiperBorderColorDef);
 	@include bgs;
 	z-index: 300;
 	outline: none !important;
@@ -327,13 +346,14 @@ input::-webkit-inner-spin-button {
 	background-image: none;
 	margin: 0;
 	@include a-cent(y); 
-	color: $body-color;
+	color: var(--swiperColorDef);
 	box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
 	margin-top: calc(-1 * var(--swiperArrowSize) * 0.4);
 	@include mt;
 	&:hover{
 		background-color: $primary;
-		color: #ffffff;
+		border-color: $primary;
+		color: var(--swiperBgDef);
 	}
 	.icon{
 		font-size: rem(12);
@@ -574,5 +594,12 @@ body:not(.main-page) {
 	.icon{
 		font-size: rem(8);
 		margin-left: rem(9);
+	}
+}
+
+.btn-outline-primary{
+	border-width: 2px;
+	&:hover{
+		color: #ffffff !important;
 	}
 }

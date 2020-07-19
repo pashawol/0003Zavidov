@@ -1,3 +1,4 @@
+
 const $ = jQuery;
 const JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
@@ -116,14 +117,14 @@ const JSCCommon = {
 		});
 	},
 	// /табы  
-	inputMask() {
-		// mask for input
-		var input = document.querySelector('[type="tel"]');
-		window.intlTelInput(input, {
-			preferredCountries: ["ru", "by"],
-
-			// any initialisation options go here
-		});
+	inputMask() { 
+			var input = document.querySelectorAll('[type="tel"]');
+			input.forEach(function (element) { 
+				window.intlTelInput(element, {
+					preferredCountries: ["ru", "by"], 
+					// any initialisation options go here
+				}); 
+			}); 
 	},
 	// /inputMask
 	customRange() {
@@ -282,6 +283,10 @@ function eventHandler() {
 	const swiper4 = new Swiper('.sCategories__slider--js', {
 		// slidesPerView: 5,
 		...defaultSl,
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 4,
+		},
 		watchOverflow: true,
 		slidesPerView: 1,
 		spaceBetween: 20,
@@ -326,12 +331,34 @@ function eventHandler() {
 			},
 		}
 	});
+	
+	const swipersRew = new Swiper('.sRews__slider--js', {
+		// slidesPerView: 5,
+		...defaultSl,
+		watchOverflow: true,
+		slidesPerView: 1, 
+		spaceBetween: 30,
+		loop: true,
+		navigation: {
+			nextEl: '.sRews .swiper-button-next',
+			prevEl: '.sRews .swiper-button-prev',
+		},
+		pagination: {
+			el: '.sRews .swiper-pagination',
+			type: 'bullets', 
+			clickable: true,
+			renderBullet: function (index, className) {
+				return '<span class="' + className + '">' + (index + 1) + '</span>';
+			}
+		},
+	});
 
-	// modal window
 
-	// custom Select
-	const element = document.querySelector('.js-choice');
-
+	$(".sTeam__btn").click(function () {
+		$(".sTeam__col:hidden").fadeIn(() => $(this).hide());
+	})
+  
+	 
  	//luckyone JS
 
 	$('.sContact__header').click(function () {
@@ -364,3 +391,30 @@ if (document.readyState !== 'loading') {
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
+
+
+
+$(document).ready(function () {
+
+	jQuery(function ($) {
+		var counterUp = window.counterUp["default"]; // import counterUp from "counterup2"
+
+		var $counters = $(".counter");
+
+		/* Start counting, do this on DOM ready or with Waypoints. */
+		$counters.each(function (ignore, counter) {
+			var waypoint = new Waypoint({
+				element: $(this),
+				handler: function () {
+					counterUp(counter, {
+						duration: 1000,
+						delay: 16
+					});
+					this.destroy();
+				},
+				offset: 'bottom-in-view',
+			});
+		});
+
+	});
+});

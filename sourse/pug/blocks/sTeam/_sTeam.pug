@@ -1,9 +1,37 @@
-mixin sTeam()
+mixin sTeam(t)
 	// start sTeam
 	+b.SECTION.sTeam.section#sTeam&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sTeam
-				
+			if t
+				+b.section-title.text-center.h2-sm
+					h2: strong= t
 			.row
+				mixin item(i,t,p)
+					+e.col.col(href="#")
+						+e.DIV.item
+							+pic(`team-${i}`,'','lazy',0)
+							+e.DIV.title= t
+							+e.DIV.text= p
+					// /+e.col.col
+				+item('1','Юрий Завидов','Президент компании')
+				+item('2','Денис Пучков','Руководитель Департамента')
+				+item('3','Дарья Коваленко','Юрисконсульт')
+				+item('4','Сергей Дробченко','Ведущий Эксперт')
+				+item('5','Наталья Горовая','Эксперт')
+				+item('6','Андрей Краснитский','Эксперт')
+				+item('7','Оксана Путняя','Эксперт')
+				+item('8','Егор Гетман','Эксперт')
+				+item('9','Полина Косяченко','Эксперт')
+				+item('10','Светлана Деева','Эксперт по коммерческой недвижимости')
+				+item('11','Михаил Соколов','Эксперт')
+				if t
+					+item('12','Денис','Эксперт')
+					+item('13','Владимир Полковых','Агент')
+					+item('14','Максим Коляков','Эксперт')
+				else
+					+item('bg','Денис','Эксперт')
+					+item('bg','Владимир Полковых','Агент')
+					+item('bg','Максим Коляков','Эксперт')
+		.d-sm-none
+			+e.btn(type='button') Показать всех
 	// end sTeam
