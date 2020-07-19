@@ -200,8 +200,8 @@ function eventHandler() {
 	JSCCommon.inputMask();
 	JSCCommon.customRange(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/04.jpg);"></div>')
-	// /добавляет подложку для pixel perfect
+
+	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>'); // /добавляет подложку для pixel perfect
 	// const url = document.location.href;
 	// $.each($(".top-nav__nav a "), function() {
 	// 	if (this.href == url) {
@@ -274,10 +274,31 @@ function eventHandler() {
 				}
 			}
 		}
+	}));
+	var swipersCatalog = new Swiper('.sCatalog__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+		watchOverflow: true,
+		slidesPerView: 1,
+		spaceBetween: 30,
+		loop: true,
+		navigation: {
+			nextEl: '.sCatalog .swiper-button-next',
+			prevEl: '.sCatalog .swiper-button-prev'
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 2
+			},
+			992: {
+				slidesPerView: 3
+			},
+			1200: {
+				slidesPerView: 4
+			}
+		}
 	})); // modal window
 	// custom Select
-
-	var element = document.querySelector('.js-choice'); // /custom Select
+	// const element = document.querySelector('.js-choice');
+	// /custom Select
 
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 

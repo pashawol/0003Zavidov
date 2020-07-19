@@ -1,7 +1,46 @@
 
 	// start .sCatalog
 	.sCatalog {
-		 
+		--swiperArrowSize: 50px;
+		--swiperArrowPosition: 0;
+		--sTPB: #{rem(60)};
+		&__slider{
+			padding: rem(20);
+			margin: rem(-20);
+		}
+		 &__slide{
+			//  padding-top: rem(20);
+				@include media-breakpoint-up(sm) {
+
+					margin-bottom: rem(47);
+				}
+				margin-bottom: rem(37);
+		 }
+		 .control-wrap{
+			 position: relative;
+			 max-width: 115px;
+			 height:var(--swiperArrowSize);
+			 @include media-breakpoint-down(sm) {
+				 margin-left: auto;
+				 margin-right: auto;
+				 margin-bottom: 30px;
+			 }
+		 }
+		 .swiper-button-hand{ 
+			 border: 1px solid $primary;
+			 color: $primary;
+			 top: 0;
+			 margin-top: 0;
+			 transform: translateY(0);
+			 .icon{
+				 font-size: rem(10);
+			 }
+			 &:hover{
+				 background-color: $primary;
+				 color: #fff;
+			 }
+			}
+			
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

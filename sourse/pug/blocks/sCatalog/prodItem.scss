@@ -1,0 +1,109 @@
+
+	// start .prodItem
+	.prodItem {
+		 display: flex;
+		 flex-direction: column;
+		 font-size: 14px;
+		 color: #000000 !important;
+		 min-height: 100%;
+		 &:hover{
+
+			 box-shadow: 0px 10px 20px rgba(0, 0, 0, 0);
+			}
+			box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+		 border-radius: 10px;
+		 background-color: #ffffff;
+		 position: relative;
+
+		 &__label{
+			 font-size: 10px;
+			 color: $primary;
+			 font-weight: 500;
+			 background: #FFFFFF;
+			 border-radius: 100px;
+			 position: absolute;
+			 @include a-cent();
+			top: 0;
+			z-index: 4;
+			 text-align: center;
+			 display: block;
+			 padding: rem(5) rem(10);
+		 }
+
+		 picture{
+			 @include block(270, 166);
+			 border-radius: 10px 10px 0px 0px;
+			 overflow: hidden;
+			//  margin-bottom: rem(24);
+		 }
+		 &__caption{
+			padding: rem(24) rem(24) 0;
+		 }
+		 .icon {
+		 	font-size: rem(16);
+		 	color: $primary;
+		 }
+
+		 td {
+		 	vertical-align: top;
+		 	font-weight: 500;
+			 font-size: 14px;
+			 padding-bottom: rem(10);
+
+		 	&:first-child {
+		 		padding-right: rem(12);
+		 	}
+		 }
+		 &__small{
+			 font-size: 12px;
+			 opacity: 0.5;
+			 padding-bottom: rem(25);
+		 }
+		 &__price-wrap{
+			 border-radius:0 0 10px 10px;
+			 background: #F8F8F8;
+			 padding: rem(12) rem(24) ;
+		 }
+		 &__price{
+			 display: block;
+			//  line-height: 1;
+			 &--old{
+				opacity: 0.5;
+				font-size: 13px;
+				padding-bottom: rem(5);
+				font-weight: 500;
+				text-decoration-line: line-through;
+			 }
+			 &--new{
+				 @extend .h5;
+				 line-height: 1;
+				 font-weight: 500;
+				 margin-bottom: 0;
+			 }
+		 }
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.prodItem

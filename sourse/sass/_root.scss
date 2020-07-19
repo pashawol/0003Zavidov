@@ -16,6 +16,9 @@
 	--sPT: #{rem(80 / 2)};
 	--sPB: #{rem(90 / 2)};
 	--sTPB: #{rem(40 / 2)};
+	
+	--swiperArrowSize: #{rem(68)};
+	--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
 }
 
 @include media-breakpoint-up(xl) {}
