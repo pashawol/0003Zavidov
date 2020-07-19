@@ -2,8 +2,20 @@ mixin sVideo()
 	// start sVideo
 	+b.SECTION.sVideo.section#sVideo&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sVideo
-				
-			.row
+			+b.section-title
+				h2 Наш собственный канал на Youtube
+			+e.row.row
+				+videoItem(1)
+				+videoItem(2)
+				+videoItem(3)
+				+videoItem(4)
 	// end sVideo
+
+mixin videoItem(imgNum, linkHref='https://www.youtube.com/watch?v=en6gms6e54Q&list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR')
+	.col-sm-6.col-lg-3
+		+e.A.video-link(href=linkHref data-fancybox="video")
+			+e.PICTURE.picture
+				source(srcset=`img/@2x/webp/sVideo-${imgNum}.webp`)
+					//-.lazy(srcset="#" data-
+				img(src=`img/@2x/sVideo-${imgNum}.jpg`, alt="")
+					//-.lazy(src="#" data-

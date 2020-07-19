@@ -36,6 +36,8 @@ $grays: ("100": $gray-100,
   "900": $gray-900) !default;
 // fusv-enable
 
+
+$section-light: #E5E5E5;
 $blue: #70ABDC !default;
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
@@ -186,7 +188,7 @@ $grid-breakpoints: (xs: 0,
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  // xxl: 1400px
+  //xxl: 1400px
   ) !default;
 // scss-docs-end grid-breakpoints
 
@@ -203,7 +205,7 @@ $container-max-widths: (sm: 540px,
   md: 720px,
   lg: 960px,
   xl: 1200px,
-  // xxl: 1320px
+  //xxl: 1320px
   ) !default;
 // scss-docs-end container-max-widths
 

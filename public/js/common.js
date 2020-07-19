@@ -297,9 +297,15 @@ function eventHandler() {
 		}
 	})); // modal window
 	// custom Select
-	// const element = document.querySelector('.js-choice');
-	// /custom Select
 
+	var element = document.querySelector('.js-choice'); //luckyone JS
+
+	$('.sContact__header').click(function () {
+		$(this).toggleClass('active');
+		$(this.parentElement).find('.sContact__txt-block').slideToggle(function () {
+			$(this).toggleClass('active');
+		});
+	});
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
 	if (isIE11) {

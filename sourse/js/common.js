@@ -127,15 +127,15 @@ const JSCCommon = {
 	},
 	// /inputMask
 	customRange() {
-	 
+
 		$(".range-wrap").each(function () {
 			let _this = $(this);
-			var $range= _this.find(".slider-js"); 
+			var $range= _this.find(".slider-js");
 			var $inputFrom = _this.find(".input_from");
 			var $inputTo = _this.find(".input_to");
 			var instance, from, to,
 				min = $range.data('min'),
-				max = $range.data('max'); 
+				max = $range.data('max');
 			$range.ionRangeSlider({
 				skin: "round",
 				type: "double",
@@ -239,14 +239,14 @@ function eventHandler() {
 
 		function lineTop() {
 			if ($(window).scrollTop() > topH) {
-		
+
 				stickyElement.classList.add('fixed');
 			} else {
 				stickyElement.classList.remove('fixed');
 			}
 		}
 		window.onscroll = () => {
-			
+
 			lineTop();
 		};
 		lineTop();
@@ -286,7 +286,7 @@ function eventHandler() {
 		slidesPerView: 1,
 		spaceBetween: 20,
 		breakpoints: {
-			
+
 			768: {
 				slidesPerView: 2,
 				navigation: {
@@ -330,9 +330,16 @@ function eventHandler() {
 	// modal window
 
 	// custom Select
-	// const element = document.querySelector('.js-choice');
-	// /custom Select
- 
+	const element = document.querySelector('.js-choice');
+
+ 	//luckyone JS
+
+	$('.sContact__header').click(function () {
+		$(this).toggleClass('active');
+		$(this.parentElement).find('.sContact__txt-block').slideToggle(function () {
+			$(this).toggleClass('active');
+		});
+	});
 
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 	if (isIE11) {

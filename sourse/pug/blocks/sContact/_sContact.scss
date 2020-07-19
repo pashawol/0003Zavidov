@@ -1,7 +1,115 @@
+// start .sContact
+.sContact {
+	background-color: $section-light;
 
-	// start .sContact
-	.sContact {
-		 
+	--sPT: #{rem(43)};
+	--sPB: #{rem(36)};
+	@include media-breakpoint-up(sm){
+		--sPT: #{rem(56)};
+		--sPB: #{rem(47)};
+	}
+
+	.container{
+		padding-left: 20px;
+		padding-right: 20px;
+		@include media-breakpoint-up(sm){
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+
+	h4{
+		line-height: 1.56;
+
+		@include media-breakpoint-down(sm){
+			font-size: 16px;
+		}
+	}
+	h5{
+		@include media-breakpoint-down(sm){
+			font-size: 14px;
+		}
+	}
+
+	&__item{
+		&:last-child{
+			.sContact__txt-block{
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__header{
+		font-weight: 700;
+		position: relative;
+		padding-right: 30px;
+
+		margin-bottom: rem(25px);
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(20px);
+		}
+		&.active{
+			&:after{
+				content: none;
+			}
+		}
+
+		@include media-breakpoint-up(lg){
+			padding-right: 0 !important;
+		}
+
+		&:after{
+			content: '';
+			@include media-breakpoint-up(lg){
+				content: none !important;
+			}
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			width: 10px;
+			height: 10px;
+
+			background-image: url(../img/chevron-down.svg);
+			background-size: cover;
+		}
+	}
+	&__txt-block{
+		&.active{
+			display: block;
+		}
+
+		display: none;
+		@include media-breakpoint-up(lg){
+			display: block !important;
+		}
+
+		margin-bottom: 33px;
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(45px);
+		}
+
+		p{
+			color: rgba($body-color, .7);
+
+			font-size: 12px;
+			line-height: 1.75;
+			margin-bottom: 20px;
+			@include media-breakpoint-up(sm){
+				font-size: $em-base;
+				line-height: (27/16);
+				margin-bottom: rem(27px);
+			}
+
+		}
+		p:last-child{
+			margin-bottom: 0;
+		}
+	}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
