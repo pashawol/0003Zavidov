@@ -118,11 +118,12 @@ var JSCCommon = {
 	},
 	// /табы  
 	inputMask: function inputMask() {
-		// mask for input
-		var input = document.querySelector('[type="tel"]');
-		window.intlTelInput(input, {
-			preferredCountries: ["ru", "by"] // any initialisation options go here
+		var input = document.querySelectorAll('[type="tel"]');
+		input.forEach(function (element) {
+			window.intlTelInput(element, {
+				preferredCountries: ["ru", "by"] // any initialisation options go here
 
+			});
 		});
 	},
 	// /inputMask
@@ -201,7 +202,7 @@ function eventHandler() {
 	JSCCommon.customRange(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>'); // /добавляет подложку для pixel perfect
+	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/08.jpg);"></div>'); // /добавляет подложку для pixel perfect
 	// const url = document.location.href;
 	// $.each($(".top-nav__nav a "), function() {
 	// 	if (this.href == url) {
@@ -295,10 +296,14 @@ function eventHandler() {
 				slidesPerView: 4
 			}
 		}
-	})); // modal window
-	// custom Select
+	}));
+	$(".sTeam__btn").click(function () {
+		var _this2 = this;
 
-	var element = document.querySelector('.js-choice'); //luckyone JS
+		$(".sTeam__col:hidden").fadeIn(function () {
+			return $(_this2).hide();
+		});
+	}); //luckyone JS
 
 	$('.sContact__header').click(function () {
 		$(this).toggleClass('active');
@@ -331,3 +336,26 @@ if (document.readyState !== 'loading') {
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
+
+$(document).ready(function () {
+	jQuery(function ($) {
+		var counterUp = window.counterUp["default"]; // import counterUp from "counterup2"
+
+		var $counters = $(".counter");
+		/* Start counting, do this on DOM ready or with Waypoints. */
+
+		$counters.each(function (ignore, counter) {
+			var waypoint = new Waypoint({
+				element: $(this),
+				handler: function handler() {
+					counterUp(counter, {
+						duration: 5000,
+						delay: 16
+					});
+					this.destroy();
+				},
+				offset: 'bottom-in-view'
+			});
+		});
+	});
+});

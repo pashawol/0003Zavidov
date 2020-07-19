@@ -1,3 +1,4 @@
+
 const $ = jQuery;
 const JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
@@ -116,14 +117,14 @@ const JSCCommon = {
 		});
 	},
 	// /табы  
-	inputMask() {
-		// mask for input
-		var input = document.querySelector('[type="tel"]');
-		window.intlTelInput(input, {
-			preferredCountries: ["ru", "by"],
-
-			// any initialisation options go here
-		});
+	inputMask() { 
+			var input = document.querySelectorAll('[type="tel"]');
+			input.forEach(function (element) { 
+				window.intlTelInput(element, {
+					preferredCountries: ["ru", "by"], 
+					// any initialisation options go here
+				}); 
+			}); 
 	},
 	// /inputMask
 	customRange() {
@@ -208,7 +209,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>')
+	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/08.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -327,11 +328,11 @@ function eventHandler() {
 		}
 	});
 
-	// modal window
-
-	// custom Select
-	const element = document.querySelector('.js-choice');
-
+	$(".sTeam__btn").click(function () {
+		$(".sTeam__col:hidden").fadeIn(() => $(this).hide());
+	})
+  
+	 
  	//luckyone JS
 
 	$('.sContact__header').click(function () {
@@ -364,3 +365,30 @@ if (document.readyState !== 'loading') {
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
+
+
+
+$(document).ready(function () {
+
+	jQuery(function ($) {
+		var counterUp = window.counterUp["default"]; // import counterUp from "counterup2"
+
+		var $counters = $(".counter");
+
+		/* Start counting, do this on DOM ready or with Waypoints. */
+		$counters.each(function (ignore, counter) {
+			var waypoint = new Waypoint({
+				element: $(this),
+				handler: function () {
+					counterUp(counter, {
+						duration: 5000,
+						delay: 16
+					});
+					this.destroy();
+				},
+				offset: 'bottom-in-view',
+			});
+		});
+
+	});
+});

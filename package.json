@@ -54,6 +54,8 @@
     "bootstrap": "^5.0.0-alpha1",
     "browserslist": "^4.12.2",
     "choices.js": "^9.0.1",
+    "counterup2": "^1.0.4",
+    "countup.js": "^2.0.5",
     "inputmask": "^5.0.3",
     "intl-tel-input": "^17.0.3",
     "ion-rangeslider": "^2.3.1",
@@ -61,6 +63,7 @@
     "popper.js": "^1.16.1",
     "select2": "^4.0.13",
     "swiper": "^5.4.5",
+    "waypoints": "^4.0.1",
     "wowjs": "^1.1.3"
   }
 }

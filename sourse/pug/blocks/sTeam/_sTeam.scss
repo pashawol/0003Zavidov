@@ -1,6 +1,167 @@
 
 	// start .sTeam
 	.sTeam {
+		text-align: center;
+		@include media-breakpoint-up(ьв) {
+
+			--sPT: #{rem(45)}; 
+		}
+		--sPT: #{rem(20)};
+		--sPB: #{rem(15)};
+		&--circle{ 
+			--sPT: #{rem(65)};
+			--sPB: #{rem(10)};
+		}
+		 &__col{ 
+				max-width: var(--colSize);
+				flex: 0 0 var(--colSize);
+					// min-width: 300px;
+				@include media-breakpoint-down(sm){
+			 
+						&:nth-child(n + 5) {
+							display: none;
+						}
+				}
+	 
+			@include media-breakpoint-up(lg) { 
+				--colSize: calc(100% / 4)
+			}
+			
+			@include media-breakpoint-up(md) {
+						--colSize: calc(100% / 3)
+			}
+			
+			@include media-breakpoint-up(sm) {
+						--colSize: calc(100% / 2)
+			} 
+			 
+		 
+			display: block;
+			margin-bottom: rem(56);
+			color: $primary;
+		 
+		}
+		&__item{
+			padding: 0 rem(26) rem(40);
+			position: relative;
+			z-index: 2;
+			min-height: 100%;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 270px;
+			@include mt;
+			&::before{
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: calc(100% - #{rem(94)});
+				background-color: #ffffff;
+				z-index: -1;
+				box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.05);
+				border: 2px solid transparent;
+				@include mt;
+				border-radius: $border-radius;
+			}
+			&:hover{
+				&::before{
+					border-color: #F8F8F8;
+				}
+			}
+
+		}
+		&--circle &__item{
+			padding: 0;
+			background-color: transparent;
+			&::before{
+				display: none;
+			}
+
+		}
+		&--circle &__col{
+				@include media-breakpoint-down(sm){
+						&:nth-child(n + 4) {
+							display: none;
+						}
+				}
+			@include media-breakpoint-up(xl) {
+				--colSize: calc(100% / 6) 
+			}
+			
+			@include media-breakpoint-up(lg) { 
+				--colSize: calc(100% / 4)
+			}
+			
+			@include media-breakpoint-up(md) {
+						--colSize: calc(100% / 3)
+			}
+			
+			@include media-breakpoint-up(sm) {
+						--colSize: calc(100% / 2)
+			} 
+		 
+			margin-bottom: rem(39);
+			color: $body-color;
+			&:hover{
+				color: $primary;
+			}
+			
+		}
+
+		
+		&--circle &__col{
+			&:hover picture {
+				border-color: $primary;
+			}
+		}
+		&--circle{
+			picture{
+				width: rem(168 + 8);
+				height: rem(168 + 8);
+				border-radius: 50%;
+			
+				border: rem(5) solid transparent;
+
+			}
+			
+		} 
+ 
+		&__title{ 
+			font-weight: bold;
+			max-width: rem(200);
+			margin-left: auto;
+			margin-right: auto;
+		}
+		&__text{
+			color: #6b6b6b;
+			font-size: $small;
+			max-width: rem(220);
+			margin-left: auto;
+			margin-right: auto;
+		}
+		&__col
+		picture{
+				margin-bottom: rem(25);
+			@include mt;
+			margin-left: auto;
+			margin-right: auto;
+			position: relative;
+			overflow: hidden;
+			img{
+				object-fit: cover;
+				object-position: top;
+				width: 100%;
+				height: 100%;
+			}
+		}
+		
+		&__btn{
+			@extend .btn;
+			@extend .btn-outline-primary;
+			width: 225px;
+			margin-bottom: rem(60);
+		}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

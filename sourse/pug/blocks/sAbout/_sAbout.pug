@@ -1,37 +1,49 @@
 mixin sAbout()
-	// start sAbout
+
 	+b.SECTION.sAbout.section#sAbout&attributes(attributes)
 		.container
-			+b.section-title
-				h2 О нас
 				
 			.row
 				.col
-					p ZAVIDOV REALTY&nbsp;&mdash; одно из&nbsp;самых успешных и&nbsp;надежных агентств столицы! Профессиональная команда экспертов, богатый опыт, креативный подход и&nbsp;безупречная деловая репутация, позволяет нам решать любые задачи на&nbsp;рынке услуг.
-					p ZAVIDOV REALTY&nbsp;&mdash; обладает самыми современными и&nbsp;уникальными технологиями. В&nbsp;активе компании более 20&nbsp;000 клиентов по&nbsp;всему миру!
-					p ZAVIDOV REALTY&nbsp;&mdash; входит в&nbsp;&laquo;ТОП&nbsp;5&raquo; лучших компаний Москвы.
+					+b.section-title
+						h2: strong О нас
+					+e.content
+						p #[strong ZAVIDOV REALTY]&nbsp;&mdash; одно из&nbsp;самых успешных и&nbsp;надежных агентств столицы! #[span Профессиональная команда экспертов, богатый опыт, креативный подход и&nbsp;безупречная деловая репутация], позволяет нам решать любые задачи на&nbsp;рынке услуг.
+						p #[strong ZAVIDOV REALTY]&nbsp;&mdash; обладает самыми современными и&nbsp;уникальными технологиями. В&nbsp;активе компании  #[span более 20&nbsp;000 клиентов] по&nbsp;всему миру!
+						p #[strong ZAVIDOV REALTY]&nbsp;&mdash; входит в&nbsp;&laquo; #[span ТОП&nbsp;5]&raquo; лучших компаний Москвы.
 
-					p Миссия нашей компании: успех и&nbsp;благополучие бизнеса наших партнеров и&nbsp;клиентов&nbsp;&mdash; результат нашей работы.
+						p  #[span Миссия нашей компании:] успех и&nbsp;благополучие бизнеса наших партнеров и&nbsp;клиентов&nbsp;&mdash; результат нашей работы.
 
-					p Нас рекомендуют друзьям. Наш капитал&nbsp;&mdash; это доверие наших партнёров и&nbsp;клиентов.
-					ul
-						li
-							+icon('mark')
-							| Россия, Москва, Цветной бульвар&nbsp;д. 26С1.
-						li
-							a(href="tel:+7(495)660-20-21")
-							+icon('tel') 
-							| +7 (495) 660-20-21
-				.col-5
+						p Нас рекомендуют друзьям. Наш капитал&nbsp;&mdash; это доверие наших партнёров и&nbsp;клиентов.
+					table
+						tr
+							td: +icon('mark')
+							td Россия, Москва, Цветной бульвар&nbsp;д. 26С1.
+						tr
+							td: +icon('tel') 
+							td
+								a(href="tel:+7(495)660-20-21")  +7 (495) 660-20-21
+				.col-lg-auto
 					+e.img-wrap
-						+pic("about-img")
-			.row
-				mixin item(t,p)
-					+e.col.col-3
-						+e.number!= t
-						+e.text!= p
-				+item(`3000`,`Успешных сделок`)
-				+item(`14`,`Лет на рынке`)
-				+item(`3500`,`Объектов недвижимости`)
-				+item(`9,9`,`Миллиардов рублей в&nbsp;активе по&nbsp;суммам сделок`)
+						+pic("about-img.png")
+						+e.label
+							+e.label-title Юрий Завидов
+							+e.label-text  Основатель компании
+			+e.numbers
+				.row
+					mixin item(t,p)
+						+e.col.col-lg-3.col-md-6
+							+e.number
+									if t
+										span.counter= t
+									else
+										block
+							+e.text!= p
+					+item(`3000`,`Успешных сделок`)
+					+item(`14`,`Лет на рынке`)
+					+item(`3500`,`Объектов недвижимости`)
+					+item(``,`Миллиардов рублей в&nbsp;активе по&nbsp;суммам сделок`)
+						span.counter 9
+						|,
+						span.counter 9
 	// end sAbout
