@@ -202,7 +202,7 @@ function eventHandler() {
 	JSCCommon.customRange(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/08.jpg);"></div>'); // /добавляет подложку для pixel perfect
+	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>'); // /добавляет подложку для pixel perfect
 	// const url = document.location.href;
 	// $.each($(".top-nav__nav a "), function() {
 	// 	if (this.href == url) {
@@ -297,6 +297,24 @@ function eventHandler() {
 			}
 		}
 	}));
+	var swipersRew = new Swiper('.sRews__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+		watchOverflow: true,
+		slidesPerView: 1,
+		spaceBetween: 30,
+		loop: true,
+		navigation: {
+			nextEl: '.sRews .swiper-button-next',
+			prevEl: '.sRews .swiper-button-prev'
+		},
+		pagination: {
+			el: '.sRews .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+			renderBullet: function renderBullet(index, className) {
+				return '<span class="' + className + '">' + (index + 1) + '</span>';
+			}
+		}
+	}));
 	$(".sTeam__btn").click(function () {
 		var _this2 = this;
 
@@ -349,7 +367,7 @@ $(document).ready(function () {
 				element: $(this),
 				handler: function handler() {
 					counterUp(counter, {
-						duration: 5000,
+						duration: 1000,
 						delay: 16
 					});
 					this.destroy();

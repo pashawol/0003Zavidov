@@ -1,5 +1,8 @@
 // start .sRews
 .sRews {
+	.container{
+		position: relative;
+	}
 
 		background-color: $section-light;
 	@include media-breakpoint-up(xl) {}

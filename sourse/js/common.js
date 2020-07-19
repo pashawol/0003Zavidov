@@ -209,7 +209,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/08.jpg);"></div>')
+	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -327,6 +327,28 @@ function eventHandler() {
 			},
 		}
 	});
+	
+	const swipersRew = new Swiper('.sRews__slider--js', {
+		// slidesPerView: 5,
+		...defaultSl,
+		watchOverflow: true,
+		slidesPerView: 1, 
+		spaceBetween: 30,
+		loop: true,
+		navigation: {
+			nextEl: '.sRews .swiper-button-next',
+			prevEl: '.sRews .swiper-button-prev',
+		},
+		pagination: {
+			el: '.sRews .swiper-pagination',
+			type: 'bullets', 
+			clickable: true,
+			renderBullet: function (index, className) {
+				return '<span class="' + className + '">' + (index + 1) + '</span>';
+			}
+		},
+	});
+
 
 	$(".sTeam__btn").click(function () {
 		$(".sTeam__col:hidden").fadeIn(() => $(this).hide());
@@ -381,7 +403,7 @@ $(document).ready(function () {
 				element: $(this),
 				handler: function () {
 					counterUp(counter, {
-						duration: 5000,
+						duration: 1000,
 						delay: 16
 					});
 					this.destroy();

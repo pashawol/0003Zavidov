@@ -19,6 +19,9 @@
 	
 	--swiperArrowSize: #{rem(68)};
 	--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
+	--swiperBorderColorDef: #{$primary};
+	--swiperColorDef: #{$primary};
+	--swiperBgDef: #ffffff;
 }
 
 @include media-breakpoint-up(xl) {}

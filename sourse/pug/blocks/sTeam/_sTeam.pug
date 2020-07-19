@@ -4,7 +4,7 @@ mixin sTeam(t)
 		.container
 			if t
 				+b.section-title.text-center.h2-sm
-				h2: strong= t
+					h2: strong= t
 			.row
 				mixin item(i,t,p)
 					+e.col.col(href="#")

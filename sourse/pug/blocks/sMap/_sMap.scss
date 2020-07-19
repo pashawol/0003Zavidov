@@ -93,4 +93,12 @@
 	@include media-breakpoint-down(sm) {}
 	@include media-breakpoint-down(xs) {} 
 
+	&--sm {
+		padding-top: 0;
+		padding-bottom: 0;
+		.sMap__map-wrap {
+			margin-top: 0;
+			height: 34.1rem;
+		}
+	}
 } // end.sMap

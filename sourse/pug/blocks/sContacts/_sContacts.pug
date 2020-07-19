@@ -1,0 +1,21 @@
+mixin sContacts()
+	// start sContacts
+	+b.SECTION.sContacts.section#sContacts&attributes(attributes)
+		.container
+			.row
+				mixin item(i, t, p)
+					+e.col.col-lg-3.col-sm-6
+						+e.item
+							+e.img-wrap
+								img.lazy(src="#" data-src=`img/svg/${i}.svg`, alt="")
+							+e.title!= t
+							block
+				+item('location','Адрес')
+					a(href="https://yandex.ru/maps/213/moscow/house/tsvetnoy_bulvar_26s1/Z04YcAViSkEFQFtvfXt2cH5qYw==/?ll=37.622342%2C55.771297&sll=30.523460%2C50.450458&sspn=0.493011%2C0.183257&z=17") Россия, Москва, Цветной&nbsp;бульвар, дом 26, строение&nbsp;1
+				+item('call','Телефон')
+					a(href="tel:74956602021") +7 (495) 660-20-21
+				+item('mail','E-mail')
+					a(href="mailto:info@zavidov.realty") info@zavidov.realty
+				+item('clock','Режим работы')
+					p Пн. – Пт.: с 9:00 до 18:00
+	// end sContacts

@@ -75,4 +75,37 @@
 	@include media-breakpoint-down(sm) {}
 	@include media-breakpoint-down(xs) {} 
 
+
+	//02-contacnt
+	&__question {
+		display: block;
+		@extend .btn;
+		@extend .btn-primary;
+		width: 100%;
+		width: max(220px);
+		@include media-breakpoint-up(lg) {
+			margin-left: auto;
+		}
+	}
+	&--sm {
+		--sPT: #{rem(50)};
+		--sPB: #{rem(47)};
+		color: #fff;
+		p {
+			line-height: 1.4;
+			max-width: rem(440);
+			@include media-breakpoint-up(lg) {
+				margin-left: rem(-10);
+			}
+		}
+		h3 {
+			letter-spacing: rem(0.4);
+		}
+		@include media-breakpoint-up(lg) {
+			p, h3 {
+				margin-bottom: 0;
+			}
+
+		}
+	}
 } // end.sForm

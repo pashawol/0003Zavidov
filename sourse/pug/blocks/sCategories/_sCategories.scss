@@ -2,6 +2,8 @@
 	// start .sCategories
 	.sCategories {
 		--sPB: #{rem(62)};
+		--swiperColorDef: #{$body-color};
+		--swiperBorderColorDef: var(--swiperBgDef);
 		h2{
 			max-width: rem(755);
 		}

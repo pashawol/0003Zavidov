@@ -337,7 +337,8 @@ input::-webkit-inner-spin-button {
 	width: var(--swiperArrowSize);
 	height: var(--swiperArrowSize);
 	border-radius: 50%;
-	background-color: #ffffff;
+	background-color: var(--swiperBgDef);
+	border: 2px solid var(--swiperBorderColorDef);
 	@include bgs;
 	z-index: 300;
 	outline: none !important;
@@ -345,13 +346,14 @@ input::-webkit-inner-spin-button {
 	background-image: none;
 	margin: 0;
 	@include a-cent(y); 
-	color: $body-color;
+	color: var(--swiperColorDef);
 	box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
 	margin-top: calc(-1 * var(--swiperArrowSize) * 0.4);
 	@include mt;
 	&:hover{
 		background-color: $primary;
-		color: #ffffff;
+		border-color: $primary;
+		color: var(--swiperBgDef);
 	}
 	.icon{
 		font-size: rem(12);

@@ -1,0 +1,99 @@
+// start .sContacts
+.sContacts {
+	padding-top: calc(var(--sPT) / 4.1);
+	padding-bottom: calc(var(--sPB) / 1.25);
+	&__img-wrap{
+		width: rem(89px);
+		height: rem(89px); 
+		border-radius: 50%;
+		background: $light;
+		margin-bottom: rem(27);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img{
+			max-width: rem(50);
+		}
+	}
+
+	&__col {
+		margin-bottom: rem(31);
+	}
+	
+	&__title{
+		font-weight: bold;
+		@extend .h5;
+		line-height: (32 / 25);
+		padding-bottom: rem(18);
+		margin-bottom: auto;
+		max-width: rem(270);
+	}
+	a {
+		color: $body-color;
+	}
+	&__item{
+		background: #FFFFFF;
+		box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.05);
+		border-radius: 10px;
+		@include media-breakpoint-up(xxl) {
+
+			padding: rem(39) rem(35) rem(0);
+		}
+		@include media-breakpoint-up(lg) {
+			padding-bottom: 0;
+			// padding: rem(34) rem(20) rem(0);
+		}
+		padding: rem(34) rem(20) rem(25);
+		@include mt;
+		
+		margin-bottom: 0;
+		min-height: 100%;
+		// &:hover{
+		// 	color: #ffffff;
+		// 	background-color: $primary;
+		// }
+		p{
+			line-height: (29 / 20);
+			max-width: rem(300);
+			// @extend .h5;
+			font-weight: normal;
+			@include media-breakpoint-down(sm) {
+				font-size: 1.2rem;
+			}
+			
+			@include media-breakpoint-up(xxl){
+				margin-bottom: 0;
+
+					min-height:7em;
+				}
+		}
+
+		a {
+			line-height: (29 / 17);
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.sContacts
