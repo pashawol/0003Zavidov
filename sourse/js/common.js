@@ -283,6 +283,10 @@ function eventHandler() {
 	const swiper4 = new Swiper('.sCategories__slider--js', {
 		// slidesPerView: 5,
 		...defaultSl,
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 4,
+		},
 		watchOverflow: true,
 		slidesPerView: 1,
 		spaceBetween: 20,

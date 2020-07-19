@@ -101,8 +101,11 @@
 				<!-- start headerBlock-->
 				<div class="headerBlock bg-wrap" id="headerBlock">
 					<!-- picture-->
-					<picture class="picture-bg"> 
-						<source srcset="img/@2x/webp/head-bg.webp" type="image/webp"/><img class="object-fit-js" src="img/@2x/head-bg.jpg" alt=""/>
+					<picture class="lazy picture-bg"> 
+						<source srcset="#" data-srcset="img/@2x/webp/head-bg.webp" type="image/webp" media="(min-width:576px)"/>
+						<source srcset="#" data-srcset="img/@1x/webp/head-bg.webp" type="image/webp"/>
+						<source srcset="#" data-srcset="img/@2x/head-bg.jpg" type="image/jpg" media="(min-width:576px)"/>
+						<source srcset="#" data-srcset="img/@1x/head-bg.jpg" type="image/jpg"/><img class="object-fit-js" src="#" data-src="img/@2x/head-bg.jpg" alt=""/>
 					</picture>
 					<!-- /picture-->
 					<div class="container">
@@ -160,7 +163,7 @@
 						<div class="swiper-wrapper">
 								<div class="sCategories__slide swiper-slide"><a class="sCategories__item" href="#"><span class="sCategories__img-wrap bg-wrap">
 									<picture class="picture-bg">
-										<source srcset="img/@2x/webp/sCategories-1.webp"/><img class="object-fit-js" src="img/@2x/sCategories-1.jpg" alt=""/>
+										<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/sCategories-1.webp"/><img class="object-fit-js swiper-lazy" src="#" data-src="img/@2x/sCategories-1.jpg" alt=""/>
 									</picture><span class="sCategories__center">Посмотреть предложения
 									<svg class="icon icon-arrow-right ">
 										<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
@@ -171,7 +174,7 @@
 								<!-- /+e.slide.swiper-slide-->
 								<div class="sCategories__slide swiper-slide"><a class="sCategories__item" href="#"><span class="sCategories__img-wrap bg-wrap">
 									<picture class="picture-bg">
-										<source srcset="img/@2x/webp/sCategories-2.webp"/><img class="object-fit-js" src="img/@2x/sCategories-2.jpg" alt=""/>
+										<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/sCategories-2.webp"/><img class="object-fit-js swiper-lazy" src="#" data-src="img/@2x/sCategories-2.jpg" alt=""/>
 									</picture><span class="sCategories__center">Посмотреть предложения
 									<svg class="icon icon-arrow-right ">
 										<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
@@ -182,7 +185,7 @@
 								<!-- /+e.slide.swiper-slide-->
 								<div class="sCategories__slide swiper-slide"><a class="sCategories__item" href="#"><span class="sCategories__img-wrap bg-wrap">
 									<picture class="picture-bg">
-										<source srcset="img/@2x/webp/sCategories-3.webp"/><img class="object-fit-js" src="img/@2x/sCategories-3.jpg" alt=""/>
+										<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/sCategories-3.webp"/><img class="object-fit-js swiper-lazy" src="#" data-src="img/@2x/sCategories-3.jpg" alt=""/>
 									</picture><span class="sCategories__center">Посмотреть предложения
 									<svg class="icon icon-arrow-right ">
 										<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
@@ -193,7 +196,7 @@
 								<!-- /+e.slide.swiper-slide-->
 								<div class="sCategories__slide swiper-slide"><a class="sCategories__item" href="#"><span class="sCategories__img-wrap bg-wrap">
 									<picture class="picture-bg">
-										<source srcset="img/@2x/webp/sCategories-4.webp"/><img class="object-fit-js" src="img/@2x/sCategories-4.jpg" alt=""/>
+										<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/sCategories-4.webp"/><img class="object-fit-js swiper-lazy" src="#" data-src="img/@2x/sCategories-4.jpg" alt=""/>
 									</picture><span class="sCategories__center">Посмотреть предложения
 									<svg class="icon icon-arrow-right ">
 										<use xlink:href="img/svg/sprite.svg#arrow-right"></use>

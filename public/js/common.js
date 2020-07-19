@@ -260,6 +260,10 @@ function eventHandler() {
 		}
 	};
 	var swiper4 = new Swiper('.sCategories__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 4
+		},
 		watchOverflow: true,
 		slidesPerView: 1,
 		spaceBetween: 20,
