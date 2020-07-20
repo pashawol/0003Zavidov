@@ -1,6 +1,26 @@
 
 	// start .sSideBar
 	.sSideBar {
+
+		.form-wrap {
+			background: #F8F8F8;
+			box-shadow: 0 10px 50px rgba(0, 0, 0, 0.05);
+			border-radius: 15px;
+			padding: 5px 5px 5px 5px;
+		}
+
+		p {
+			@include rfs(rem(20));
+			line-height: (26 / 16);
+			text-align: center;
+			margin-bottom: 34px;
+		}
+
+		.form-wrap__polite {
+			color: #000000;
+			max-width: 351px;
+			opacity: 0.7;
+		}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
