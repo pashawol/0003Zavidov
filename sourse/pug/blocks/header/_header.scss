@@ -10,8 +10,9 @@
 			min-height: rem(120);
 		}
 		@include media-breakpoint-up(sm) { 
+			min-height: rem(95);
 		}
-		min-height: rem(95);
+		min-height: rem(70);
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

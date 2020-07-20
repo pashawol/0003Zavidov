@@ -1,6 +1,6 @@
 mixin sForm()
 	// start sForm
-	+b.SECTION.sForm.section.bg-wrap#sForm&attributes(attributes)
+	+b.SECTION.sForm.section.bg-wrap&attributes(attributes)
 		+pic("form-bg.jpg",'bg','','')(class="picture-bg")
 		.container
 			.row
@@ -14,7 +14,7 @@ mixin sForm()
 						+input('Ваш номер телефона','tel')
 						+e.btn(type="button")  Получить консультацию
 						+polite
-
+		block
 
 mixin sForm-sm()
 	// start sForm

@@ -262,12 +262,20 @@
 	display: block;
 }
 .iti__selected-flag{
-	width: rem(104);
+		@include media-breakpoint-up(sm) {
+
+			width: rem(104);
+		}
+		width: rem(64);
 	border-right: 1px solid #DADADA;
 }
 .iti--allow-dropdown input,
 .iti--allow-dropdown input[type=tel]{
-	padding-left: rem(120);
+		@include media-breakpoint-up(sm){
+
+			padding-left: rem(120);
+		}
+		padding-left: rem(80);
 }
 .iti__selected-flag{
 	justify-content: center;

@@ -1,7 +1,11 @@
 
 	// start .topLine
 	.topLine {
-		padding-bottom: rem(25);
+			@include media-breakpoint-up(md) {
+
+				padding-bottom: rem(25);
+			}
+			padding-bottom: rem(15);
 		@include mt;
 		.row{
 				@include media-breakpoint-up(md){

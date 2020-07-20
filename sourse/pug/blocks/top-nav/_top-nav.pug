@@ -10,12 +10,14 @@ mixin mob-mnu()
 	//- h1= dataJson['lala'] 
 	
 	+b.menu-mobile--js.d-lg-none
-		+b.toggle-menu-mobile--js
-			span
 		+e.inner
+			+b.toggle-menu-mobile--js
+				span
 		
 			+mnu()
-			.text-right
+			+b.soc-block
+				+soc()
+			+e.btn(href="#") Заказать звонок
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav

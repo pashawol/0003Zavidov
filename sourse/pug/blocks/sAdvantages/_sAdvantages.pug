@@ -4,7 +4,7 @@ mixin sAdvantages()
 		.container 
 			.row
 				mixin item(i, t)
-					+e.col.col-lg-3.col-sm-6
+					+e.col.col-lg-3.col-sm-6(class="wow  animate__fadeInUp " data-wow-offset="100" )
 						+e.item
 							+e.img-wrap
 								img.lazy(src="#" data-src=`img/svg/sAdvantages-${i}.svg`, alt="")

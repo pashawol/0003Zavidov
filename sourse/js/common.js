@@ -260,13 +260,13 @@ function eventHandler() {
 	window.addEventListener('resize', () => {
 		heightses();
 
-	});
+	}, { passive: true });
 
 	heightses();
 
 	// листалка по стр
 	$(" .top-nav li a, .scroll-link").click(function () {
-		const elementClick = $(this).attr("href");
+		const elementClick = $(this).attr("href") + 120;
 		const destination = $(elementClick).offset().top;
 
 		$('html, body').animate({ scrollTop: destination }, 1100);
@@ -338,6 +338,7 @@ function eventHandler() {
 		watchOverflow: true,
 		slidesPerView: 1, 
 		spaceBetween: 30,
+		autoHeight: true,
 		loop: true,
 		navigation: {
 			nextEl: '.sRews .swiper-button-next',
@@ -358,7 +359,25 @@ function eventHandler() {
 		$(".sTeam__col:hidden").fadeIn(() => $(this).hide());
 	})
   
-	 
+	$(".sRews__more").click(function () {
+		$(this).toggleClass('show').parent().find('p').toggleClass('show')
+		swipersRew.updateAutoHeight();
+	})
+	var wow = new WOW({
+		mobile: false,
+		animateClass: 'animate__animated',
+	});
+	wow.init();
+
+
+	$(".menu-mobile__link").click(function () {
+		if ($(this).next()) {
+			$(this).next().slideToggle();
+			return false;
+		}
+	})
+	// paralax
+
  	//luckyone JS
 
 	$('.sContact__header').click(function () {
@@ -367,6 +386,29 @@ function eventHandler() {
 			$(this).toggleClass('active');
 		});
 	});
+
+	function animateCloud(el) {
+		var scene = document.getElementById(el);
+		var parallaxInstance = new Parallax(scene, {
+			invertX: false,
+			invertY: false,
+			// limitX: 200,
+			// limitY: 200
+		});
+	}
+	let blockWithAnimate = [
+		'sCategories-inner',
+		'sForm-inner1',
+		'sForm-inner2',
+		'sMap-inner',
+		'sCatalog-inner',
+		'sDo-inner',
+		'sLogos-inner1',
+		'sAbout-inner',
+		'sVideo-inner',
+	];
+	blockWithAnimate.forEach(element => animateCloud(element));
+ 
 
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 	if (isIE11) {
@@ -384,7 +426,7 @@ function eventHandler() {
 		// We execute the same script as before
 		let vh = window.innerHeight * 0.01;
 		document.documentElement.style.setProperty('--vh', `${vh}px`);
-	});
+	}, { passive: true });
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

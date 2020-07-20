@@ -29,6 +29,9 @@ mixin sAbout()
 						+e.label
 							+e.label-title Юрий Завидов
 							+e.label-text  Основатель компании
+						+cloud()(id="sAbout-inner")
+							+b.cloud(data-depth=".2" )
+								+pic('cloud.png','','')
 			+e.numbers
 				.row
 					mixin item(t,p)

@@ -4,10 +4,10 @@ mixin sDo()
 		.container
 			+b.section-title
 				h2: strong Что мы&nbsp;делаем для успешной и&nbsp;безопасной сделки
-				
+				+cloud()(id="sDo-inner")
 			.row
 				mixin item(i, t, p)
-					+e.col.col-lg-4.col-md-6
+					+e.col.col-lg-4.col-md-6(class="wow  animate__fadeInUp " data-wow-offset="100")
 						+e.item
 							+e.img-wrap
 								img.lazy(src="#" data-src=`img/svg/do-${i}.svg`, alt="")
@@ -21,4 +21,5 @@ mixin sDo()
 				+item("4",`Сопровождение сделки`,`Проверяем объект и&nbsp;готовим документы для сделки`)
 				+item("5",`Профессиональная фото и&nbsp;видеосъемка`,`Собственная продакшн студия обеспечит качественную &laquo;упаковку&raquo; Вашего объекта`)
 				+item("6",`Продвижение и&nbsp;реклама`,`Выводим объект на&nbsp;топовые позиции ведущих порталов недвижимости и&nbsp;рекламируем в&nbsp;соц.сетях`)
+		
 	// end sDo

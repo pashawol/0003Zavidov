@@ -6,12 +6,16 @@ mixin item-sos(icon, a='#')
 			+icon(icon)
 //- social buttons
 mixin soc()
-	+b.soc
-		if block
-			block
-		else
-			+item-sos('fb')
-			+item-sos('instagram')
-			+item-sos('telegram')
+	ul
+		li
+			a(href="#")
+				+icon('fb')
+		li
+			a(href="#")
+				+icon('instagram')
+		li
+			a(href="#")
+				+icon('youtube')
+
 
 //- /social buttons 

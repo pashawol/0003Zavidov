@@ -76,12 +76,18 @@
 }
 
 .sub-menu{
-	position: absolute;
-	left: 0;
-	top: 100%;
-	border-radius: 0px 10px 10px 10px;
-	min-width: rem(209);
-	background: #FFFFFF;
+	@include media-breakpoint-up(lg) {
+		position: absolute;
+		left: 0;
+		top: 100%;
+		background: #FFFFFF;
+		text-align: left;	
+		border-radius: 0px 10px 10px 10px;
+		min-width: rem(209);
+	 padding-right: 0;
+	}
+	padding-right: rem(20);
+	// text-align: center; 
 	list-style: none;
 	display: none;
 	&__link{
@@ -89,7 +95,11 @@
 		padding: rem(15) rem(20);
 		font-size: $small;
 		color: #000000;
-		text-align: left;
+			@include media-breakpoint-up(lg){
+
+				text-align: left;
+			}
+			text-align: right;
 		text-decoration: none !important;
 		&:hover{
 			color: $primary;

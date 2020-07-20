@@ -11,6 +11,8 @@
 		}
 		&__col{
 			margin-bottom: 30px;
+			position: relative;
+			z-index: 2;
 		}
 		&__img-wrap{
 			width: rem(100px);
