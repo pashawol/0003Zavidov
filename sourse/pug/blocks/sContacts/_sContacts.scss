@@ -1,10 +1,18 @@
 // start .sContacts
 .sContacts {
 	padding-top: calc(var(--sPT) / 4.1);
-	padding-bottom: calc(var(--sPB) / 1.25);
+	padding-bottom: calc(var(--sPB) / 2.5);
+	@include media-breakpoint-up(lg) {
+		padding-bottom: calc(var(--sPB) / 1.25);
+	}
 	&__img-wrap{
-		width: rem(89px);
-		height: rem(89px); 
+		width: rem(63px);
+		height: rem(63px); 
+
+		@include media-breakpoint-up(lg) {
+			width: rem(89px);
+			height: rem(89px); 
+		}
 		border-radius: 50%;
 		background: $light;
 		margin-bottom: rem(27);
@@ -12,14 +20,17 @@
 		justify-content: center;
 		align-items: center;
 		img{
-			max-width: rem(50);
+			max-width: rem(30);
+			@include media-breakpoint-up(lg)  {
+				max-width: rem(50);
+			}
 		}
 	}
 
 	&__col {
-		margin-bottom: rem(31);
+		margin-bottom: rem(30);
 	}
-	
+
 	&__title{
 		font-weight: bold;
 		@extend .h5;
@@ -43,7 +54,7 @@
 			padding-bottom: 0;
 			// padding: rem(34) rem(20) rem(0);
 		}
-		padding: rem(34) rem(20) rem(25);
+		padding: rem(27) rem(33) rem(30);
 		@include mt;
 		
 		margin-bottom: 0;
@@ -57,19 +68,22 @@
 			max-width: rem(300);
 			// @extend .h5;
 			font-weight: normal;
+			margin-bottom: 0;
 			@include media-breakpoint-down(sm) {
-				font-size: 1.2rem;
+				font-size: 1.07rem;
 			}
 			
-			@include media-breakpoint-up(xxl){
-				margin-bottom: 0;
+			@include media-breakpoint-up(xl){
 
 					min-height:7em;
-				}
+			}
 		}
 
 		a {
-			line-height: (29 / 17);
+			line-height: (29 / 16);
+			@include media-breakpoint-up(lg) {
+				line-height: (29 / 17);
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {}

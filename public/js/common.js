@@ -201,13 +201,8 @@ function eventHandler() {
 	JSCCommon.inputMask();
 	JSCCommon.customRange(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-<<<<<<< HEAD
-
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/contacts-mob.jpg);"></div>'); // /добавляет подложку для pixel perfect
-=======
-	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/main.jpg);"></div>')
+	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/blog.png);"></div>')
 	// /добавляет подложку для pixel perfect
->>>>>>> 1260dc0c36184097d634387cfc15976198818a70
 	// const url = document.location.href;
 	// $.each($(".top-nav__nav a "), function() {
 	// 	if (this.href == url) {

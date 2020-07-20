@@ -1,0 +1,150 @@
+// start .sBlog
+.sBlog {
+	padding-top: calc(var(--sPT) / 4.5);
+	padding-bottom: calc(var(--sPB) / 1.8);
+ 
+
+	&__loadMore {
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+	&__mnu {
+		padding: rem(22) 0;
+		color: $body-color;
+		background: #FFFFFF;
+		border-radius: 15px;
+		margin-bottom: rem(31);
+	}
+
+	&__mnuItem {
+		display: flex;
+		align-items: center;
+		min-height: rem(45);
+		padding: rem(5) rem(36);
+		
+		&:hover {
+			color: $primary;
+			background-color: #f6f6f6;
+		}
+
+		&.active {
+			color: $primary;
+			@include media-breakpoint-up (lg) {
+				background-color: #f6f6f6;
+			}
+		}
+	}
+
+	&__mnuBody {
+		@include media-breakpoint-down(lg) {
+			display: none;
+		}
+	}
+
+	&__col {
+		margin-bottom: rem(29);
+	}
+
+	.row {
+		margin-bottom: rem(28);
+	}
+	
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.sBlog
+
+.blogItem {
+	position: relative;
+	border-radius: $border-radius;
+	overflow: hidden;
+	background-color: #fff;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.05);
+
+	picture {
+		@include media-breakpoint-up(sm) {
+			height: rem(157);
+		}
+		overflow: hidden;
+	}
+
+	&:hover &__details{
+		background: #63A3D8;
+		color: #fff;
+		.icon {
+			color: #fff;
+		}
+	}
+
+	&__label {
+		position: absolute;
+		top: rem(10);
+		left: rem(10);
+		color: $body-color;
+		font-size: rem(12);
+		background-color: #fff;
+		border-radius: 100px;
+		padding: rem(6) rem(13) rem(6);
+	}
+
+	&__details {
+		font-size: $small;
+		font-weight: 500;
+		margin-top: auto;
+		background-color: #fbfbfb;
+		padding: rem(13) rem(27);
+
+		@include mt;
+		.icon {
+			margin-left: 3px;
+			font-size: rem(6);
+		}
+	}
+
+	&__date {
+		font-size: rem(12);
+		color: rgba($color: #000000, $alpha: 0.5);
+		margin-bottom: rem(10);
+	}
+
+	&__title {
+		@extend .h6;
+		font-weight: 700;
+		color: $body-color;
+		line-height: 1.35;
+	}
+
+	&__desc {
+		font-size: $small;
+		color: $body-color;
+	}
+
+	&__caption {
+		padding: rem(13) rem(26) rem(22);
+	}
+}
