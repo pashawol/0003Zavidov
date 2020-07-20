@@ -72,7 +72,7 @@
 										<use xlink:href="img/svg/sprite.svg#youtube"></use>
 									</svg></a></li>
 						</ul>
-					</div><a class="menu-mobile__btn" href="#">Заказать звонок</a>
+					</div><a class="menu-mobile__btn link-modal" href="#modal-call-lg">Заказать звонок</a>
 				</div>
 			</div>
 			<!--  мобильное меню-->
@@ -104,7 +104,7 @@
 										<div class="topLine__tel">+7 (495) 660-20-21
 										</div><span class="topLine__small-text">Пн-Пт.&nbsp;с&nbsp;9:00 до&nbsp;18:00</span></span></a>
 									</div>
-									<div class="col-auto d-none d-lg-block"><a class="topLine__btn" href="#">Заказать звонок</a>
+									<div class="col-auto d-none d-lg-block"><a class="topLine__btn link-modal" href="#modal-call">Заказать звонок</a>
 									</div>
 									<div class="col-auto d-lg-none">
 										<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
@@ -249,30 +249,92 @@
 			</footer>
 		</div>
 		<div class="d-none">
-			<div class="form-wrap modal-win modal-form" id="modal-call">
-				<form>
-					<input type="hidden" name="example-input-field"/>
-					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
-					<input class="utm_source" type="hidden" name="utm_source"/>
-					<input class="utm_term" type="hidden" name="utm_term"/>
-					<input class="utm_medium" type="hidden" name="utm_medium"/>
-					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
-					<div class="text-center">
-						<div class="form-wrap__title h3 ttu">Обратный звонок
+			<div class=" modal-win modal-win--lg modal-form" id="modal-call">
+				<div class="form-wrap">
+					<form>
+						<input type="hidden" name="example-input-field"/>
+						<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+						<input class="utm_source" type="hidden" name="utm_source"/>
+						<input class="utm_term" type="hidden" name="utm_term"/>
+						<input class="utm_medium" type="hidden" name="utm_medium"/>
+						<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+						<div class="row">
+							<div class="col-md-6">
+								<!-- picture-->
+								<picture> 
+									<source srcset="img/@2x/webp/girl.webp" type="image/webp" media="(min-width:576px)"/>
+									<source srcset="img/@1x/webp/girl.webp" type="image/webp"/>
+									<source srcset="img/@2x/girl.jpg" type="image/jpg" media="(min-width:576px)"/>
+									<source srcset="img/@1x/girl.jpg" type="image/jpg"/><img src="img/@2x/girl.jpg" alt=""/>
+								</picture>
+								<!-- /picture-->
+							</div>
+							<div class="col-md-6">
+								<div class="form-wrap__title h5 text-center">Оставьте заявку и&nbsp;наш специалист с&nbsp;Вами свяжется
+								</div>
+								<div class="form-wrap__input-wrap form-group form-group form-group--text"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/> 
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group form-group form-group--tel"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш номер телефона" name="tel" required="required"/>
+								</div>
+								<!-- +e.input-wrap--><input class="form-wrap__btn" type="submit" value="Отправить"/>
+								<div class="form-wrap__polite">Отправляя заявку, Вы&nbsp;соглашаетесь на&nbsp;обработку <a href="#">персональных данных </a>
+								</div>
+							</div>
 						</div>
-						<p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
-					</div>
-					<div class="form-wrap__input-wrap form-group form-group form-group--text"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/> 
-					</div>
-					<!-- +e.input-wrap-->
-					<div class="form-wrap__input-wrap form-group form-group form-group--tel"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" name="tel" required="required"/>
-					</div>
-					<!-- +e.input-wrap--><input class="form-wrap__btn" type="submit" value="Рассчитать"/>
-					<div class="form-wrap__polite">Отправляя заявку, Вы&nbsp;соглашаетесь на&nbsp;обработку <a href="#">персональных данных </a>
-					</div>
-				</form>
+					</form>
+				</div>
 			</div>
 			<!-- #modal-call-->
+			<div class=" modal-win modal-win--lg modal-form" id="modal-call-lg">
+				<div class="form-wrap">
+					<form>
+						<input type="hidden" name="example-input-field"/>
+						<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+						<input class="utm_source" type="hidden" name="utm_source"/>
+						<input class="utm_term" type="hidden" name="utm_term"/>
+						<input class="utm_medium" type="hidden" name="utm_medium"/>
+						<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+						<div class="form-wrap__title h3">Задать вопрос
+						</div>
+						<p>Менеджеры компании с&nbsp;радостью ответят на&nbsp;ваши вопросы и&nbsp;произведут расчет стоимости услуг и&nbsp;подготовят индивидуальное коммерческое предложение.</p>
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="form-wrap__input-wrap form-group form-group form-group--text"><input class="form-wrap__input form-control" type="text" placeholder="*Ваше Имя" name="text" required="required"/> 
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="col-lg-6">
+								<div class="form-wrap__input-wrap form-group form-group form-group--tel"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш номер телефона" name="tel" required="required"/>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="col-lg-6">
+								<div class="form-wrap__input-wrap form-group form-group form-group--email"><input class="form-wrap__input form-control" type="email" placeholder="Email" name="email" required="required"/>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="col-lg-6">
+								<div class="form-wrap__input-wrap form-group form-group form-group--text"><input class="form-wrap__input form-control" type="text" placeholder="Интересующий товар/услуга:" name="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+						</div>
+						<div class="form-wrap__input-wrap form-group form-group form-group--textarea"><textarea class="form-wrap__input form-control" placeholder="*Ваш вопрос" name="textarea"></textarea>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="row align-items-center">
+							<div class="col-lg-6"><input class="form-wrap__btn" type="submit" value="Отправить"/>
+							</div>
+							<div class="col-lg-6">
+								<div class="form-wrap__polite">Отправляя заявку, Вы&nbsp;соглашаетесь на&nbsp;обработку <a href="#">персональных данных </a>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- #modal-call-lg-->
 		</div>
 		<!-- modal-->
 		<script src="js/lazy.js"></script>

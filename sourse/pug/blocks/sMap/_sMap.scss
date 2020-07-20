@@ -98,7 +98,10 @@
 		padding-bottom: 0;
 		.sMap__map-wrap {
 			margin-top: 0;
-			height: 34.1rem;
+			height: 36.5rem;
+			@include media-breakpoint-up(lg) {
+				height: 34.1rem;
+			}
 		}
 	}
 } // end.sMap

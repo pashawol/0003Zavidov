@@ -8,15 +8,15 @@ html {
 	@include a-cent(x);
 	display: block;
 	pointer-events: none;
-	z-index: 1000;
+	z-index: 99999;
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
 	background-position: center 0;
-	//background-position: center -6284px;
+	// background-position: center 635px;
 	//background-position: center -10021px;//-9888px
 	opacity: 0;
-	// opacity: 0.7;
+	opacity: 0.7;
 }
 @include media-breakpoint-up(xl) {
 
@@ -573,6 +573,25 @@ body:not(.main-page) {
 				
 							box-shadow: 0px 0px 0px #2974B0 !important;
 						}
+}
+
+.btn-outline-primary {
+	border-radius: $border-radius;
+	border: solid 2px $primary;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: $primary;
+	font-weight: 700;
+	min-height: rem(69px);
+	padding: 5px;
+	@include mt;
+	max-width: rem(250);
+
+	&:hover {
+		background-color: $primary;
+		color: #fff;
+	}
 }
 
 .container{
