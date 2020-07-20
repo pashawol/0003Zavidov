@@ -1,16 +1,90 @@
 
 	// start .sArticalContent
 	.sArticalContent {
-		padding-top: rem(20);
+		padding-top: rem(24);
 		&__inner{
-
+			@include media-breakpoint-up(sm) {
+				padding: rem(48) rem(15) rem(43);
+			}
+			padding: rem(23) rem(21) rem(5);
 			margin-left: auto;
 			margin-right: auto;
 			max-width: rem(1030);
 			background-color: #ffffff;
+			border-radius: rem(15);
+			box-shadow: 0 rem(10) rem(50) rgba(0, 0, 0, 0.03);
 		}
 		// margin-top: rem(60);
-		 
+
+		&__inner-2 {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 829px;
+		}
+
+		&__row {
+			align-items: center;
+			padding-bottom: rem(15);
+		}
+
+		&__label {
+			background: #F4F4F4;
+			border-radius: rem(100);
+			padding: rem(6) rem(13);		
+			text-align: center;
+			margin-right: rem(-12);
+			@include media-breakpoint-up(sm) {
+				font-size: rem(12);
+			}
+			font-size: rem(11);
+		}
+
+		&__date {
+			font-size: rem(12);
+			opacity: 0.5;
+		}
+
+		h1 {
+			@include media-breakpoint-up(sm) {
+				margin-bottom: rem(40);
+			}
+			margin-bottom: rem(27);
+			@extend .h3;
+			// font-size: rem(10);
+			font-weight: bold;
+		}
+
+		h5 {
+			@include media-breakpoint-up(sm) {
+				margin-bottom: rem(13);
+				font-size: rem(20);
+				letter-spacing: rem(1);
+			}
+			margin-bottom: rem(22);
+			font-size: rem(16);
+			font-weight: bold;
+		}
+
+		img {
+			border-radius: rem(15);
+			max-width: 100%;
+			height: auto;
+			@include media-breakpoint-up(sm) {
+				margin-bottom: rem(38);
+			}
+			margin-bottom: rem(28);
+		}
+
+		p {
+			text-align: left;
+			line-height: (23 / 16);
+			margin-bottom: rem(25);
+			// @include media-breakpoint-up(sm) {
+			// 	font-size: rem(16);
+			// }
+			// font-size: rem(14);
+		}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

@@ -1,6 +1,31 @@
 
 	// start .sContent
 	.sContent {
+		padding-top: rem(13);
+		padding-bottom: rem(80);
+
+		p {
+			line-height: (20 / 16);
+			margin-bottom: rem(20);
+		}
+
+		ul {
+			list-style-type: none;
+		}
+
+		li {
+			margin-bottom: rem(14);
+			display: flex;
+			align-items: center;
+		}
+
+		&__icon-wrap {
+			margin-right: rem(8);
+			width: rem(23);
+			// align-items: center;
+		}
+
+	
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
