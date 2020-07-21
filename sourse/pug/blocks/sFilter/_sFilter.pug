@@ -12,6 +12,7 @@ mixin checkbox(typ="checkbox", text, name= typ )
 mixin sFilter()
 	// start sFilter
 	+b.sFilter#sFilter&attributes(attributes)
+		+cloud()(id="sFilter-inner")
 		+e.filter
 			+e.sort.d-lg-none.acardion-js Сортировать
 			+e.body.acardion-toggle

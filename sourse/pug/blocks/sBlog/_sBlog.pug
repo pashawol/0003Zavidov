@@ -15,6 +15,7 @@ mixin blogItem(d,t,s)
 mixin sBlog()
 	// start sBlog
 	+b.sBlog#sBlog&attributes(attributes)
+		+cloud()(id="sBlog-inner")
 		.container
 			.row
 				.col.order-lg-last
@@ -48,5 +49,4 @@ mixin sBlog()
 						+e.col.col-sm-6.col-md-4
 							+blogItem('13:21 27 мая 2020 г.','Какую квартиру выбрать: варианты планировок','И жить с комфортом')
 					+e.loadMore.btn-outline-primary(href="#") Показать ещё
-
 	// end sBlog

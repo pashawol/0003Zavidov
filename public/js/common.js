@@ -370,7 +370,7 @@ function eventHandler() {
 		}
 	}
 
-	var blockWithAnimate = ['sCategories-inner', 'sForm-inner1', 'sForm-inner2', 'sMap-inner', 'sCatalog-inner', 'sDo-inner', 'sLogos-inner1', 'sAbout-inner', 'sVideo-inner', 'sContacts-inner'];
+	var blockWithAnimate = ['sCategories-inner', 'sForm-inner1', 'sForm-inner2', 'sMap-inner', 'sCatalog-inner', 'sDo-inner', 'sLogos-inner1', 'sAbout-inner', 'sVideo-inner', 'sContacts-inner', 'sBlog-inner', 'sFilter-inner'];
 	blockWithAnimate.forEach(function (element) {
 		return animateCloud(element);
 	});

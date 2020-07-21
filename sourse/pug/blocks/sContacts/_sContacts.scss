@@ -28,8 +28,14 @@
 		}
 	}
 
+	.cloud {
+		top: -300px !important;
+		left: 40% !important;
+	}
+
 	&__col {
 		margin-bottom: rem(30);
+		position: relative;
 	}
 
 	&__title{

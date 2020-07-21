@@ -415,6 +415,8 @@ function eventHandler() {
 		'sAbout-inner',
 		'sVideo-inner',
 		'sContacts-inner',
+		'sBlog-inner',
+		'sFilter-inner',
 	];
 	blockWithAnimate.forEach(element => animateCloud(element));
  

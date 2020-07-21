@@ -61,6 +61,11 @@
 		margin-bottom: rem(28);
 	}
 
+	.cloud {
+		left: 50% !important;
+		top: 65% !important;
+	}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
