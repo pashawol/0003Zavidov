@@ -494,7 +494,7 @@ body:not(.main-page) {
 	width: 100%;
 	left: 0;
 	top: 0;
-	z-index: 200;
+	z-index: 350;
 	@include mt;
 	&::before{
 		content: '';
@@ -551,11 +551,10 @@ body:not(.main-page) {
 		content: '';
 		z-index: -1;
 		background: #83C7FF;
-		opacity: 0.4;
-		filter: blur(30px);
+		filter: blur(50px);
 		border-radius: 60px;
 		@include a-cent(x);
-		width: rem(141px);
+		width: 90%;
 		height: rem(28px);
 		bottom: -6px;
 		@include mt;
