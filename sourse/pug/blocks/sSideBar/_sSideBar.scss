@@ -72,21 +72,21 @@
 } // end.sSideBar
 
 
-.sSideBar--bSale {
-	padding-top: 23px !important;
-	@include media-breakpoint-down(lg) {
-		padding-bottom: rem(42);
-	}
+// .sSideBar--bSale {
+// 	padding-top: 23px !important;
+// 	@include media-breakpoint-down(lg) {
+// 		padding-bottom: rem(42);
+// 	}
 
-	.form-wrap {
-		@include media-breakpoint-up(xl) {
-			padding: 40px 70px 30px !important;
-		}
-		padding: 40px 29px 30px !important;
-		@include media-breakpoint-up(lg) {
-			padding: 40px 29px 30px !important;
-		}
-		padding: 38px 73px 29px!important;
-	}
+	// .form-wrap {
+	// 	@include media-breakpoint-up(xl) {
+	// 		padding: 40px 70px 30px !important;
+	// 	}
+	// 	padding: 40px 29px 30px !important;
+	// 	@include media-breakpoint-up(lg) {
+	// 		padding: 40px 29px 30px !important;
+	// 	}
+	// 	padding: 38px 73px 29px!important;
+	// }
 
-}
+// }
