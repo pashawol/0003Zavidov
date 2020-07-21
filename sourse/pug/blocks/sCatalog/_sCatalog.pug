@@ -1,9 +1,52 @@
+mixin itemProd(i, sl)
+	+b.prodItem(href="#")
+		+e.DIV.label  Мы рекомендуем
+		picture.bg-wrap
+			if sl
+				source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/prod-${i}.webp`)
+				img.object-fit-js.img-bg.swiper-lazy(src="#" data-src=`img/@2x/prod-${i}.jpg`, alt="")
+			else
+				source.lazy(srcset="#" data-srcset=`img/@2x/webp/prod-${i}.webp`)
+				img.object-fit-js.img-bg.lazy(src="#" data-src=`img/@2x/prod-${i}.jpg`, alt="")
+		+e.DIV.caption
+			table
+				mixin tr(i ,p)
+					tr
+						td.text-center
+							+icon(i)
+						td!= p
+				+tr(`mark`,`г&nbsp;Москва, пер Сивцев Вражек, д&nbsp;44/28`)
+				+tr(`area`,`198 м2`)
+				+tr(`home`,`Продажа`)
+			+e.DIV.small Вторичная недвижимость
+		+e.DIV.price-wrap
+			+e.DIV.price--old 170 000 000
+			+e.DIV.price--new 145 000 000 р.
+		
 mixin sCatalog()
 	// start sCatalog
 	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sCatalog
-				
-			.row
+			+b.section-title
+				h2: strong Лучшие предложения
+				+cloud()(id="sCatalog-inner")
+			+e.slider--js.swiper-container
+				.swiper-wrapper
+					+e.slide.swiper-slide
+						+itemProd('1', "sl")
+					+e.slide.swiper-slide
+						+itemProd('2', "sl")
+					+e.slide.swiper-slide
+						+itemProd('3', "sl")
+					+e.slide.swiper-slide
+						+itemProd('4', "sl")
+					+e.slide.swiper-slide
+						+itemProd('4', "sl")
+			.row.align-items-center
+				.col
+					.control-wrap
+						+arrow
+				.col-sm-auto.text-center
+					a.link-more(href="#") Все предложения
+						+icon("arrow-right")
 	// end sCatalog

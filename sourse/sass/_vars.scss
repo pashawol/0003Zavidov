@@ -36,6 +36,8 @@ $grays: ("100": $gray-100,
   "900": $gray-900) !default;
 // fusv-enable
 
+
+$section-light: #E5E5E5;
 $blue: #70ABDC !default;
 $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
@@ -112,7 +114,7 @@ $enable-caret: true !default;
 $enable-rounded: true !default;
 $enable-shadows: false !default;
 $enable-gradients: false !default;
-$enable-transitions: false !default;
+$enable-transitions: true !default;
 $enable-reduced-motion: true !default;
 $enable-grid-classes: true !default;
 $enable-button-pointers: true !default;
@@ -150,6 +152,7 @@ $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) 
 // Settings for the `<body>` element.
 
 $body-bg: #f8f8f8 !default;
+// $body-bg: #000 !default;
 $body-color: #000000 !default;
 $body-text-align: null !default;
 
@@ -186,7 +189,7 @@ $grid-breakpoints: (xs: 0,
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  // xxl: 1400px
+  //xxl: 1400px
   ) !default;
 // scss-docs-end grid-breakpoints
 
@@ -203,7 +206,7 @@ $container-max-widths: (sm: 540px,
   md: 720px,
   lg: 960px,
   xl: 1200px,
-  // xxl: 1320px
+  //xxl: 1320px
   ) !default;
 // scss-docs-end container-max-widths
 

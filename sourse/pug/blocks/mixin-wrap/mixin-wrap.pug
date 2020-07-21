@@ -35,3 +35,9 @@ mixin page-title(t)
 	.page-title
 		.container
 			h1= t
+
+mixin cloud(i="cloud.png")
+	.cloud-wrap&attributes(attributes)
+		+b.cloud(data-depth=".5" )
+			+pic(i,'','')
+		block

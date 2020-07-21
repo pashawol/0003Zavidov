@@ -10,3 +10,16 @@ mixin sSideBar()
 				+polite
 				
 	// end sSideBar
+
+mixin sSideBar10()
+	// start sSideBar
+	+b.ASIDE.sSideBar--bSale.section#sSideBar&attributes(attributes)
+		.container
+			+form-wrap
+				p #[strong Оставьте заявку, наш менеджер свяжется с&nbsp;Вами]
+				+input('Ваше имя')
+				+input('Ваш номер телефона','tel')
+				+e.btn(type="button") Продать бизнес
+				+polite
+				
+	// end sSideBar

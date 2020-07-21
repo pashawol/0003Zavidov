@@ -2,8 +2,22 @@ mixin sLogos()
 	// start sLogos
 	+b.SECTION.sLogos.section#sLogos&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sLogos
-				
+			+b.section-title
+				h2: strong Оказываем содействие в&nbsp;получении ипотеки на&nbsp;выгодных условиях
+				p В&nbsp;каждом банке своя политика одобрения ипотечных заявок, которая напрямую зависит от&nbsp;категории объекта. Основываясь на&nbsp;собственном опыте, мы&nbsp;подбираем тот банк, где вероятность одобрения вашей заявки будет максимальной, а&nbsp;ставка по&nbsp;кредиту минимальной!
 			.row
+				mixin item(i, t)
+					+e.col.col-md-4.col-sm-6
+						+e.img-wrap
+							+pic(`logo-${i}`,'','lazy',0)
+				+item("1")
+				+item("2")
+				+item("3")
+				+item("4")
+				+item("5")
+				+item("6")
+			+e.btn(href="#") Получить ипотеку
+		+cloud()(id="sLogos-inner1")
+			+b.cloud(data-depth=".2" )
+				+pic('cloud.png','','')
 	// end sLogos

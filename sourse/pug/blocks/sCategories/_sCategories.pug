@@ -4,7 +4,7 @@ mixin sCategories()
 		.container
 			+b.section-title
 				h2.h2-sm #[strong Сопровождаем сделки &laquo;под ключ&raquo;:] покупка, продажа, аренда
-				
+				+cloud()(id="sCategories-inner")
 			+e.slider--js.swiper-container
 				.swiper-wrapper
 					mixin slide(i, t)
@@ -12,8 +12,8 @@ mixin sCategories()
 							+e.item(href="#")
 								+e.img-wrap.bg-wrap
 									picture.picture-bg
-										source(srcset=`img/@2x/webp/sCategories-${i}.webp`)
-										img.object-fit-js(src=`img/@2x/sCategories-${i}.jpg`, alt="")
+										source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/sCategories-${i}.webp`)
+										img.object-fit-js.swiper-lazy(src="#" data-src=`img/@2x/sCategories-${i}.jpg`, alt="")
 									+e.center Посмотреть предложения
 										+icon('arrow-right')
 								+e.DIV.title= t

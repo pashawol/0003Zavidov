@@ -160,3 +160,17 @@
     @content;
   }
 }
+
+
+//tear container
+@mixin tear($width) {
+  position: relative;
+  width: $width;
+  left: calc(-1 * (#{$width} - 100%) / 2);
+}
+
+@mixin tear-drop() {
+  position: static;
+  width: 100%;
+  left: unset;
+}

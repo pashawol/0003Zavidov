@@ -1,0 +1,51 @@
+mixin blogItem(d,t,s)
+	+b.blogItem(href="#")
+		+e.DIV.label Недвижимость
+		+pic('sCategories-4','','lazy','')
+		//- picture.bg-wrap
+		//- 	source.lazy(srcset="#" data-srcset=`img/@2x/webp/sCategories-4.webp`)
+		//- 	img.object-fit-js.img-bg.lazy(src="#" data-src=`img/@2x/sCategories-4.jpg`, alt="")
+		+e.DIV.caption
+			+e.date= d
+			+e.title= t
+			+e.desc= s
+		+e.details Читать далее
+			+icon('arrow-right')
+
+mixin sBlog()
+	// start sBlog
+	+b.sBlog#sBlog&attributes(attributes)
+		.container
+			.row
+				.col.order-lg-last
+					+e.mnu
+						+e.mnuItem.active(href="#") Все статьи
+						+e.mnuBody
+							+e.mnuItem(href="#") Новости
+							+e.mnuItem(href="#") Недвижимость
+							+e.mnuItem(href="#") Ипотека
+							+e.mnuItem(href="#") Мой дом
+
+				.col-lg-9
+					.row
+						+e.col.col-sm-6.col-md-4
+							+blogItem('13:21 27 мая 2020 г.','Какую квартиру выбрать: варианты планировок','И жить с комфортом')
+						+e.col.col-sm-6.col-md-4
+							+blogItem('13:21 27 мая 2020 г.','Какую квартиру выбрать: варианты планировок','И жить с комфортом')
+						+e.col.col-sm-6.col-md-4
+							+blogItem('13:21 27 мая 2020 г.','Какую квартиру выбрать: варианты планировок','И жить с комфортом')
+						+e.col.col-sm-6.col-md-4
+							+blogItem('13:21 27 мая 2020 г.','Какую квартиру выбрать: варианты планировок','И жить с комфортом')
+						+e.col.col-sm-6.col-md-4
+							+blogItem('13:21 27 мая 2020 г.','Какую квартиру выбрать: варианты планировок','И жить с комфортом')
+						+e.col.col-sm-6.col-md-4
+							+blogItem('13:21 27 мая 2020 г.','Какую квартиру выбрать: варианты планировок','И жить с комфортом')
+						+e.col.col-sm-6.col-md-4
+							+blogItem('13:21 27 мая 2020 г.','Какую квартиру выбрать: варианты планировок','И жить с комфортом')
+						+e.col.col-sm-6.col-md-4
+							+blogItem('13:21 27 мая 2020 г.','Какую квартиру выбрать: варианты планировок','И жить с комфортом')
+						+e.col.col-sm-6.col-md-4
+							+blogItem('13:21 27 мая 2020 г.','Какую квартиру выбрать: варианты планировок','И жить с комфортом')
+					+e.loadMore.btn-outline-primary(href="#") Показать ещё
+
+	// end sBlog

@@ -2,6 +2,11 @@
 	// start .sArticalContent
 	.sArticalContent {
 		padding-top: rem(24);
+		@include media-breakpoint-up(sm) {
+			padding-bottom: rem(78);
+		}
+		padding-bottom: rem(50);
+		
 		&__inner{
 			@include media-breakpoint-up(sm) {
 				padding: rem(48) rem(15) rem(43);

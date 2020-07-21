@@ -32,6 +32,8 @@
 			align-items: center;
 		}
 		.form-wrap{
+			position: relative;
+			z-index: 2;
 			background: rgba($color: #FFFFFF, $alpha: .2);
 			// opacity: 0.2;
 			border-radius: 15px;
@@ -43,7 +45,11 @@
 
 				max-width: rem(458);
 			}
-			padding: rem(43);
+			@include media-breakpoint-up(sm) {
+
+				padding: rem(43);
+			}
+			padding: rem(43) rem(25);
 			padding-bottom: rem(25);
 			@include media-breakpoint-up(xl) {
 
@@ -75,4 +81,40 @@
 	@include media-breakpoint-down(sm) {}
 	@include media-breakpoint-down(xs) {} 
 
+
+	//02-contacnt
+	&__question {
+		display: block;
+		@extend .btn;
+		@extend .btn-primary;
+		width: 100%;
+		// max-width: rem(220px);
+		@include media-breakpoint-up(lg) {
+			margin-left: auto;
+		}
+	}
+	&--sm {
+		--sPT: #{rem(50)};
+		--sPB: #{rem(47)};
+		color: #fff;
+		p {
+			line-height: 1.4;
+			max-width: rem(440);
+			@include media-breakpoint-up(lg) {
+				margin-left: rem(-10);
+			}
+			@include media-breakpoint-down(lg) {
+				margin-bottom: rem(50);
+			}
+		}
+		h3 {
+			letter-spacing: rem(0.4);
+		}
+		@include media-breakpoint-up(lg) {
+			p, h3 {
+				margin-bottom: 0;
+			}
+
+		}
+	}
 } // end.sForm

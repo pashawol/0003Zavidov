@@ -1,26 +1,49 @@
 
-	// start .sSideBar
-	.sSideBar {
+// start .sSideBar
+.sSideBar {
+	@include media-breakpoint-up(sm) {
+		padding-top: 0;
+	}
+	padding-top: 15px;
+	@include media-breakpoint-down(md) {
+		padding-bottom: rem(42);
+	}
 
-		.form-wrap {
-			background: #F8F8F8;
-			box-shadow: 0 10px 50px rgba(0, 0, 0, 0.05);
-			border-radius: 15px;
-			padding: 5px 5px 5px 5px;
-		}
 
-		p {
-			@include rfs(rem(20));
-			line-height: (26 / 16);
-			text-align: center;
-			margin-bottom: 34px;
+	.form-wrap {
+		background: #F8F8F8;
+		box-shadow: 0 rem(10) rem(50) rgba(0, 0, 0, 0.05);
+		border-radius: rem(15);
+		@include media-breakpoint-up(xl) {
+			padding: rem(40) rem(63) rem(42) rem(77);
 		}
+		padding: rem(33) rem(18) rem(29);
+		@include media-breakpoint-up(lg) {
+			padding: rem(33) rem(18) rem(29);
+		}
+		padding: rem(33) rem(26) rem(29);
+		@include media-breakpoint-up(md) {
+			padding: rem(33) rem(14) rem(29);
+		}
+		padding: rem(33) rem(26) rem(29);
+	}
 
-		.form-wrap__polite {
-			color: #000000;
-			max-width: 351px;
-			opacity: 0.7;
+	p {
+		@include media-breakpoint-down(md) {
+			font-size: rem(18);
 		}
+		@include rfs(rem(20));
+		line-height: (26 / 16);
+		text-align: center;
+		margin-bottom: rem(34);
+	}
+
+	.form-wrap__polite {
+		color: #000000;
+		max-width: rem(351);
+		opacity: 0.7;
+		padding-bottom: rem(14);
+	}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -47,3 +70,23 @@
 	@include media-breakpoint-down(xs) {} 
 
 } // end.sSideBar
+
+
+.sSideBar--bSale {
+	padding-top: 23px !important;
+	@include media-breakpoint-down(lg) {
+		padding-bottom: rem(42);
+	}
+
+	.form-wrap {
+		@include media-breakpoint-up(xl) {
+			padding: 40px 70px 30px !important;
+		}
+		padding: 40px 29px 30px !important;
+		@include media-breakpoint-up(lg) {
+			padding: 40px 29px 30px !important;
+		}
+		padding: 38px 73px 29px!important;
+	}
+
+}

@@ -1,6 +1,93 @@
 
 	// start .sDo
 	.sDo {
+		background: #FFFFFF;
+		@include media-breakpoint-up(xl) { 
+			--sPT: #{rem(95)};
+			--sPB: #{rem(105)};
+		}
+		.section-title{
+			max-width: rem(700);
+		}
+		&__col{
+			margin-bottom: 30px;
+			position: relative;
+			z-index: 2;
+		}
+		&__img-wrap{
+			width: rem(100px);
+			height: rem(100px); 
+			border-radius: 50%;
+			margin-left: auto;
+			margin-right: auto;
+			background: #EDF7FF;
+			margin-bottom: rem(25);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			img{
+				max-width: rem(50);
+			}
+		}
+		&__title{
+			font-weight: bold;
+			@extend .h4;
+			line-height: (32 / 25);
+			padding-bottom: rem(10);
+			margin-bottom: auto;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: rem(270);
+			&::after{
+				content: '';
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: rem(20);
+				width: rem(46);
+				height: 2px;
+				background-color: #E0E0E0;
+				display: block;
+			}
+		}
+		&__item{
+			background: #FFFFFF;
+			box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.05);
+			border-radius: 10px;
+			@include media-breakpoint-up(xl) {
+
+				padding: rem(44) rem(30) rem(0);
+			}
+			@include media-breakpoint-up(lg) {
+				padding-bottom: 0;
+				// padding: rem(34) rem(20) rem(0);
+			}
+			padding: rem(34) rem(20) rem(25);
+			@include mt;
+			text-align: center;
+			
+			margin-bottom: 0;
+			min-height: 100%;
+			&:hover{
+				color: #ffffff;
+				background-color: $primary;
+			}
+			p{
+				line-height: (29 / 20);
+				margin-left: auto;
+				margin-right: auto;
+				max-width: rem(300);
+				@extend .h5;
+				font-weight: normal;
+				@include media-breakpoint-down(sm) {
+					font-size: 1.2rem;
+				}
+				
+					@include media-breakpoint-up(xl){
+
+						min-height:7em;
+					}
+			}
+		}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

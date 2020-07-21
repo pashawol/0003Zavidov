@@ -2,9 +2,14 @@
 	// start .sCategories
 	.sCategories {
 		--sPB: #{rem(62)};
-		h2{
+		--swiperColorDef: #{$body-color};
+		--swiperBorderColorDef: var(--swiperBgDef);
+		.section-title{
 			max-width: rem(755);
+			position: relative;
+
 		}
+		
 		&__slider{
 			overflow: inherit;
 		}

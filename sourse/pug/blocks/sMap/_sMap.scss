@@ -5,6 +5,7 @@
 			
 		
 			--sPT: #{rem(110)};
+			--sPB: #{rem(40)};
 		}
 		 input{
 			 text-align: center;
@@ -52,7 +53,9 @@
 			 @extend .btn-block;
 			 width: rem(244);
 			//  margin-top: rem(10);
-			 transform: translateY(50%);
+			// top: ;
+			bottom: rem(- 73 / 2 );
+			//  transform: translateY(50%);
 			//  margin-bottom: rem(-40);
 		 }
 		 &__map-wrap{
@@ -60,6 +63,10 @@
 			 margin-right: auto;
 			 margin-top: rem(-80);
 			 @include block(1540, 750);
+			 @include media-breakpoint-up(xl) {
+
+			 height: rem(750px);
+			 }
 			 max-height: rem(750px);
 		 }
 	@include media-breakpoint-up(xl) {}
@@ -86,4 +93,15 @@
 	@include media-breakpoint-down(sm) {}
 	@include media-breakpoint-down(xs) {} 
 
+	&--sm {
+		padding-top: 0;
+		padding-bottom: 0;
+		.sMap__map-wrap {
+			margin-top: 0;
+			height: 36.5rem;
+			@include media-breakpoint-up(lg) {
+				height: 34.1rem;
+			}
+		}
+	}
 } // end.sMap

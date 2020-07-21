@@ -1,0 +1,41 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/sAdvantages/_sAdvantages.pug 
+include ../blocks/sCategories/_sCategories.pug 
+include ../blocks/sCatalog/_sCatalog.pug 
+include ../blocks/sDo/_sDo.pug 
+include ../blocks/sLogos/_sLogos.pug 
+include ../blocks/sAbout/_sAbout.pug 
+include ../blocks/sTeam/_sTeam.pug 
+include ../blocks/sRews/_sRews.pug 
+include ../blocks/sVideo/_sVideo.pug 
+include ../blocks/sMap/_sMap.pug 
+include ../blocks/sArticalContent/_sArticalContent.pug 
+include ../blocks/sSideBar/_sSideBar.pug 
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Продажа бизнеса'
+	title= title
+block pagecontent 
+	+mob-mnu()
+	+header()
+		.fixed-line
+			.container
+				+topLine()
+				+top-nav()
+	+breadcrumb("Главная", title)
+	+page-title(title)
+	.container
+		+b.main-row.row
+			+e.sideBar.col-lg-5.order-lg-last
+				+sSideBar10
+			+e.content.col
+				+sContent10
+
+	+footer()
+	

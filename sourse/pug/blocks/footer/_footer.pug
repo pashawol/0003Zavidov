@@ -1,4 +1,28 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			h2 footer
+			+e.top-row.row
+				+e.logo-col.col
+					+e.A.logo(href='/')
+						img.lazy(src="#" data-src="img/svg/logo.svg" alt="")
+				.col-auto.d-none.d-lg-block
+					+e.NAV.footer-menu
+						ul
+							li: a(href="#") Главная
+							li: a(href="#") Каталог объектов
+							li: a.scroll-link(href="#sAbout" ) Об агентстве
+							li: a(href="#") Блог
+							li: a(href="#") Наша команда
+							li: a(href="#") Отзывы клиентов
+				+socLinksFooter('d-lg-none')
+			+e.lower-row.row
+				+e.txt-col.col
+					| © 2020. All Rights Reserved. Design by
+					|
+					a(href="#") ZAVIDOV.
+				+socLinksFooter('d-none d-lg-block')
+
+mixin socLinksFooter(DisplayClasses)
+	+e.soc-links-col.col-auto(class=DisplayClasses)
+		+soc()
+		
