@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Блог</title>
+		<title>Каталог объектов</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, shrink-to-fit=no">
@@ -111,22 +111,36 @@
 				<ol class="breadcrumb container" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
 					<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
 							<meta itemprop="position" content="1"/></a></li>
-					<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Блог</span>
+					<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Каталог объектов</span>
 							<meta itemprop="position" content="2"/></a></li>
 				</ol>
 			</nav>
 			<div class="page-title">
 				<div class="container">
-					<h1>Блог</h1>
+					<h1>Каталог объектов</h1>
 				</div>
 			</div>
 			<!-- start sBlog-->
 			<div class="sBlog" id="sBlog">
+				<div class="cloud-wrap" id="sBlog-inner">
+					<div class="cloud" data-depth=".5">
+						<!-- picture-->
+						<picture> 
+							<source srcset="img/@2x/webp/cloud.webp" type="image/webp" media="(min-width:576px)"/>
+							<source srcset="img/@1x/webp/cloud.webp" type="image/webp"/>
+							<source srcset="img/@2x/cloud.png" type="image/png" media="(min-width:576px)"/>
+							<source srcset="img/@1x/cloud.png" type="image/png"/><img src="img/@2x/cloud.png" alt=""/>
+						</picture>
+						<!-- /picture-->
+					</div>
+				</div>
 				<div class="container">
 					<div class="row">
 						<div class="col order-lg-last">
-							<div class="sBlog__mnu"><a class="sBlog__mnuItem active" href="#">Все статьи</a>
-								<div class="sBlog__mnuBody"><a class="sBlog__mnuItem" href="#">Новости</a><a class="sBlog__mnuItem" href="#">Недвижимость</a><a class="sBlog__mnuItem" href="#">Ипотека</a><a class="sBlog__mnuItem" href="#">Мой дом</a>
+							<div class="sBlog__mnu">
+								<div class="sBlog__accardion d-lg-none acardion-js">Все статьи
+								</div>
+								<div class="sBlog__mnuBody acardion-toggle"><a class="sBlog__mnuItem active" href="#">Все статьи</a><a class="sBlog__mnuItem" href="#">Новости</a><a class="sBlog__mnuItem" href="#">Недвижимость</a><a class="sBlog__mnuItem" href="#">Ипотека</a><a class="sBlog__mnuItem" href="#">Мой дом</a>
 								</div>
 							</div>
 						</div>

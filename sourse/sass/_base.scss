@@ -12,12 +12,11 @@ html {
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
-	background-position: center 22px;
-	// background-position: center 635px;
+	background-position: center 0;
+	background-position: center 18px;
 	//background-position: center -10021px;//-9888px
 	opacity: 0;
-	opacity: 0.7;
-	background-repeat: no-repeat;
+	opacity: 0.6;
 }
 @include media-breakpoint-up(xl) {
 
@@ -251,6 +250,10 @@ ul {
 	}
 }
 
+.mb-30 {
+	margin-bottom: rem(30);
+}
+
 .form-control{
 	@include mt;
 }
@@ -299,6 +302,24 @@ select.form-control-sm {
 		position: absolute;
 		left: 0;
 		top: 0;
+	}
+}
+
+select.form-control-standart {
+	background-position: 93.1% center;
+	@include media-breakpoint-up(lg) {
+		max-width: rem(295px);
+		background-position: 94% center;
+	}
+	padding: rem(13) rem(11);
+	margin-bottom: rem(20);
+	font-size: rem(12px);
+	min-height: auto;
+	background-image: url('../img/chevron-down-primary.svg');
+	background-repeat: no-repeat;
+	color: $primary;
+	&:focus {
+		color: $primary;
 	}
 }
 
@@ -495,7 +516,7 @@ body:not(.main-page) {
 	width: 100%;
 	left: 0;
 	top: 0;
-	z-index: 200;
+	z-index: 350;
 	@include mt;
 	&::before{
 		content: '';
@@ -552,11 +573,10 @@ body:not(.main-page) {
 		content: '';
 		z-index: -1;
 		background: #83C7FF;
-		opacity: 0.4;
-		filter: blur(30px);
+		filter: blur(50px);
 		border-radius: 60px;
 		@include a-cent(x);
-		width: rem(141px);
+		width: 90%;
 		height: rem(28px);
 		bottom: -6px;
 		@include mt;

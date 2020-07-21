@@ -58,7 +58,11 @@ $output-bourbon-deprecation-warnings: false;
 }
 .breadcrumb-wrap{
 	background-color: #ffffff;
-	margin-bottom: rem(45);
+		@include media-breakpoint-up(sm) {
+
+			margin-bottom: rem(45);
+		}
+		margin-bottom: rem(45 / 2);
 }
 @import "./node_modules/bootstrap/scss/pagination";
 
@@ -68,16 +72,65 @@ $output-bourbon-deprecation-warnings: false;
 
 .pagination-wrapper li .page-numbers {
 	@extend .page-link;
+	background-color: #fff;
+	border-radius: 50%;
+	text-align: center;
 }
 
 .pagination-wrapper li {
+	flex-shrink: 0;
 	@extend .page-item;
+	margin-left: rem(5);
+	margin-right: rem(5);
+	width: rem(30px);
+	height: rem(30px);
+	@include media-breakpoint-up(sm) {
+		margin-left: rem(6);
+		margin-right: rem(6);
+		width: rem(35px);
+		height: rem(35px);
+	}
+	font-size: $small;
+
+	span, a{
+		display: flex !important;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+	}
 
 	.current {
+		pointer-events: none;
 		z-index: 1;
-		// color: $pagination-active-color;
-		// background-color: $pagination-active-bg;
+		color: $pagination-active-color;
+		background-color: $pagination-active-bg;
 		// border-color: $pagination-active-border-color;
+	}
+}
+
+.pagination-wrapper {
+	padding-top: rem(20);
+	padding-bottom: rem(28);
+	.page-numbers {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.prev, .next {
+		width: rem(29px);
+		height: rem(29px);
+		@include media-breakpoint-up(sm) {
+			width: rem(35px);
+			height: rem(35px);
+		}
+		border: 1px solid #eaeaea !important;
+		background-color: transparent !important;
+
+		&:hover {
+			background-color: #fff !important;
+		}
 	}
 }
 

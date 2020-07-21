@@ -16,6 +16,7 @@ include ../blocks/sVideo/_sVideo.pug
 include ../blocks/sMap/_sMap.pug 
 include ../blocks/sArticalContent/_sArticalContent.pug 
 include ../blocks/sSideBar/_sSideBar.pug 
+include ../blocks/sFilter/_sFilter.pug 
 
 block variables
 	- let  mainPage= null
@@ -31,7 +32,41 @@ block pagecontent
 				+top-nav()
 	+breadcrumb("Главная",title)
 	+page-title(title)
-	+sBlog()
+	+sCategories-sm()
+	.container.mb-30
+		.row
+			.col-lg-3
+				+sFilter()
+					+e.block
+						.strong.mb-2 Тип недвижимости
+						+input('Выбрать','select')(class="form-control-sm ")
+					+e.block
+						.strong.mb-2 Цена (руб.):
+						+range("1000000", "30000000")
+					+e.block
+						.strong.mb-2 Населённый пункт
+						+input('Выбрать','select')(class="form-control-sm ")
+					+e.block
+						.strong.mb-2 Метро
+						+input('Выбрать','select')(class="form-control-sm ")
+					+e.block
+						.strong.mb-2 Общая прощадь (м2):
+						+range("20", "44000")
+			.col-lg-9
+				.row
+					mixin row()
+						.col-sm-6.col-lg-4.mb-30
+							+itemProd('2')
+						.col-sm-6.col-lg-4.mb-30
+							+itemProd('3')
+						.col-sm-6.col-lg-4.mb-30
+							+itemProd('4')
+					+row
+					+row
+					+row
+				+pugin()
+
+
 	//- +sForm-sm()
 	//- +sMap-sm()
 	+footer()

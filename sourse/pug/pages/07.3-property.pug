@@ -1,0 +1,98 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/sBlog/_sBlog.pug 
+include ../blocks/sAdvantages/_sAdvantages.pug 
+include ../blocks/sCategories/_sCategories.pug 
+include ../blocks/sCatalog/_sCatalog.pug 
+include ../blocks/sDo/_sDo.pug 
+include ../blocks/sLogos/_sLogos.pug 
+include ../blocks/sAbout/_sAbout.pug 
+include ../blocks/sTeam/_sTeam.pug 
+include ../blocks/sRews/_sRews.pug 
+include ../blocks/sVideo/_sVideo.pug 
+include ../blocks/sMap/_sMap.pug 
+include ../blocks/sArticalContent/_sArticalContent.pug 
+include ../blocks/sSideBar/_sSideBar.pug 
+include ../blocks/sFilter/_sFilter.pug 
+include ../blocks/sPropertyMnu/_sPropertyMnu.pug 
+include ../blocks/sDescription/_sDescription.pug 
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Вторичная недвижимость'
+	title= title
+block pagecontent 
+	//- +mob-mnu()
+	+header()
+		.fixed-line
+			.container
+				+topLine()
+				+top-nav()
+	+breadcrumb("Главная",title)
+	+page-title(title)
+	//- +sCategories-sm()
+	.container.mb-30.pt-2
+		.row
+			.col-lg-3
+				+sPropertyMnu()
+					+e.accardion.d-lg-none.acardion-js Вторичная недвижимость
+					+e.mnuBody.acardion-toggle
+						+e.mnuItem.active(href="#") Вторичная недвижимость
+						+e.mnuItem(href="#") Загородная недвижимость
+						+e.mnuItem(href="#") Коммерческая недвижимость
+						+e.mnuItem(href="#") Зарубежная недвижимость
+				+sFilter()
+					+e.block
+						.strong.mb-2 Тип недвижимости
+						+input('Выбрать','select')(class="form-control-sm ")
+					+e.block
+						.strong.mb-2 Цена (руб.):
+						+range("1000000", "30000000")
+					+e.block
+						.strong.mb-2 Населённый пункт
+						+input('Выбрать','select')(class="form-control-sm ")
+					+e.block
+						.strong.mb-2 Метро
+						+input('Выбрать','select')(class="form-control-sm ")
+					+e.block
+						.strong.mb-2 Этаж
+						+range("1", "2200")
+					+e.block
+						.strong.mb-2 Этажность
+						+range("1", "2200")
+					+e.block
+						.strong.mb-2 Общая площадь (м2):
+						+range("20", "2200")
+					+e.block
+						.strong.mb-2 Количество комнат
+						+range("20", "2200")
+					+e.block
+						.strong.mb-2 Лоджия/балкон
+						+e.checkBoxWrap
+							+checkbox('checkbox','1')
+							+checkbox('checkbox','2')
+							+checkbox('checkbox','3')
+							+checkbox('checkbox','4')
+			.col-lg-9
+				+input('Сортировать по цене (сначала дешёвые)','select')(class="form-control-standart ") 
+				+sMap-xsm()
+				.row
+					mixin row()
+						.col-sm-6.col-lg-4.mb-30
+							+itemProd('2')
+						.col-sm-6.col-lg-4.mb-30
+							+itemProd('3')
+						.col-sm-6.col-lg-4.mb-30
+							+itemProd('4')
+					+row
+					+row
+					+row
+					+row
+				+pugin()
+	+sDescription
+	+footer()
+	

@@ -104,4 +104,13 @@
 			}
 		}
 	}
+
+	&--xsm {
+		padding-top: 0;
+
+		.sMap__map-wrap {
+			margin-top: 0;
+			max-height: rem(286);
+		}
+	}
 } // end.sMap
