@@ -4,9 +4,12 @@
 		--sPB: #{rem(62)};
 		--swiperColorDef: #{$body-color};
 		--swiperBorderColorDef: var(--swiperBgDef);
-		h2{
+		.section-title{
 			max-width: rem(755);
+			position: relative;
+
 		}
+		
 		&__slider{
 			overflow: inherit;
 		}

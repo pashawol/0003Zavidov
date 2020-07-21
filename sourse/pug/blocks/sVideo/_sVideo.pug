@@ -4,6 +4,7 @@ mixin sVideo()
 		.container
 			+b.section-title
 				h2 Наш собственный канал на Youtube
+				+cloud("cloud-2.png")(id="sVideo-inner")
 			+e.row.row
 				+videoItem(1)
 				+videoItem(2)
@@ -12,7 +13,7 @@ mixin sVideo()
 	// end sVideo
 
 mixin videoItem(imgNum, linkHref='https://www.youtube.com/watch?v=en6gms6e54Q&list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR')
-	.col-sm-6.col-lg-3
+	.col-sm-6.col-lg-3(class="wow  animate__fadeInUp " data-wow-offset="100")
 		+e.A.video-link(href=linkHref data-fancybox="video")
 			+e.PICTURE.picture
 				source(srcset=`img/@2x/webp/sVideo-${imgNum}.webp`)

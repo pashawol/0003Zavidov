@@ -10,7 +10,7 @@ mixin footer()
 						ul
 							li: a(href="#") Главная
 							li: a(href="#") Каталог объектов
-							li: a(href="#") Об агентстве
+							li: a.scroll-link(href="#sAbout" ) Об агентстве
 							li: a(href="#") Блог
 							li: a(href="#") Наша команда
 							li: a(href="#") Отзывы клиентов
@@ -24,13 +24,5 @@ mixin footer()
 
 mixin socLinksFooter(DisplayClasses)
 	+e.soc-links-col.col-auto(class=DisplayClasses)
-		ul
-			li
-				a(href="#")
-					+icon('fb')
-			li
-				a(href="#")
-					+icon('instagram')
-			li
-				a(href="#")
-					+icon('youtube')
+		+soc()
+		

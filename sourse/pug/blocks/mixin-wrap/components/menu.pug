@@ -1,8 +1,7 @@
 
 mixin mnu()
 	-
-		var nav= { 
-			"Об агентстве":"#",
+		var nav= {  
 			"Закрытая продажа":"#",
 			"Продажа бизнеса":"#",
 			"Блог ":"#",
@@ -16,6 +15,8 @@ mixin mnu()
 				+e.LI.item: +e.link(href="#")  Текст
 				+e.LI.item: +e.link(href="#")  Текст
 				+e.LI.item: +e.link(href="#")  Текст
+		+e.LI.item( itemprop="item" )
+			+e.A.link.scroll-link(href="#sAbout" itemprop="url") Об агентстве
 		each linkPatch, linkName in nav
 			+e.LI.item( itemprop="item" ): +e.A.link(href= linkPatch  itemprop="url")= linkName
 //- /menu

@@ -1,12 +1,48 @@
+#modal-call{
+	padding-top: 120px;
+	.form-wrap {
+		&__title {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: rem(326);
+			padding-bottom: 1rem;
+		}
+	}
+	.form-wrap__polite{
+		text-align: center;
+		padding-top:1rem;
+	}
+}
 .modal-win {
+	.fancybox-button{
+		top: 120px;
+	}
 	// display: block;
 	width: 100%;
 	position: relative;
-	border-radius: rem(15);
-	vertical-align: top !important; //Убрать после подгонки!!!!
-	padding: rem(40) rem(35);
-	@include media-breakpoint-up(md) {
-		padding: rem(46) rem(88) rem(46) rem(53);
+	// vertical-align: top !important; //Убрать после подгонки!!!!
+	padding: 0;
+	background-color: transparent;
+	.form-wrap{
+		border-radius: rem(15);
+			background-color: #ffffff;
+			@include media-breakpoint-up(md) {
+				padding: rem(46) rem(88) rem(46) rem(53);
+			}
+		padding: rem(40) rem(35);
+		position: relative;
+	}
+	picture{
+		text-align: center;
+		margin-top: -120px;	
+		margin-bottom: 30px;
+		@include media-breakpoint-up(md){
+				margin-top: 0;
+				margin-bottom: 0;
+				position: absolute;
+				bottom: 0;
+				left: rem(20);
+			}
 	}
 	
 	.modal-content {
@@ -25,6 +61,7 @@
 		&__title {
 			font-weight: bold;
 			margin-bottom: .75rem;
+		
 			@include media-breakpoint-down(lg) {
 				text-align: center;
 			}

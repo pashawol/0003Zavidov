@@ -242,11 +242,13 @@ function eventHandler() {
 
 	window.addEventListener('resize', function () {
 		heightses();
+	}, {
+		passive: true
 	});
 	heightses(); // листалка по стр
 
 	$(" .top-nav li a, .scroll-link").click(function () {
-		var elementClick = $(this).attr("href");
+		var elementClick = $(this).attr("href") + 120;
 		var destination = $(elementClick).offset().top;
 		$('html, body').animate({
 			scrollTop: destination
@@ -305,6 +307,7 @@ function eventHandler() {
 		watchOverflow: true,
 		slidesPerView: 1,
 		spaceBetween: 30,
+		autoHeight: true,
 		loop: true,
 		navigation: {
 			nextEl: '.sRews .swiper-button-next',
@@ -329,13 +332,44 @@ function eventHandler() {
 		$(".sTeam__col:hidden").fadeIn(function () {
 			return $(_this2).hide();
 		});
-	}); //luckyone JS
+	});
+	$(".sRews__more").click(function () {
+		$(this).toggleClass('show').parent().find('p').toggleClass('show');
+		swipersRew.updateAutoHeight();
+	});
+	var wow = new WOW({
+		mobile: false,
+		animateClass: 'animate__animated'
+	});
+	wow.init();
+	$(".menu-mobile__link").click(function () {
+		if ($(this).next()) {
+			$(this).next().slideToggle();
+			return false;
+		}
+	}); // paralax
+	//luckyone JS
 
 	$('.sContact__header').click(function () {
 		$(this).toggleClass('active');
 		$(this.parentElement).find('.sContact__txt-block').slideToggle(function () {
 			$(this).toggleClass('active');
 		});
+	});
+
+	function animateCloud(el) {
+		var scene = document.getElementById(el);
+		var parallaxInstance = new Parallax(scene, {
+			invertX: false,
+			invertY: false // limitX: 200,
+			// limitY: 200
+
+		});
+	}
+
+	var blockWithAnimate = ['sCategories-inner', 'sForm-inner1', 'sForm-inner2', 'sMap-inner', 'sCatalog-inner', 'sDo-inner', 'sLogos-inner1', 'sAbout-inner', 'sVideo-inner'];
+	blockWithAnimate.forEach(function (element) {
+		return animateCloud(element);
 	});
 	var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
@@ -352,6 +386,8 @@ function eventHandler() {
 		// We execute the same script as before
 		var vh = window.innerHeight * 0.01;
 		document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
+	}, {
+		passive: true
 	});
 }
 

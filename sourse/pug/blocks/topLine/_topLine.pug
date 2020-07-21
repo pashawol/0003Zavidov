@@ -14,13 +14,13 @@ mixin topLine()
 						+e.text Адрес: #[span г. Москва, Цветной бульвар, дом&nbsp;26, строение&nbsp;1]
 				.col-lg.col-auto
 					+e.item(href="tel:+7(495)660-20-21")
-						+e.icon-wrap
+						+e.DIV.icon-wrap
 							+icon('tel')
-						+e.text.text-right
+						+e.DIV.text.text-right
 							+e.DIV.tel +7 (495) 660-20-21
 							+e.small-text Пн-Пт.&nbsp;с&nbsp;9:00 до&nbsp;18:00
 				.col-auto.d-none.d-lg-block
-					+e.btn(href="#") Заказать звонок
+					+e.btn.link-modal(href="#modal-call") Заказать звонок
 				.col-auto.d-lg-none
 					+b.toggle-menu-mobile--js.d-lg-none
 						span

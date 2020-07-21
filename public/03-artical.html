@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 	<head>
 		<meta charset="utf-8">
 		<title>Отдельная статья</title>
@@ -20,6 +20,7 @@
 		<!-- Custom Browsers Color-->
 		<meta name="theme-color" content="#3361d8">
 		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
+		<link rel="stylesheet" href="libs/animate.css/animate.min.css"/>
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="libs/intl-tel-input/build/css/intlTelInput.min.css"/>
 		<link rel="stylesheet" href="libs/ion-rangeslider/css/ion.rangeSlider.min.css"/>
@@ -28,6 +29,53 @@
 	</head>
 	<body><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 		<div class="main-wrapper">
+			<div class="menu-mobile menu-mobile--js d-lg-none">
+				<div class="menu-mobile__inner">
+					<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+					</div>
+					<ul class="menu-mobile__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Главная</a>
+						</li>
+						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Каталог объектов</a>
+							<ul class="sub-menu">
+								<li class="sub-menu__item"><a class="sub-menu__link" href="#"> Текст</a>
+								</li>
+								<li class="sub-menu__item"><a class="sub-menu__link" href="#"> Текст</a>
+								</li>
+								<li class="sub-menu__item"><a class="sub-menu__link" href="#"> Текст</a>
+								</li>
+							</ul>
+						</li>
+						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link scroll-link" href="#sAbout" itemprop="url">Об агентстве</a>
+						</li>
+						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Закрытая продажа</a>
+						</li>
+						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Продажа бизнеса</a>
+						</li>
+						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Блог </a>
+						</li>
+						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Контакты</a>
+						</li>
+					</ul>
+					<div class="soc-block">
+						<ul>
+							<li><a href="#">
+									<svg class="icon icon-fb ">
+										<use xlink:href="img/svg/sprite.svg#fb"></use>
+									</svg></a></li>
+							<li><a href="#">
+									<svg class="icon icon-instagram ">
+										<use xlink:href="img/svg/sprite.svg#instagram"></use>
+									</svg></a></li>
+							<li><a href="#">
+									<svg class="icon icon-youtube ">
+										<use xlink:href="img/svg/sprite.svg#youtube"></use>
+									</svg></a></li>
+						</ul>
+					</div><a class="menu-mobile__btn link-modal" href="#modal-call-lg">Заказать звонок</a>
+				</div>
+			</div>
+			<!--  мобильное меню-->
 			<!-- start header-->
 			<header class="header" id="header">
 				<div class="fixed-line">
@@ -49,14 +97,20 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-lg col-auto"><a class="topLine__item" href="tel:+7(495)660-20-21"><span class="topLine__icon-wrap">
-										<svg class="icon icon-tel ">
-											<use xlink:href="img/svg/sprite.svg#tel"></use>
-										</svg></span><span class="topLine__text text-right">
-										<div class="topLine__tel">+7 (495) 660-20-21
-										</div><span class="topLine__small-text">Пн-Пт.&nbsp;с&nbsp;9:00 до&nbsp;18:00</span></span></a>
+									<div class="col-lg col-auto"><a class="topLine__item" href="tel:+7(495)660-20-21">
+										<div class="topLine__icon-wrap">
+											<svg class="icon icon-tel ">
+												<use xlink:href="img/svg/sprite.svg#tel"></use>
+											</svg>
+										</div>
+										<div class="topLine__text text-right">
+											<div class="topLine__tel">+7 (495) 660-20-21
+											</div>
+											<div class="topLine__small-text">Пн-Пт.&nbsp;с&nbsp;9:00 до&nbsp;18:00
+											</div>
+										</div></a>
 									</div>
-									<div class="col-auto d-none d-lg-block"><a class="topLine__btn" href="#">Заказать звонок</a>
+									<div class="col-auto d-none d-lg-block"><a class="topLine__btn link-modal" href="#modal-call">Заказать звонок</a>
 									</div>
 									<div class="col-auto d-lg-none">
 										<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
@@ -82,7 +136,7 @@
 											</li>
 										</ul>
 									</li>
-									<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Об агентстве</a>
+									<li class="top-nav__item" itemprop="item"><a class="top-nav__link scroll-link" href="#sAbout" itemprop="url">Об агентстве</a>
 									</li>
 									<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Закрытая продажа</a>
 									</li>
@@ -132,7 +186,7 @@
 								<ul>
 									<li><a href="#">Главная</a></li>
 									<li><a href="#">Каталог объектов</a></li>
-									<li><a href="#">Об агентстве</a></li>
+									<li><a class="scroll-link" href="#sAbout">Об агентстве</a></li>
 									<li><a href="#">Блог</a></li>
 									<li><a href="#">Наша команда</a></li>
 									<li><a href="#">Отзывы клиентов</a></li>
@@ -182,90 +236,104 @@
 			</footer>
 		</div>
 		<div class="d-none">
-			<div class="form-wrap modal-win modal-form" id="modal-call">
-				<form>
-					<input type="hidden" name="example-input-field"/>
-					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
-					<input class="utm_source" type="hidden" name="utm_source"/>
-					<input class="utm_term" type="hidden" name="utm_term"/>
-					<input class="utm_medium" type="hidden" name="utm_medium"/>
-					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
-					<div class="text-center">
-						<div class="form-wrap__title h3 ttu">Обратный звонок
-						</div>
-						<p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
-					</div>
-					<div class="form-wrap__input-wrap form-group form-group form-group--text"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/> 
-					</div>
-					<!-- +e.input-wrap-->
-					<div class="form-wrap__input-wrap form-group form-group form-group--tel"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" name="tel" required="required"/>
-					</div>
-					<!-- +e.input-wrap--><input class="form-wrap__btn" type="submit" value="Рассчитать"/>
-					<div class="form-wrap__polite">Отправляя заявку, Вы&nbsp;соглашаетесь на&nbsp;обработку <a href="#">персональных данных </a>
-					</div>
-				</form>
-			</div>
-			<div class="form-wrap modal-win modal-win modal-win--lg modal-form" id="modal-call-lg">
-				<form>
-					<input type="hidden" name="example-input-field"/>
-					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
-					<input class="utm_source" type="hidden" name="utm_source"/>
-					<input class="utm_term" type="hidden" name="utm_term"/>
-					<input class="utm_medium" type="hidden" name="utm_medium"/>
-					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
-					<div class="form-wrap__title h3">Задать вопрос
-					</div>
-					<p>Менеджеры компании с&nbsp;радостью ответят на&nbsp;ваши вопросы и&nbsp;произведут расчет стоимости услуг и&nbsp;подготовят индивидуальное коммерческое предложение.</p>
-					<div class="row">
-						<div class="col-lg-6">
-							<div class="form-wrap__input-wrap form-group form-group form-group--text"><input class="form-wrap__input form-control" type="text" placeholder="*Ваше Имя" name="text" required="required"/> 
+			<div class=" modal-win modal-win--lg modal-form" id="modal-call">
+				<div class="form-wrap">
+					<form>
+						<input type="hidden" name="example-input-field"/>
+						<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+						<input class="utm_source" type="hidden" name="utm_source"/>
+						<input class="utm_term" type="hidden" name="utm_term"/>
+						<input class="utm_medium" type="hidden" name="utm_medium"/>
+						<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+						<div class="row">
+							<div class="col-md-6">
+								<!-- picture-->
+								<picture> 
+									<source srcset="img/@2x/webp/girl.webp" type="image/webp" media="(min-width:576px)"/>
+									<source srcset="img/@1x/webp/girl.webp" type="image/webp"/>
+									<source srcset="img/@2x/girl.jpg" type="image/jpg" media="(min-width:576px)"/>
+									<source srcset="img/@1x/girl.jpg" type="image/jpg"/><img src="img/@2x/girl.jpg" alt=""/>
+								</picture>
+								<!-- /picture-->
 							</div>
-							<!-- +e.input-wrap-->
-						</div>
-						<div class="col-lg-6">
-							<div class="form-wrap__input-wrap form-group form-group form-group--tel"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш номер телефона" name="tel" required="required"/>
-							</div>
-							<!-- +e.input-wrap-->
-						</div>
-						<div class="col-lg-6">
-							<div class="form-wrap__input-wrap form-group form-group form-group--email"><input class="form-wrap__input form-control" type="email" placeholder="Email" name="email" required="required"/>
-							</div>
-							<!-- +e.input-wrap-->
-						</div>
-						<div class="col-lg-6">
-							<div class="form-wrap__input-wrap form-group form-group form-group--text"><input class="form-wrap__input form-control" type="text" placeholder="Интересующий товар/услуга:" name="text"/>
-							</div>
-							<!-- +e.input-wrap-->
-						</div>
-					</div>
-					<div class="form-wrap__input-wrap form-group form-group form-group--textarea"><textarea class="form-wrap__input form-control" placeholder="*Ваш вопрос" name="textarea"></textarea>
-					</div>
-					<!-- +e.input-wrap-->
-					<div class="row align-items-center">
-						<div class="col-lg-6"><input class="form-wrap__btn" type="submit" value="Отправить"/>
-						</div>
-						<div class="col-lg-6">
-							<div class="form-wrap__polite">Отправляя заявку, Вы&nbsp;соглашаетесь на&nbsp;обработку <a href="#">персональных данных </a>
+							<div class="col-md-6">
+								<div class="form-wrap__title h5 text-center">Оставьте заявку и&nbsp;наш специалист с&nbsp;Вами свяжется
+								</div>
+								<div class="form-wrap__input-wrap form-group form-group form-group--text"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/> 
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group form-group form-group--tel"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш номер телефона" name="tel" required="required"/>
+								</div>
+								<!-- +e.input-wrap--><input class="form-wrap__btn" type="submit" value="Отправить"/>
+								<div class="form-wrap__polite">Отправляя заявку, Вы&nbsp;соглашаетесь на&nbsp;обработку <a href="#">персональных данных </a>
+								</div>
 							</div>
 						</div>
-					</div>
-				</form>
+					</form>
+				</div>
 			</div>
 			<!-- #modal-call-->
+			<div class=" modal-win modal-win--lg modal-form" id="modal-call-lg">
+				<div class="form-wrap">
+					<form>
+						<input type="hidden" name="example-input-field"/>
+						<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+						<input class="utm_source" type="hidden" name="utm_source"/>
+						<input class="utm_term" type="hidden" name="utm_term"/>
+						<input class="utm_medium" type="hidden" name="utm_medium"/>
+						<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+						<div class="form-wrap__title h3">Задать вопрос
+						</div>
+						<p>Менеджеры компании с&nbsp;радостью ответят на&nbsp;ваши вопросы и&nbsp;произведут расчет стоимости услуг и&nbsp;подготовят индивидуальное коммерческое предложение.</p>
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="form-wrap__input-wrap form-group form-group form-group--text"><input class="form-wrap__input form-control" type="text" placeholder="*Ваше Имя" name="text" required="required"/> 
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="col-lg-6">
+								<div class="form-wrap__input-wrap form-group form-group form-group--tel"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш номер телефона" name="tel" required="required"/>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="col-lg-6">
+								<div class="form-wrap__input-wrap form-group form-group form-group--email"><input class="form-wrap__input form-control" type="email" placeholder="Email" name="email" required="required"/>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="col-lg-6">
+								<div class="form-wrap__input-wrap form-group form-group form-group--text"><input class="form-wrap__input form-control" type="text" placeholder="Интересующий товар/услуга:" name="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+						</div>
+						<div class="form-wrap__input-wrap form-group form-group form-group--textarea"><textarea class="form-wrap__input form-control" placeholder="*Ваш вопрос" name="textarea"></textarea>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="row align-items-center">
+							<div class="col-lg-6"><input class="form-wrap__btn" type="submit" value="Отправить"/>
+							</div>
+							<div class="col-lg-6">
+								<div class="form-wrap__polite">Отправляя заявку, Вы&nbsp;соглашаетесь на&nbsp;обработку <a href="#">персональных данных </a>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- #modal-call-lg-->
 		</div>
 		<!-- modal-->
 		<script src="js/lazy.js"></script>
 		<script src="libs/jquery/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-		<!-- modal libs-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"> </script>
 		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
-		<!-- modal libs-->
-		<!-- slider libs-->
+		<script src="libs/parallax-js/parallax.min.js"> </script>
 		<script src="libs/swiper/js/swiper.min.js"></script>
 		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
 		<script src="libs/choices.js/public/assets/scripts/choices.min.js"></script>
 		<script src="libs/counterup2/index.js"></script>
-		<!-- /slider libs-->
+		<script src="libs/wowjs/wow.min.js"> </script>
 		<script src="libs/intl-tel-input/build/js/intlTelInput.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>

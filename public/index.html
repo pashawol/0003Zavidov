@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 	<head>
 		<meta charset="utf-8">
 		<title>Главная</title>
@@ -20,6 +20,7 @@
 		<!-- Custom Browsers Color-->
 		<meta name="theme-color" content="#3361d8">
 		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
+		<link rel="stylesheet" href="libs/animate.css/animate.min.css"/>
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="libs/intl-tel-input/build/css/intlTelInput.min.css"/>
 		<link rel="stylesheet" href="libs/ion-rangeslider/css/ion.rangeSlider.min.css"/>
@@ -28,6 +29,53 @@
 	</head>
 	<body class="main-page"><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 		<div class="main-wrapper">
+			<div class="menu-mobile menu-mobile--js d-lg-none">
+				<div class="menu-mobile__inner">
+					<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+					</div>
+					<ul class="menu-mobile__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Главная</a>
+						</li>
+						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Каталог объектов</a>
+							<ul class="sub-menu">
+								<li class="sub-menu__item"><a class="sub-menu__link" href="#"> Текст</a>
+								</li>
+								<li class="sub-menu__item"><a class="sub-menu__link" href="#"> Текст</a>
+								</li>
+								<li class="sub-menu__item"><a class="sub-menu__link" href="#"> Текст</a>
+								</li>
+							</ul>
+						</li>
+						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link scroll-link" href="#sAbout" itemprop="url">Об агентстве</a>
+						</li>
+						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Закрытая продажа</a>
+						</li>
+						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Продажа бизнеса</a>
+						</li>
+						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Блог </a>
+						</li>
+						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Контакты</a>
+						</li>
+					</ul>
+					<div class="soc-block">
+						<ul>
+							<li><a href="#">
+									<svg class="icon icon-fb ">
+										<use xlink:href="img/svg/sprite.svg#fb"></use>
+									</svg></a></li>
+							<li><a href="#">
+									<svg class="icon icon-instagram ">
+										<use xlink:href="img/svg/sprite.svg#instagram"></use>
+									</svg></a></li>
+							<li><a href="#">
+									<svg class="icon icon-youtube ">
+										<use xlink:href="img/svg/sprite.svg#youtube"></use>
+									</svg></a></li>
+						</ul>
+					</div><a class="menu-mobile__btn link-modal" href="#modal-call-lg">Заказать звонок</a>
+				</div>
+			</div>
+			<!--  мобильное меню-->
 			<!-- start header-->
 			<header class="header" id="header">
 				<div class="fixed-line">
@@ -49,14 +97,20 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-lg col-auto"><a class="topLine__item" href="tel:+7(495)660-20-21"><span class="topLine__icon-wrap">
-										<svg class="icon icon-tel ">
-											<use xlink:href="img/svg/sprite.svg#tel"></use>
-										</svg></span><span class="topLine__text text-right">
-										<div class="topLine__tel">+7 (495) 660-20-21
-										</div><span class="topLine__small-text">Пн-Пт.&nbsp;с&nbsp;9:00 до&nbsp;18:00</span></span></a>
+									<div class="col-lg col-auto"><a class="topLine__item" href="tel:+7(495)660-20-21">
+										<div class="topLine__icon-wrap">
+											<svg class="icon icon-tel ">
+												<use xlink:href="img/svg/sprite.svg#tel"></use>
+											</svg>
+										</div>
+										<div class="topLine__text text-right">
+											<div class="topLine__tel">+7 (495) 660-20-21
+											</div>
+											<div class="topLine__small-text">Пн-Пт.&nbsp;с&nbsp;9:00 до&nbsp;18:00
+											</div>
+										</div></a>
 									</div>
-									<div class="col-auto d-none d-lg-block"><a class="topLine__btn" href="#">Заказать звонок</a>
+									<div class="col-auto d-none d-lg-block"><a class="topLine__btn link-modal" href="#modal-call">Заказать звонок</a>
 									</div>
 									<div class="col-auto d-lg-none">
 										<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
@@ -82,7 +136,7 @@
 											</li>
 										</ul>
 									</li>
-									<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Об агентстве</a>
+									<li class="top-nav__item" itemprop="item"><a class="top-nav__link scroll-link" href="#sAbout" itemprop="url">Об агентстве</a>
 									</li>
 									<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Закрытая продажа</a>
 									</li>
@@ -111,7 +165,7 @@
 					<div class="container">
 						<h1>Любая сделка с&nbsp;недвижимостью  от&nbsp;лидера рынка!</h1>
 						<div class="headerBlock__text"> 100% гарантия юридической чистоты
-						</div><a class="headerBlock__btn" href="#"> Получить консультацию</a>
+						</div><a class="headerBlock__btn scroll-link" href="#sForm"> Получить консультацию</a>
 					</div>
 				</div>
 				<!-- end headerBlock-->
@@ -121,28 +175,28 @@
 			<div class="sAdvantages" id="sAdvantages">
 				<div class="container"> 
 					<div class="row">
-								<div class="sAdvantages__col col-lg-3 col-sm-6">
+								<div class="sAdvantages__col col-lg-3 col-sm-6 wow animate__fadeInUp" data-wow-offset="100">
 									<div class="sAdvantages__item">
 										<div class="sAdvantages__img-wrap"><img class="lazy" src="#" data-src="img/svg/sAdvantages-1.svg" alt=""/>
 										</div>
 										<p>Бесплатная оценка недвижимости</p>
 									</div>
 								</div>
-								<div class="sAdvantages__col col-lg-3 col-sm-6">
+								<div class="sAdvantages__col col-lg-3 col-sm-6 wow animate__fadeInUp" data-wow-offset="100">
 									<div class="sAdvantages__item">
 										<div class="sAdvantages__img-wrap"><img class="lazy" src="#" data-src="img/svg/sAdvantages-2.svg" alt=""/>
 										</div>
 										<p>Собственная база клиентов (более 20&nbsp;тыс. покупателей)</p>
 									</div>
 								</div>
-								<div class="sAdvantages__col col-lg-3 col-sm-6">
+								<div class="sAdvantages__col col-lg-3 col-sm-6 wow animate__fadeInUp" data-wow-offset="100">
 									<div class="sAdvantages__item">
 										<div class="sAdvantages__img-wrap"><img class="lazy" src="#" data-src="img/svg/sAdvantages-3.svg" alt=""/>
 										</div>
 										<p>Проверка объекта и&nbsp;сбор всех документов</p>
 									</div>
 								</div>
-								<div class="sAdvantages__col col-lg-3 col-sm-6">
+								<div class="sAdvantages__col col-lg-3 col-sm-6 wow animate__fadeInUp" data-wow-offset="100">
 									<div class="sAdvantages__item">
 										<div class="sAdvantages__img-wrap"><img class="lazy" src="#" data-src="img/svg/sAdvantages-4.svg" alt=""/>
 										</div>
@@ -158,6 +212,18 @@
 				<div class="container">
 					<div class="section-title">
 						<h2 class="h2-sm"><strong>Сопровождаем сделки &laquo;под ключ&raquo;:</strong> покупка, продажа, аренда</h2>
+						<div class="cloud-wrap" id="sCategories-inner">
+							<div class="cloud" data-depth=".5">
+								<!-- picture-->
+								<picture> 
+									<source srcset="img/@2x/webp/cloud.webp" type="image/webp" media="(min-width:576px)"/>
+									<source srcset="img/@1x/webp/cloud.webp" type="image/webp"/>
+									<source srcset="img/@2x/cloud.png" type="image/png" media="(min-width:576px)"/>
+									<source srcset="img/@1x/cloud.png" type="image/png"/><img src="img/@2x/cloud.png" alt=""/>
+								</picture>
+								<!-- /picture-->
+							</div>
+						</div>
 					</div>
 					<div class="sCategories__slider sCategories__slider--js swiper-container">
 						<div class="swiper-wrapper">
@@ -261,12 +327,36 @@
 						</div>
 					</div>
 				</div>
+				<div class="cloud-wrap" id="sForm-inner1">
+					<div class="cloud" data-depth=".5">
+						<!-- picture-->
+						<picture> 
+							<source srcset="img/@2x/webp/cloud.webp" type="image/webp" media="(min-width:576px)"/>
+							<source srcset="img/@1x/webp/cloud.webp" type="image/webp"/>
+							<source srcset="img/@2x/cloud.png" type="image/png" media="(min-width:576px)"/>
+							<source srcset="img/@1x/cloud.png" type="image/png"/><img src="img/@2x/cloud.png" alt=""/>
+						</picture>
+						<!-- /picture-->
+					</div>
+				</div>
 			</section>
 			<!-- start sMap-->
 			<section class="sMap section" id="sMap">
 				<div class="container">
 					<div class="section-title">
 						<h2><strong>Подобрать недвижимость</strong></h2>
+						<div class="cloud-wrap" id="sMap-inner">
+							<div class="cloud" data-depth=".5">
+								<!-- picture-->
+								<picture> 
+									<source srcset="img/@2x/webp/cloud.webp" type="image/webp" media="(min-width:576px)"/>
+									<source srcset="img/@1x/webp/cloud.webp" type="image/webp"/>
+									<source srcset="img/@2x/cloud.png" type="image/png" media="(min-width:576px)"/>
+									<source srcset="img/@1x/cloud.png" type="image/png"/><img src="img/@2x/cloud.png" alt=""/>
+								</picture>
+								<!-- /picture-->
+							</div>
+						</div>
 					</div>
 					<div class="sMap__filter">
 						<div class="sMap__row row">
@@ -350,6 +440,18 @@
 				<div class="container">
 					<div class="section-title">
 						<h2><strong>Лучшие предложения</strong></h2>
+						<div class="cloud-wrap" id="sCatalog-inner">
+							<div class="cloud" data-depth=".5">
+								<!-- picture-->
+								<picture> 
+									<source srcset="img/@2x/webp/cloud.webp" type="image/webp" media="(min-width:576px)"/>
+									<source srcset="img/@1x/webp/cloud.webp" type="image/webp"/>
+									<source srcset="img/@2x/cloud.png" type="image/png" media="(min-width:576px)"/>
+									<source srcset="img/@1x/cloud.png" type="image/png"/><img src="img/@2x/cloud.png" alt=""/>
+								</picture>
+								<!-- /picture-->
+							</div>
+						</div>
 					</div>
 					<div class="sCatalog__slider sCatalog__slider--js swiper-container">
 						<div class="swiper-wrapper">
@@ -598,9 +700,21 @@
 				<div class="container">
 					<div class="section-title">
 						<h2><strong>Что мы&nbsp;делаем для успешной и&nbsp;безопасной сделки</strong></h2>
+						<div class="cloud-wrap" id="sDo-inner">
+							<div class="cloud" data-depth=".5">
+								<!-- picture-->
+								<picture> 
+									<source srcset="img/@2x/webp/cloud.webp" type="image/webp" media="(min-width:576px)"/>
+									<source srcset="img/@1x/webp/cloud.webp" type="image/webp"/>
+									<source srcset="img/@2x/cloud.png" type="image/png" media="(min-width:576px)"/>
+									<source srcset="img/@1x/cloud.png" type="image/png"/><img src="img/@2x/cloud.png" alt=""/>
+								</picture>
+								<!-- /picture-->
+							</div>
+						</div>
 					</div>
 					<div class="row">
-								<div class="sDo__col col-lg-4 col-md-6">
+								<div class="sDo__col col-lg-4 col-md-6 wow animate__fadeInUp" data-wow-offset="100">
 									<div class="sDo__item">
 										<div class="sDo__img-wrap"><img class="lazy" src="#" data-src="img/svg/do-1.svg" alt=""/>
 										</div>
@@ -610,7 +724,7 @@
 									</div>
 								</div>
 								<!-- /+e.col.col-lg-4.col-md-6-->
-								<div class="sDo__col col-lg-4 col-md-6">
+								<div class="sDo__col col-lg-4 col-md-6 wow animate__fadeInUp" data-wow-offset="100">
 									<div class="sDo__item">
 										<div class="sDo__img-wrap"><img class="lazy" src="#" data-src="img/svg/do-2.svg" alt=""/>
 										</div>
@@ -620,7 +734,7 @@
 									</div>
 								</div>
 								<!-- /+e.col.col-lg-4.col-md-6-->
-								<div class="sDo__col col-lg-4 col-md-6">
+								<div class="sDo__col col-lg-4 col-md-6 wow animate__fadeInUp" data-wow-offset="100">
 									<div class="sDo__item">
 										<div class="sDo__img-wrap"><img class="lazy" src="#" data-src="img/svg/do-3.svg" alt=""/>
 										</div>
@@ -630,7 +744,7 @@
 									</div>
 								</div>
 								<!-- /+e.col.col-lg-4.col-md-6-->
-								<div class="sDo__col col-lg-4 col-md-6">
+								<div class="sDo__col col-lg-4 col-md-6 wow animate__fadeInUp" data-wow-offset="100">
 									<div class="sDo__item">
 										<div class="sDo__img-wrap"><img class="lazy" src="#" data-src="img/svg/do-4.svg" alt=""/>
 										</div>
@@ -640,7 +754,7 @@
 									</div>
 								</div>
 								<!-- /+e.col.col-lg-4.col-md-6-->
-								<div class="sDo__col col-lg-4 col-md-6">
+								<div class="sDo__col col-lg-4 col-md-6 wow animate__fadeInUp" data-wow-offset="100">
 									<div class="sDo__item">
 										<div class="sDo__img-wrap"><img class="lazy" src="#" data-src="img/svg/do-5.svg" alt=""/>
 										</div>
@@ -650,7 +764,7 @@
 									</div>
 								</div>
 								<!-- /+e.col.col-lg-4.col-md-6-->
-								<div class="sDo__col col-lg-4 col-md-6">
+								<div class="sDo__col col-lg-4 col-md-6 wow animate__fadeInUp" data-wow-offset="100">
 									<div class="sDo__item">
 										<div class="sDo__img-wrap"><img class="lazy" src="#" data-src="img/svg/do-6.svg" alt=""/>
 										</div>
@@ -728,6 +842,28 @@
 								</div>
 					</div><a class="sLogos__btn" href="#">Получить ипотеку</a>
 				</div>
+				<div class="cloud-wrap" id="sLogos-inner1">
+					<div class="cloud" data-depth=".5">
+						<!-- picture-->
+						<picture> 
+							<source srcset="img/@2x/webp/cloud.webp" type="image/webp" media="(min-width:576px)"/>
+							<source srcset="img/@1x/webp/cloud.webp" type="image/webp"/>
+							<source srcset="img/@2x/cloud.png" type="image/png" media="(min-width:576px)"/>
+							<source srcset="img/@1x/cloud.png" type="image/png"/><img src="img/@2x/cloud.png" alt=""/>
+						</picture>
+						<!-- /picture-->
+					</div>
+					<div class="cloud" data-depth=".2">
+						<!-- picture-->
+						<picture> 
+							<source srcset="img/@2x/webp/cloud.webp" type="image/webp" media="(min-width:576px)"/>
+							<source srcset="img/@1x/webp/cloud.webp" type="image/webp"/>
+							<source srcset="img/@2x/cloud.png" type="image/png" media="(min-width:576px)"/>
+							<source srcset="img/@1x/cloud.png" type="image/png"/><img src="img/@2x/cloud.png" alt=""/>
+						</picture>
+						<!-- /picture-->
+					</div>
+				</div>
 			</section>
 			<!-- end sLogos-->
 			<section class="sAbout section" id="sAbout">
@@ -777,6 +913,28 @@
 									<div class="sAbout__label-title">Юрий Завидов
 									</div>
 									<div class="sAbout__label-text"> Основатель компании
+									</div>
+								</div>
+								<div class="cloud-wrap" id="sAbout-inner">
+									<div class="cloud" data-depth=".5">
+										<!-- picture-->
+										<picture> 
+											<source srcset="img/@2x/webp/cloud.webp" type="image/webp" media="(min-width:576px)"/>
+											<source srcset="img/@1x/webp/cloud.webp" type="image/webp"/>
+											<source srcset="img/@2x/cloud.png" type="image/png" media="(min-width:576px)"/>
+											<source srcset="img/@1x/cloud.png" type="image/png"/><img src="img/@2x/cloud.png" alt=""/>
+										</picture>
+										<!-- /picture-->
+									</div>
+									<div class="cloud" data-depth=".2">
+										<!-- picture-->
+										<picture> 
+											<source srcset="img/@2x/webp/cloud.webp" type="image/webp" media="(min-width:576px)"/>
+											<source srcset="img/@1x/webp/cloud.webp" type="image/webp"/>
+											<source srcset="img/@2x/cloud.png" type="image/png" media="(min-width:576px)"/>
+											<source srcset="img/@1x/cloud.png" type="image/png"/><img src="img/@2x/cloud.png" alt=""/>
+										</picture>
+										<!-- /picture-->
 									</div>
 								</div>
 							</div>
@@ -997,7 +1155,7 @@
 			</section>
 			<!-- end sTeam-->
 			<!-- start sForm-->
-			<section class="sForm section bg-wrap" id="sForm">
+			<section class="sForm section bg-wrap">
 				<!-- picture-->
 				<picture class="picture-bg"> 
 					<source srcset="img/@2x/webp/form-bg.webp" type="image/webp"/><img class="object-fit-js" src="img/@2x/form-bg.jpg" alt=""/>
@@ -1036,6 +1194,18 @@
 						</div>
 					</div>
 				</div>
+				<div class="cloud-wrap" id="sForm-inner2">
+					<div class="cloud" data-depth=".5">
+						<!-- picture-->
+						<picture> 
+							<source srcset="img/@2x/webp/cloud.webp" type="image/webp" media="(min-width:576px)"/>
+							<source srcset="img/@1x/webp/cloud.webp" type="image/webp"/>
+							<source srcset="img/@2x/cloud.png" type="image/png" media="(min-width:576px)"/>
+							<source srcset="img/@1x/cloud.png" type="image/png"/><img src="img/@2x/cloud.png" alt=""/>
+						</picture>
+						<!-- /picture-->
+					</div>
+				</div>
 			</section>
 			<!-- start sRews-->
 			<section class="sRews section" id="sRews">
@@ -1043,87 +1213,106 @@
 					<div class="section-title text-center h2-sm">
 						<h2><strong> Отзывы наших клиентов</strong></h2>
 					</div>
-					<div class="sRews__slider sRews__slider--js swiper-container">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<div class="sRews__item">
-									<div class="sRews__head">
-										<div class="row">
-											<div class="col-auto">
-												<picture>
-													<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/rew.webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/rew.jpg" alt=""/>
-												</picture>
-											</div>
-											<div class="col">
-												<div class="sRews__title">Маргарита Королева
+					<div class="sRews__slider-wrapper">
+						<div class="sRews__slider sRews__slider--js swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="sRews__item">
+										<div class="sRews__head">
+											<div class="row">
+												<div class="col-sm-auto">
+													<picture>
+														<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/rew.webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/rew.jpg" alt=""/>
+													</picture>
 												</div>
-												<div class="sRews__title-sub">Самый востребованный диетолог по версии Forbes
-												</div>
-												<div class="sRews__italic">На&nbsp;протяжении года не&nbsp;могли продать недвижимость. Обратилась в&nbsp;агентство &laquo;ZAVIDOV REALTY&raquo; и&nbsp;оно реализовало помещение за&nbsp;два месяца
+												<div class="col">
+													<div class="sRews__title">Маргарита Королева
+													</div>
+													<div class="sRews__title-sub">Самый востребованный диетолог по версии Forbes
+													</div>
+													<div class="sRews__italic">На&nbsp;протяжении года не&nbsp;могли продать недвижимость. Обратилась в&nbsp;агентство &laquo;ZAVIDOV REALTY&raquo; и&nbsp;оно реализовало помещение за&nbsp;два месяца
+													</div>
 												</div>
 											</div>
 										</div>
+										<p>Однажды, с целью оптимизации работы, у меня появилась необходимость объединить две мои клиники воедино и переехать в новое просторное помещение исторического здания в Благовещенском переулке Москвы. Одновременно было принято решение выставить на продажу помещение на Ленинградке. Я обратилась в несколько агентств по недвижимости, которые обещали оперативно решить вопрос. Но на протяжении почти года ничего не происходило: количество просмотров было минимальным, реклама помещения отсутствовала. Как-то в беседе с Надеждой Бабкиной, обсуждая ситуацию с продажей помещения на Ленинградке, она упомянула агентство "ZAVIDOV REALTY", которое помогло ей и ее знакомым эффективно решить вопросы с недвижимостью. Не раздумывая, я решила обратиться по рекомендации и позвонила. И вот результат — помещение было реализовано в течение двух месяцев, а главное — по той цене, которая меня устроила. Хотела бы поблагодарить агентство "ZAVIDOV REALTY" за проделанную работу, качественный сервис и профессионализм!</p>
+										<div class="sRews__more link-primary d-md-none"> 
+											<svg class="icon icon-chevron-down ">
+												<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+											</svg>
+										</div>
 									</div>
-									<p>Однажды, с целью оптимизации работы, у меня появилась необходимость объединить две мои клиники воедино и переехать в новое просторное помещение исторического здания в Благовещенском переулке Москвы. Одновременно было принято решение выставить на продажу помещение на Ленинградке. Я обратилась в несколько агентств по недвижимости, которые обещали оперативно решить вопрос. Но на протяжении почти года ничего не происходило: количество просмотров было минимальным, реклама помещения отсутствовала. Как-то в беседе с Надеждой Бабкиной, обсуждая ситуацию с продажей помещения на Ленинградке, она упомянула агентство "ZAVIDOV REALTY", которое помогло ей и ее знакомым эффективно решить вопросы с недвижимостью. Не раздумывая, я решила обратиться по рекомендации и позвонила. И вот результат — помещение было реализовано в течение двух месяцев, а главное — по той цене, которая меня устроила. Хотела бы поблагодарить агентство "ZAVIDOV REALTY" за проделанную работу, качественный сервис и профессионализм!</p>
 								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="sRews__item">
-									<div class="sRews__head">
-										<div class="row">
-											<div class="col-auto">
-												<picture>
-													<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/rew.webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/rew.jpg" alt=""/>
-												</picture>
-											</div>
-											<div class="col">
-												<div class="sRews__title">Маргарита Королева
+								<div class="swiper-slide">
+									<div class="sRews__item">
+										<div class="sRews__head">
+											<div class="row">
+												<div class="col-sm-auto">
+													<picture>
+														<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/rew.webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/rew.jpg" alt=""/>
+													</picture>
 												</div>
-												<div class="sRews__title-sub">Самый востребованный диетолог по версии Forbes
-												</div>
-												<div class="sRews__italic">На&nbsp;протяжении года не&nbsp;могли продать недвижимость. Обратилась в&nbsp;агентство &laquo;ZAVIDOV REALTY&raquo; и&nbsp;оно реализовало помещение за&nbsp;два месяца
+												<div class="col">
+													<div class="sRews__title">Маргарита Королева
+													</div>
+													<div class="sRews__title-sub">Самый востребованный диетолог по версии Forbes
+													</div>
+													<div class="sRews__italic">На&nbsp;протяжении года не&nbsp;могли продать недвижимость. Обратилась в&nbsp;агентство &laquo;ZAVIDOV REALTY&raquo; и&nbsp;оно реализовало помещение за&nbsp;два месяца
+													</div>
 												</div>
 											</div>
 										</div>
+										<p>Однажды, с целью оптимизации работы, у меня появилась необходимость объединить две мои клиники воедино и переехать в новое просторное помещение исторического здания в Благовещенском переулке Москвы. Одновременно было принято решение выставить на продажу помещение на Ленинградке. Я обратилась в несколько агентств по недвижимости, которые обещали оперативно решить вопрос. Но на протяжении почти года ничего не происходило: количество просмотров было минимальным, реклама помещения отсутствовала. Как-то в беседе с Надеждой Бабкиной, обсуждая ситуацию с продажей помещения на Ленинградке, она упомянула агентство "ZAVIDOV REALTY", которое помогло ей и ее знакомым эффективно решить вопросы с недвижимостью. Не раздумывая, я решила обратиться по рекомендации и позвонила. И вот результат — помещение было реализовано в течение двух месяцев, а главное — по той цене, которая меня устроила. Хотела бы поблагодарить агентство "ZAVIDOV REALTY" за проделанную работу, качественный сервис и профессионализм!</p>
+										<div class="sRews__more link-primary d-md-none"> 
+											<svg class="icon icon-chevron-down ">
+												<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+											</svg>
+										</div>
 									</div>
-									<p>Однажды, с целью оптимизации работы, у меня появилась необходимость объединить две мои клиники воедино и переехать в новое просторное помещение исторического здания в Благовещенском переулке Москвы. Одновременно было принято решение выставить на продажу помещение на Ленинградке. Я обратилась в несколько агентств по недвижимости, которые обещали оперативно решить вопрос. Но на протяжении почти года ничего не происходило: количество просмотров было минимальным, реклама помещения отсутствовала. Как-то в беседе с Надеждой Бабкиной, обсуждая ситуацию с продажей помещения на Ленинградке, она упомянула агентство "ZAVIDOV REALTY", которое помогло ей и ее знакомым эффективно решить вопросы с недвижимостью. Не раздумывая, я решила обратиться по рекомендации и позвонила. И вот результат — помещение было реализовано в течение двух месяцев, а главное — по той цене, которая меня устроила. Хотела бы поблагодарить агентство "ZAVIDOV REALTY" за проделанную работу, качественный сервис и профессионализм!</p>
 								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="sRews__item">
-									<div class="sRews__head">
-										<div class="row">
-											<div class="col-auto">
-												<picture>
-													<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/rew.webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/rew.jpg" alt=""/>
-												</picture>
-											</div>
-											<div class="col">
-												<div class="sRews__title">Маргарита Королева
+								<div class="swiper-slide">
+									<div class="sRews__item">
+										<div class="sRews__head">
+											<div class="row">
+												<div class="col-sm-auto">
+													<picture>
+														<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/rew.webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/rew.jpg" alt=""/>
+													</picture>
 												</div>
-												<div class="sRews__title-sub">Самый востребованный диетолог по версии Forbes
-												</div>
-												<div class="sRews__italic">На&nbsp;протяжении года не&nbsp;могли продать недвижимость. Обратилась в&nbsp;агентство &laquo;ZAVIDOV REALTY&raquo; и&nbsp;оно реализовало помещение за&nbsp;два месяца
+												<div class="col">
+													<div class="sRews__title">Маргарита Королева
+													</div>
+													<div class="sRews__title-sub">Самый востребованный диетолог по версии Forbes
+													</div>
+													<div class="sRews__italic">На&nbsp;протяжении года не&nbsp;могли продать недвижимость. Обратилась в&nbsp;агентство &laquo;ZAVIDOV REALTY&raquo; и&nbsp;оно реализовало помещение за&nbsp;два месяца
+													</div>
 												</div>
 											</div>
 										</div>
+										<p>Однажды, с целью оптимизации работы, у меня появилась необходимость объединить две мои клиники воедино и переехать в новое просторное помещение исторического здания в Благовещенском переулке Москвы. Одновременно было принято решение выставить на продажу помещение на Ленинградке. Я обратилась в несколько агентств по недвижимости, которые обещали оперативно решить вопрос. Но на протяжении почти года ничего не происходило: количество просмотров было минимальным, реклама помещения отсутствовала. Как-то в беседе с Надеждой Бабкиной, обсуждая ситуацию с продажей помещения на Ленинградке, она упомянула агентство "ZAVIDOV REALTY", которое помогло ей и ее знакомым эффективно решить вопросы с недвижимостью. Не раздумывая, я решила обратиться по рекомендации и позвонила. И вот результат — помещение было реализовано в течение двух месяцев, а главное — по той цене, которая меня устроила. Хотела бы поблагодарить агентство "ZAVIDOV REALTY" за проделанную работу, качественный сервис и профессионализм!</p>
+										<div class="sRews__more link-primary d-md-none"> 
+											<svg class="icon icon-chevron-down ">
+												<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+											</svg>
+										</div>
 									</div>
-									<p>Однажды, с целью оптимизации работы, у меня появилась необходимость объединить две мои клиники воедино и переехать в новое просторное помещение исторического здания в Благовещенском переулке Москвы. Одновременно было принято решение выставить на продажу помещение на Ленинградке. Я обратилась в несколько агентств по недвижимости, которые обещали оперативно решить вопрос. Но на протяжении почти года ничего не происходило: количество просмотров было минимальным, реклама помещения отсутствовала. Как-то в беседе с Надеждой Бабкиной, обсуждая ситуацию с продажей помещения на Ленинградке, она упомянула агентство "ZAVIDOV REALTY", которое помогло ей и ее знакомым эффективно решить вопросы с недвижимостью. Не раздумывая, я решила обратиться по рекомендации и позвонила. И вот результат — помещение было реализовано в течение двух месяцев, а главное — по той цене, которая меня устроила. Хотела бы поблагодарить агентство "ZAVIDOV REALTY" за проделанную работу, качественный сервис и профессионализм!</p>
 								</div>
 							</div>
 						</div>
-						<div class="swiper-pagination"></div>
+						<div class="control-wrap">
+							<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+								<svg class="icon icon-arrow-left ">
+									<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+								</svg>
+							</div>
+							<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+								<svg class="icon icon-arrow-right ">
+									<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+								</svg>
+							</div>
+						</div>
 					</div>
-					<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
-						<svg class="icon icon-arrow-left ">
-							<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
-						</svg>
-					</div>
-					<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
-						<svg class="icon icon-arrow-right ">
-							<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
-						</svg>
-					</div>
+					<div class="swiper-pagination d-none d-md-flex"></div>
 				</div>
 			</section>
 			<!-- end sRews-->
@@ -1132,24 +1321,36 @@
 				<div class="container">
 					<div class="section-title">
 						<h2>Наш собственный канал на Youtube</h2>
+						<div class="cloud-wrap" id="sVideo-inner">
+							<div class="cloud" data-depth=".5">
+								<!-- picture-->
+								<picture> 
+									<source srcset="img/@2x/webp/cloud-2.webp" type="image/webp" media="(min-width:576px)"/>
+									<source srcset="img/@1x/webp/cloud-2.webp" type="image/webp"/>
+									<source srcset="img/@2x/cloud-2.png" type="image/png" media="(min-width:576px)"/>
+									<source srcset="img/@1x/cloud-2.png" type="image/png"/><img src="img/@2x/cloud-2.png" alt=""/>
+								</picture>
+								<!-- /picture-->
+							</div>
+						</div>
 					</div>
 					<div class="sVideo__row row">
-						<div class="col-sm-6 col-lg-3"><a class="sVideo__video-link" href="https://www.youtube.com/watch?v=en6gms6e54Q&amp;list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR" data-fancybox="video">
+						<div class="col-sm-6 col-lg-3 wow  animate__fadeInUp " data-wow-offset="100"><a class="sVideo__video-link" href="https://www.youtube.com/watch?v=en6gms6e54Q&amp;list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR" data-fancybox="video">
 							<picture class="sVideo__picture">
 								<source srcset="img/@2x/webp/sVideo-1.webp"/><img src="img/@2x/sVideo-1.jpg" alt=""/>
 							</picture></a>
 						</div>
-						<div class="col-sm-6 col-lg-3"><a class="sVideo__video-link" href="https://www.youtube.com/watch?v=en6gms6e54Q&amp;list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR" data-fancybox="video">
+						<div class="col-sm-6 col-lg-3 wow  animate__fadeInUp " data-wow-offset="100"><a class="sVideo__video-link" href="https://www.youtube.com/watch?v=en6gms6e54Q&amp;list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR" data-fancybox="video">
 							<picture class="sVideo__picture">
 								<source srcset="img/@2x/webp/sVideo-2.webp"/><img src="img/@2x/sVideo-2.jpg" alt=""/>
 							</picture></a>
 						</div>
-						<div class="col-sm-6 col-lg-3"><a class="sVideo__video-link" href="https://www.youtube.com/watch?v=en6gms6e54Q&amp;list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR" data-fancybox="video">
+						<div class="col-sm-6 col-lg-3 wow  animate__fadeInUp " data-wow-offset="100"><a class="sVideo__video-link" href="https://www.youtube.com/watch?v=en6gms6e54Q&amp;list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR" data-fancybox="video">
 							<picture class="sVideo__picture">
 								<source srcset="img/@2x/webp/sVideo-3.webp"/><img src="img/@2x/sVideo-3.jpg" alt=""/>
 							</picture></a>
 						</div>
-						<div class="col-sm-6 col-lg-3"><a class="sVideo__video-link" href="https://www.youtube.com/watch?v=en6gms6e54Q&amp;list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR" data-fancybox="video">
+						<div class="col-sm-6 col-lg-3 wow  animate__fadeInUp " data-wow-offset="100"><a class="sVideo__video-link" href="https://www.youtube.com/watch?v=en6gms6e54Q&amp;list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR" data-fancybox="video">
 							<picture class="sVideo__picture">
 								<source srcset="img/@2x/webp/sVideo-4.webp"/><img src="img/@2x/sVideo-4.jpg" alt=""/>
 							</picture></a>
@@ -1200,7 +1401,7 @@
 								<ul>
 									<li><a href="#">Главная</a></li>
 									<li><a href="#">Каталог объектов</a></li>
-									<li><a href="#">Об агентстве</a></li>
+									<li><a class="scroll-link" href="#sAbout">Об агентстве</a></li>
 									<li><a href="#">Блог</a></li>
 									<li><a href="#">Наша команда</a></li>
 									<li><a href="#">Отзывы клиентов</a></li>
@@ -1250,90 +1451,104 @@
 			</footer>
 		</div>
 		<div class="d-none">
-			<div class="form-wrap modal-win modal-form" id="modal-call">
-				<form>
-					<input type="hidden" name="example-input-field"/>
-					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
-					<input class="utm_source" type="hidden" name="utm_source"/>
-					<input class="utm_term" type="hidden" name="utm_term"/>
-					<input class="utm_medium" type="hidden" name="utm_medium"/>
-					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
-					<div class="text-center">
-						<div class="form-wrap__title h3 ttu">Обратный звонок
-						</div>
-						<p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
-					</div>
-					<div class="form-wrap__input-wrap form-group form-group form-group--text"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/> 
-					</div>
-					<!-- +e.input-wrap-->
-					<div class="form-wrap__input-wrap form-group form-group form-group--tel"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" name="tel" required="required"/>
-					</div>
-					<!-- +e.input-wrap--><input class="form-wrap__btn" type="submit" value="Рассчитать"/>
-					<div class="form-wrap__polite">Отправляя заявку, Вы&nbsp;соглашаетесь на&nbsp;обработку <a href="#">персональных данных </a>
-					</div>
-				</form>
-			</div>
-			<div class="form-wrap modal-win modal-win modal-win--lg modal-form" id="modal-call-lg">
-				<form>
-					<input type="hidden" name="example-input-field"/>
-					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
-					<input class="utm_source" type="hidden" name="utm_source"/>
-					<input class="utm_term" type="hidden" name="utm_term"/>
-					<input class="utm_medium" type="hidden" name="utm_medium"/>
-					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
-					<div class="form-wrap__title h3">Задать вопрос
-					</div>
-					<p>Менеджеры компании с&nbsp;радостью ответят на&nbsp;ваши вопросы и&nbsp;произведут расчет стоимости услуг и&nbsp;подготовят индивидуальное коммерческое предложение.</p>
-					<div class="row">
-						<div class="col-lg-6">
-							<div class="form-wrap__input-wrap form-group form-group form-group--text"><input class="form-wrap__input form-control" type="text" placeholder="*Ваше Имя" name="text" required="required"/> 
+			<div class=" modal-win modal-win--lg modal-form" id="modal-call">
+				<div class="form-wrap">
+					<form>
+						<input type="hidden" name="example-input-field"/>
+						<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+						<input class="utm_source" type="hidden" name="utm_source"/>
+						<input class="utm_term" type="hidden" name="utm_term"/>
+						<input class="utm_medium" type="hidden" name="utm_medium"/>
+						<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+						<div class="row">
+							<div class="col-md-6">
+								<!-- picture-->
+								<picture> 
+									<source srcset="img/@2x/webp/girl.webp" type="image/webp" media="(min-width:576px)"/>
+									<source srcset="img/@1x/webp/girl.webp" type="image/webp"/>
+									<source srcset="img/@2x/girl.jpg" type="image/jpg" media="(min-width:576px)"/>
+									<source srcset="img/@1x/girl.jpg" type="image/jpg"/><img src="img/@2x/girl.jpg" alt=""/>
+								</picture>
+								<!-- /picture-->
 							</div>
-							<!-- +e.input-wrap-->
-						</div>
-						<div class="col-lg-6">
-							<div class="form-wrap__input-wrap form-group form-group form-group--tel"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш номер телефона" name="tel" required="required"/>
-							</div>
-							<!-- +e.input-wrap-->
-						</div>
-						<div class="col-lg-6">
-							<div class="form-wrap__input-wrap form-group form-group form-group--email"><input class="form-wrap__input form-control" type="email" placeholder="Email" name="email" required="required"/>
-							</div>
-							<!-- +e.input-wrap-->
-						</div>
-						<div class="col-lg-6">
-							<div class="form-wrap__input-wrap form-group form-group form-group--text"><input class="form-wrap__input form-control" type="text" placeholder="Интересующий товар/услуга:" name="text"/>
-							</div>
-							<!-- +e.input-wrap-->
-						</div>
-					</div>
-					<div class="form-wrap__input-wrap form-group form-group form-group--textarea"><textarea class="form-wrap__input form-control" placeholder="*Ваш вопрос" name="textarea"></textarea>
-					</div>
-					<!-- +e.input-wrap-->
-					<div class="row align-items-center">
-						<div class="col-lg-6"><input class="form-wrap__btn" type="submit" value="Отправить"/>
-						</div>
-						<div class="col-lg-6">
-							<div class="form-wrap__polite">Отправляя заявку, Вы&nbsp;соглашаетесь на&nbsp;обработку <a href="#">персональных данных </a>
+							<div class="col-md-6">
+								<div class="form-wrap__title h5 text-center">Оставьте заявку и&nbsp;наш специалист с&nbsp;Вами свяжется
+								</div>
+								<div class="form-wrap__input-wrap form-group form-group form-group--text"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/> 
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group form-group form-group--tel"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш номер телефона" name="tel" required="required"/>
+								</div>
+								<!-- +e.input-wrap--><input class="form-wrap__btn" type="submit" value="Отправить"/>
+								<div class="form-wrap__polite">Отправляя заявку, Вы&nbsp;соглашаетесь на&nbsp;обработку <a href="#">персональных данных </a>
+								</div>
 							</div>
 						</div>
-					</div>
-				</form>
+					</form>
+				</div>
 			</div>
 			<!-- #modal-call-->
+			<div class=" modal-win modal-win--lg modal-form" id="modal-call-lg">
+				<div class="form-wrap">
+					<form>
+						<input type="hidden" name="example-input-field"/>
+						<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+						<input class="utm_source" type="hidden" name="utm_source"/>
+						<input class="utm_term" type="hidden" name="utm_term"/>
+						<input class="utm_medium" type="hidden" name="utm_medium"/>
+						<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+						<div class="form-wrap__title h3">Задать вопрос
+						</div>
+						<p>Менеджеры компании с&nbsp;радостью ответят на&nbsp;ваши вопросы и&nbsp;произведут расчет стоимости услуг и&nbsp;подготовят индивидуальное коммерческое предложение.</p>
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="form-wrap__input-wrap form-group form-group form-group--text"><input class="form-wrap__input form-control" type="text" placeholder="*Ваше Имя" name="text" required="required"/> 
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="col-lg-6">
+								<div class="form-wrap__input-wrap form-group form-group form-group--tel"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш номер телефона" name="tel" required="required"/>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="col-lg-6">
+								<div class="form-wrap__input-wrap form-group form-group form-group--email"><input class="form-wrap__input form-control" type="email" placeholder="Email" name="email" required="required"/>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="col-lg-6">
+								<div class="form-wrap__input-wrap form-group form-group form-group--text"><input class="form-wrap__input form-control" type="text" placeholder="Интересующий товар/услуга:" name="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+						</div>
+						<div class="form-wrap__input-wrap form-group form-group form-group--textarea"><textarea class="form-wrap__input form-control" placeholder="*Ваш вопрос" name="textarea"></textarea>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="row align-items-center">
+							<div class="col-lg-6"><input class="form-wrap__btn" type="submit" value="Отправить"/>
+							</div>
+							<div class="col-lg-6">
+								<div class="form-wrap__polite">Отправляя заявку, Вы&nbsp;соглашаетесь на&nbsp;обработку <a href="#">персональных данных </a>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- #modal-call-lg-->
 		</div>
 		<!-- modal-->
 		<script src="js/lazy.js"></script>
 		<script src="libs/jquery/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-		<!-- modal libs-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"> </script>
 		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
-		<!-- modal libs-->
-		<!-- slider libs-->
+		<script src="libs/parallax-js/parallax.min.js"> </script>
 		<script src="libs/swiper/js/swiper.min.js"></script>
 		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
 		<script src="libs/choices.js/public/assets/scripts/choices.min.js"></script>
 		<script src="libs/counterup2/index.js"></script>
-		<!-- /slider libs-->
+		<script src="libs/wowjs/wow.min.js"> </script>
 		<script src="libs/intl-tel-input/build/js/intlTelInput.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
