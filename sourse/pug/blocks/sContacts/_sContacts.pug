@@ -1,6 +1,7 @@
 mixin sContacts()
 	// start sContacts
-	+b.SECTION.sContacts.section#sContacts&attributes(attributes)
+	+b.sContacts#sContacts&attributes(attributes)
+		+cloud()(id="sContacts-inner")
 		.container
 			.row
 				mixin item(i, t, p)

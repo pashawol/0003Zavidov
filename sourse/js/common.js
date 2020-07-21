@@ -209,7 +209,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/blog-mob.png);"></div>')
+	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/07-mob.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -355,7 +355,7 @@ function eventHandler() {
 	});
 
 	$('.acardion-js').click(function(){
-		$('.acardion-toggle').slideToggle();
+		$(this).parent().find('.acardion-toggle').slideToggle();
 		$(this).toggleClass('active');
 	})
 
@@ -411,6 +411,7 @@ function eventHandler() {
 		'sLogos-inner1',
 		'sAbout-inner',
 		'sVideo-inner',
+		'sContacts-inner',
 	];
 	blockWithAnimate.forEach(element => animateCloud(element));
  

@@ -17,11 +17,13 @@ include ../blocks/sMap/_sMap.pug
 include ../blocks/sArticalContent/_sArticalContent.pug 
 include ../blocks/sSideBar/_sSideBar.pug 
 include ../blocks/sFilter/_sFilter.pug 
+include ../blocks/sPropertyMnu/_sPropertyMnu.pug 
+include ../blocks/sDescription/_sDescription.pug 
 
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'Каталог объектов'
+	- let  title= 'Коммерческая недвижимость'
 	title= title
 block pagecontent 
 	//- +mob-mnu()
@@ -32,13 +34,23 @@ block pagecontent
 				+top-nav()
 	+breadcrumb("Главная",title)
 	+page-title(title)
-	+sCategories-sm()
-	.container.mb-30
+	//- +sCategories-sm()
+	.container.mb-30.pt-2
 		.row
 			.col-lg-3
+				+sPropertyMnu()
+					+e.accardion.d-lg-none.acardion-js Коммерческая недвижимость
+					+e.mnuBody.acardion-toggle
+						+e.mnuItem(href="#") Вторичная недвижимость
+						+e.mnuItem(href="#") Загородная недвижимость
+						+e.mnuItem.active(href="#") Коммерческая недвижимость
+						+e.mnuItem(href="#") Зарубежная недвижимость
 				+sFilter()
 					+e.block
 						.strong.mb-2 Тип недвижимости
+						+input('Выбрать','select')(class="form-control-sm ")
+					+e.block
+						.strong.mb-2 Тип здания
 						+input('Выбрать','select')(class="form-control-sm ")
 					+e.block
 						.strong.mb-2 Цена (руб.):
@@ -50,9 +62,11 @@ block pagecontent
 						.strong.mb-2 Метро
 						+input('Выбрать','select')(class="form-control-sm ")
 					+e.block
-						.strong.mb-2 Общая прощадь (м2):
-						+range("20", "44000")
+						.strong.mb-2 Общая площадь (м2):
+						+range("20", "2200")
 			.col-lg-9
+				+input('Сортировать по цене (сначала дешёвые)','select')(class="form-control-standart ") 
+				+sMap-xsm()
 				.row
 					mixin row()
 						.col-sm-6.col-lg-4.mb-30
@@ -64,10 +78,8 @@ block pagecontent
 					+row
 					+row
 					+row
+					+row
 				+pugin()
-
-
-	//- +sForm-sm()
-	//- +sMap-sm()
+	+sDescription
 	+footer()
 	

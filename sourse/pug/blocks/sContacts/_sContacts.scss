@@ -1,5 +1,6 @@
 // start .sContacts
 .sContacts {
+	position: relative;
 	padding-top: calc(var(--sPT) / 4.1);
 	padding-bottom: calc(var(--sPB) / 2.5);
 	@include media-breakpoint-up(lg) {

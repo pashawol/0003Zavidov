@@ -201,7 +201,7 @@ function eventHandler() {
 	JSCCommon.inputMask();
 	JSCCommon.customRange(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/blog-mob.png);"></div>')
+	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/07-mob.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
 	// const url = document.location.href;
 	// $.each($(".top-nav__nav a "), function() {
@@ -323,7 +323,7 @@ function eventHandler() {
 		}
 	}));
 	$('.acardion-js').click(function () {
-		$('.acardion-toggle').slideToggle();
+		$(this).parent().find('.acardion-toggle').slideToggle();
 		$(this).toggleClass('active');
 	});
 	$(".sTeam__btn").click(function () {
@@ -367,7 +367,7 @@ function eventHandler() {
 		});
 	}
 
-	var blockWithAnimate = ['sCategories-inner', 'sForm-inner1', 'sForm-inner2', 'sMap-inner', 'sCatalog-inner', 'sDo-inner', 'sLogos-inner1', 'sAbout-inner', 'sVideo-inner'];
+	var blockWithAnimate = ['sCategories-inner', 'sForm-inner1', 'sForm-inner2', 'sMap-inner', 'sCatalog-inner', 'sDo-inner', 'sLogos-inner1', 'sAbout-inner', 'sVideo-inner', 'sContacts-inner'];
 	blockWithAnimate.forEach(function (element) {
 		return animateCloud(element);
 	});

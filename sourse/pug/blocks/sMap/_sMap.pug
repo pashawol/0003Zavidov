@@ -29,24 +29,15 @@ mixin sMap-sm()
 	// start sMap
 	+b.SECTION.sMap--sm.section#sMap&attributes(attributes)
 		.container
-			//- +b.section-title
-			//- 	h2: strong Подобрать недвижимость
-			//- +e.filter
-			//- 	+e.row.row
-			//- 		+e.item.col
-			//- 			.strong.mb-2 Тип недвижимости
-			//- 			+input('Выбрать','select')(class="form-control-sm ")
-			//- 		+e.item.col-xl-auto.col-lg-3.col-md-6
-			//- 			.strong.mb-2 Вид сделки
-			//- 			+input('Выбрать','select')(class="form-control-sm ")
-			//- 		+e.item.col-lg-3.col-md-6
-			//- 			.strong.mb-2 Цена (руб.):
-			//- 			+range("1000000", "30000000")
-			//- 		+e.item.col-lg-3.col-md-6
-			//- 			.strong.mb-2 Общая прощадь (м2):
-			//- 			+range("20", "44000")
-			//- 	+e.btn(type="submit") Подобрать
 		+e.map-wrap.bg-wrap
 			+pic("map.jpg",'bg')(class="picture-bg")
 				//- img(src="", alt="")
 	// end sMap
+
+mixin sMap-xsm()
+	// start sMap
+	+b.SECTION.sMap--xsm.section#sMap&attributes(attributes)
+		.container
+		+e.map-wrap.bg-wrap
+			+pic("map.jpg",'bg')(class="picture-bg")
+				//- img(src="", alt="")

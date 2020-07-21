@@ -168,7 +168,19 @@
 				</div>
 			</div>
 			<!-- start sContacts-->
-			<section class="sContacts section" id="sContacts">
+			<div class="sContacts" id="sContacts">
+				<div class="cloud-wrap" id="sContacts-inner">
+					<div class="cloud" data-depth=".5">
+						<!-- picture-->
+						<picture> 
+							<source srcset="img/@2x/webp/cloud.webp" type="image/webp" media="(min-width:576px)"/>
+							<source srcset="img/@1x/webp/cloud.webp" type="image/webp"/>
+							<source srcset="img/@2x/cloud.png" type="image/png" media="(min-width:576px)"/>
+							<source srcset="img/@1x/cloud.png" type="image/png"/><img src="img/@2x/cloud.png" alt=""/>
+						</picture>
+						<!-- /picture-->
+					</div>
+				</div>
 				<div class="container">
 					<div class="row">
 								<div class="sContacts__col col-lg-3 col-sm-6">
@@ -206,7 +218,7 @@
 								</div>
 					</div>
 				</div>
-			</section>
+			</div>
 			<!-- end sContacts-->
 			<!-- start sForm-->
 			<section class="sForm sForm--sm section bg-wrap" id="sForm">

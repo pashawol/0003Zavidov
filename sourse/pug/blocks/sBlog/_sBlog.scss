@@ -93,7 +93,7 @@
 	&::before {
 		content: '';
 		@include a-cent(y);
-		right: rem(25);
+		right: rem(18);
 		width: rem(14);
 		height: rem(8);
 		background-image: url('../img/chevron-down-primary.svg');
