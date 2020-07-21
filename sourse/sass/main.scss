@@ -58,7 +58,11 @@ $output-bourbon-deprecation-warnings: false;
 }
 .breadcrumb-wrap{
 	background-color: #ffffff;
-	margin-bottom: rem(45);
+		@include media-breakpoint-up(sm) {
+
+			margin-bottom: rem(45);
+		}
+		margin-bottom: rem(45 / 2);
 }
 @import "./node_modules/bootstrap/scss/pagination";
 

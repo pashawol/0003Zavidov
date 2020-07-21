@@ -359,12 +359,15 @@ function eventHandler() {
 
 	function animateCloud(el) {
 		var scene = document.getElementById(el);
-		var parallaxInstance = new Parallax(scene, {
-			invertX: false,
-			invertY: false // limitX: 200,
-			// limitY: 200
 
-		});
+		if (scene) {
+			var parallaxInstance = new Parallax(scene, {
+				invertX: false,
+				invertY: false // limitX: 200,
+				// limitY: 200
+
+			});
+		}
 	}
 
 	var blockWithAnimate = ['sCategories-inner', 'sForm-inner1', 'sForm-inner2', 'sMap-inner', 'sCatalog-inner', 'sDo-inner', 'sLogos-inner1', 'sAbout-inner', 'sVideo-inner', 'sContacts-inner'];

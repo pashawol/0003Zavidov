@@ -16,7 +16,7 @@ mixin videoItem(imgNum, linkHref='https://www.youtube.com/watch?v=en6gms6e54Q&li
 	.col-sm-6.col-lg-3(class="wow  animate__fadeInUp " data-wow-offset="100")
 		+e.A.video-link(href=linkHref data-fancybox="video")
 			+e.PICTURE.picture
-				source(srcset=`img/@2x/webp/sVideo-${imgNum}.webp`)
+				source(srcset=`img/@2x/webp/sVideo-${imgNum}.webp` type="image/webp")
 					//-.lazy(srcset="#" data-
 				img(src=`img/@2x/sVideo-${imgNum}.jpg`, alt="")
 					//-.lazy(src="#" data-

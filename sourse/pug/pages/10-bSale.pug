@@ -19,7 +19,7 @@ include ../blocks/sSideBar/_sSideBar.pug
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'Закрытая продажа'
+	- let  title= 'Продажа бизнеса'
 	title= title
 block pagecontent 
 	+mob-mnu()
@@ -32,11 +32,10 @@ block pagecontent
 	+page-title(title)
 	.container
 		+b.main-row.row
-			+e.sideBar.col-md-5.order-md-last
-				+sSideBar
+			+e.sideBar.col-lg-5.order-lg-last
+				+sSideBar10
 			+e.content.col
-				+sContent
-			
+				+sContent10
 
 	+footer()
 	
