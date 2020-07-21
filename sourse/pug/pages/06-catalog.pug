@@ -16,11 +16,12 @@ include ../blocks/sVideo/_sVideo.pug
 include ../blocks/sMap/_sMap.pug 
 include ../blocks/sArticalContent/_sArticalContent.pug 
 include ../blocks/sSideBar/_sSideBar.pug 
+include ../blocks/sFilter/_sFilter.pug 
 
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'Каталог объектов'
+	- let  title= 'Блог'
 	title= title
 block pagecontent 
 	//- +mob-mnu()
@@ -31,7 +32,26 @@ block pagecontent
 				+top-nav()
 	+breadcrumb("Главная",title)
 	+page-title(title)
-	//- +sBlog()
+	+sCategories-sm()
+	.container
+		.row
+			.col-lg-3
+				+sFilter()
+			.col-lg-9
+				.row
+					mixin row()
+						.col-md-6.col-lg-4.mb-30
+							+itemProd('2')
+						.col-md-6.col-lg-4.mb-30
+							+itemProd('3')
+						.col-md-6.col-lg-4.mb-30
+							+itemProd('4')
+					+row
+					+row
+					+row
+				+pugin()
+
+
 	//- +sForm-sm()
 	//- +sMap-sm()
 	+footer()

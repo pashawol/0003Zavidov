@@ -19,8 +19,9 @@ mixin sBlog()
 			.row
 				.col.order-lg-last
 					+e.mnu
-						+e.mnuItem.active(href="#") Все статьи
-						+e.mnuBody
+						+e.accardion.d-lg-none.acardion-js Все статьи
+						+e.mnuBody.acardion-toggle
+							+e.mnuItem.active(href="#") Все статьи
 							+e.mnuItem(href="#") Новости
 							+e.mnuItem(href="#") Недвижимость
 							+e.mnuItem(href="#") Ипотека
