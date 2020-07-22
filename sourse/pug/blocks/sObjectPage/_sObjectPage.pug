@@ -94,7 +94,7 @@ mixin sObjectPage()
 								+tableContentItem('Раздельный санузел', '2')
 								+tableContentItem('Пассажирских лифтов', '1')
 								+tableContentItem('Парковка', 'Наземная')
-					.col-lg-4
+					+e.cloud-wrap.col-lg-4
 						+e.header.active Документы
 						+e.content.active
 							+e.references-cont
@@ -106,8 +106,7 @@ mixin sObjectPage()
 										a(href="#") Просмотр
 										a(href="#") Скачать
 										a(href="#") Сохранить
-								+e.cloud-wrap.d-none.d-xl-block
-									+cloud('cloud-3.png')(id="objectPageCloud")
+						+cloud('cloud-3.png')(id="objectPageCloud")
 				+e.lower-nav
 					+e.A.nav-item(href="#")
 						+e.get-back-btn

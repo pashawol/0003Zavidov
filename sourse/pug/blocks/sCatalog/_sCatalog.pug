@@ -1,7 +1,6 @@
 mixin itemProd(i, sl)
 	+b.prodItem(href="#")
-		if sl
-			+e.DIV.label  Мы рекомендуем
+		+e.DIV.label  Мы рекомендуем
 		picture.bg-wrap
 			if sl
 				source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/prod-${i}.webp` type="image/webp")
