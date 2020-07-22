@@ -159,6 +159,10 @@
 		
 		&__btn{
 			@extend .btn;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			// @extend .btn-bl;
 			@extend .btn-outline-primary;
 			width: 225px;
 			margin-bottom: rem(60);

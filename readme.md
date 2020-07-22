@@ -8,4 +8,6 @@
 1. 
 1. 
 1. 
+1. 
 1. <https://pashawol.github.io/0003Zavidov/public/08-team.html>
+1. <https://pashawol.github.io/0003Zavidov/public/10-bSale.html>

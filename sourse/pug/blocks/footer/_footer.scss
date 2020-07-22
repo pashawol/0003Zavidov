@@ -1,6 +1,6 @@
 .footer {
   background-color: #222222;
-
+  position: relative;
   padding: 0;
   @include media-breakpoint-up(sm){
     padding: 0;

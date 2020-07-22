@@ -1,0 +1,30 @@
+mixin radio(t,n)
+	+b.LABEL.custom-radio
+		input(type="radio" name= n)&attributes(attributes)
+		+e.SPAN.lab
+		+e.SPAN.text= t
+
+mixin checkbox(typ="checkbox", text, name= typ )
+	+b.LABEL.checkbox
+		+e.INPUT.input(type= typ , name= name)&attributes(attributes)
+		+e.SPAN.lab= text
+
+mixin sFilter()
+	// start sFilter
+	+b.sFilter#sFilter&attributes(attributes)
+		+cloud()(id="sFilter-inner")
+		+e.filter
+			+e.sort.d-lg-none.acardion-js Сортировать
+			+e.body.acardion-toggle
+				+e.block
+					.row
+						.col-6
+							+radio('Аренда','order-type')
+						.col-6
+							+radio('Продажа','order-type')(checked)
+				block
+				+e.buttons
+					+e.btn(type="button") Показать
+					+e.discharge.btn(type="button") Сбросить
+		+e.result.d-none.d-lg-block Найдено #[span 132] объекта по Вашему запросы
+	// end sFilter

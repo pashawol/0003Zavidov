@@ -209,7 +209,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/07-320.jpg);"></div>')
+	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/blog.png);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -354,6 +354,11 @@ function eventHandler() {
 		},
 	});
 
+	$('.acardion-js').click(function(){
+		$(this).parent().find('.acardion-toggle').slideToggle();
+		$(this).toggleClass('active');
+	})
+
 
 	$(".sTeam__btn").click(function () {
 		$(".sTeam__col:hidden").fadeIn(() => $(this).hide());
@@ -446,12 +451,15 @@ function eventHandler() {
 
 	function animateCloud(el) {
 		var scene = document.getElementById(el);
-		var parallaxInstance = new Parallax(scene, {
-			invertX: false,
-			invertY: false,
-			// limitX: 200,
-			// limitY: 200
-		});
+		if (scene) {
+
+			var parallaxInstance = new Parallax(scene, {
+				invertX: false,
+				invertY: false,
+				// limitX: 200,
+				// limitY: 200
+			});
+		}
 	}
 	let blockWithAnimate = [
 		'sCategories-inner',
@@ -463,6 +471,9 @@ function eventHandler() {
 		'sLogos-inner1',
 		'sAbout-inner',
 		'sVideo-inner',
+		'sContacts-inner',
+		'sBlog-inner',
+		'sFilter-inner',
 		'objectPageCloud',
 	];
 	blockWithAnimate.forEach(element => animateCloud(element));

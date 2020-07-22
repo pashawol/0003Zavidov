@@ -168,7 +168,19 @@
 				</div>
 			</div>
 			<!-- start sContacts-->
-			<section class="sContacts section" id="sContacts">
+			<div class="sContacts" id="sContacts">
+				<div class="cloud-wrap" id="sContacts-inner">
+					<div class="cloud" data-depth=".5">
+						<!-- picture-->
+						<picture> 
+							<source srcset="img/@2x/webp/cloud.webp" type="image/webp" media="(min-width:576px)"/>
+							<source srcset="img/@1x/webp/cloud.webp" type="image/webp"/>
+							<source srcset="img/@2x/cloud.png" type="image/png" media="(min-width:576px)"/>
+							<source srcset="img/@1x/cloud.png" type="image/png"/><img src="img/@2x/cloud.png" alt=""/>
+						</picture>
+						<!-- /picture-->
+					</div>
+				</div>
 				<div class="container">
 					<div class="row">
 								<div class="sContacts__col col-lg-3 col-sm-6">
@@ -206,7 +218,7 @@
 								</div>
 					</div>
 				</div>
-			</section>
+			</div>
 			<!-- end sContacts-->
 			<!-- start sForm-->
 			<section class="sForm sForm--sm section bg-wrap" id="sForm">
@@ -307,12 +319,6 @@
 			<div class=" modal-win modal-win--lg modal-form" id="modal-call">
 				<div class="form-wrap">
 					<form>
-						<input type="hidden" name="example-input-field"/>
-						<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
-						<input class="utm_source" type="hidden" name="utm_source"/>
-						<input class="utm_term" type="hidden" name="utm_term"/>
-						<input class="utm_medium" type="hidden" name="utm_medium"/>
-						<input class="utm_campaign" type="hidden" name="utm_campaign"/>
 						<div class="row">
 							<div class="col-md-6">
 								<!-- picture-->
@@ -344,12 +350,6 @@
 			<div class=" modal-win modal-win--lg modal-form" id="modal-call-lg">
 				<div class="form-wrap">
 					<form>
-						<input type="hidden" name="example-input-field"/>
-						<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
-						<input class="utm_source" type="hidden" name="utm_source"/>
-						<input class="utm_term" type="hidden" name="utm_term"/>
-						<input class="utm_medium" type="hidden" name="utm_medium"/>
-						<input class="utm_campaign" type="hidden" name="utm_campaign"/>
 						<div class="form-wrap__title h3">Задать вопрос
 						</div>
 						<p>Менеджеры компании с&nbsp;радостью ответят на&nbsp;ваши вопросы и&nbsp;произведут расчет стоимости услуг и&nbsp;подготовят индивидуальное коммерческое предложение.</p>

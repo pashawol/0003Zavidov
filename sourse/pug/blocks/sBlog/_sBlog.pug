@@ -15,12 +15,14 @@ mixin blogItem(d,t,s)
 mixin sBlog()
 	// start sBlog
 	+b.sBlog#sBlog&attributes(attributes)
+		+cloud()(id="sBlog-inner")
 		.container
 			.row
 				.col.order-lg-last
 					+e.mnu
-						+e.mnuItem.active(href="#") Все статьи
-						+e.mnuBody
+						+e.accardion.d-lg-none.acardion-js Все статьи
+						+e.mnuBody.acardion-toggle
+							+e.mnuItem.active(href="#") Все статьи
 							+e.mnuItem(href="#") Новости
 							+e.mnuItem(href="#") Недвижимость
 							+e.mnuItem(href="#") Ипотека
@@ -47,5 +49,4 @@ mixin sBlog()
 						+e.col.col-sm-6.col-md-4
 							+blogItem('13:21 27 мая 2020 г.','Какую квартиру выбрать: варианты планировок','И жить с комфортом')
 					+e.loadMore.btn-outline-primary(href="#") Показать ещё
-
 	// end sBlog

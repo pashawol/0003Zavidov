@@ -12,6 +12,31 @@ mixin sCategories()
 							+e.item(href="#")
 								+e.img-wrap.bg-wrap
 									picture.picture-bg
+										source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/sCategories-${i}.webp` type="image/webp")
+										img.object-fit-js.swiper-lazy(src="#" data-src=`img/@2x/sCategories-${i}.jpg`, alt="")
+									+e.center Посмотреть предложения
+										+icon('arrow-right')
+								+e.DIV.title= t
+						// /+e.slide.swiper-slide
+					+slide("1","Вторичная недвижимость")
+					+slide("2","Загородная недвижимость")
+					+slide("3","Коммерческая недвижимость")
+					+slide("4","Зарубежная недвижимость")
+				.d-none.d-md-block
+					+arrow()
+
+mixin sCategories-sm()
+	// start sCategories
+	+b.SECTION.sCategories--sm.section#sCategories&attributes(attributes)
+		.container
+				
+			+e.slider--js.swiper-container
+				.swiper-wrapper
+					mixin slide(i, t)
+						+e.slide.swiper-slide
+							+e.item(href="#")
+								+e.img-wrap.bg-wrap
+									picture.picture-bg
 										source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/sCategories-${i}.webp`)
 										img.object-fit-js.swiper-lazy(src="#" data-src=`img/@2x/sCategories-${i}.jpg`, alt="")
 									+e.center Посмотреть предложения

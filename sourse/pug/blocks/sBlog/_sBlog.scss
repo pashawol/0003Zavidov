@@ -10,19 +10,31 @@
 	}
 
 	&__mnu {
-		padding: rem(22) 0;
+		padding: rem(10) 0;
+		@include media-breakpoint-up(md) {
+			padding: rem(22) 0;
+		}
 		color: $body-color;
 		background: #FFFFFF;
 		border-radius: 15px;
-		margin-bottom: rem(31);
+		margin-bottom: rem(33);
 	}
+
+	&__accardion {
+		color: $primary;
+		padding: rem(5) rem(27);
+	}
+	
 
 	&__mnuItem {
 		display: flex;
 		align-items: center;
 		min-height: rem(45);
-		padding: rem(5) rem(36);
-		
+		padding: rem(5) rem(27);
+		@include media-breakpoint-up(lg) {
+			padding: rem(5) rem(36);
+		}
+
 		&:hover {
 			color: $primary;
 			background-color: #f6f6f6;
@@ -30,15 +42,14 @@
 
 		&.active {
 			color: $primary;
-			@include media-breakpoint-up (lg) {
-				background-color: #f6f6f6;
-			}
+			background-color: #f6f6f6;
 		}
 	}
 
-	&__mnuBody {
+	&__mnuBody, &__mnuItem.active {
 		@include media-breakpoint-down(lg) {
 			display: none;
+			padding-top: rem(7);
 		}
 	}
 
@@ -49,7 +60,12 @@
 	.row {
 		margin-bottom: rem(28);
 	}
-	
+
+	.cloud {
+		left: 50% !important;
+		top: 65% !important;
+	}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -76,6 +92,28 @@
 
 } // end.sBlog
 
+.acardion-js {
+	position: relative;
+
+	&::before {
+		content: '';
+		@include a-cent(y);
+		right: rem(18);
+		width: rem(14);
+		height: rem(8);
+		background-image: url('../img/chevron-down-primary.svg');
+		background-position: center;
+		background-repeat: no-repeat;
+		@include mt;
+	}
+
+	&.active{
+		&::before {
+			transform: rotate(180deg);
+		}
+	}
+}
+
 .blogItem {
 	position: relative;
 	border-radius: $border-radius;
@@ -87,6 +125,7 @@
 	box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.05);
 
 	picture {
+		height: rem(170);
 		@include media-breakpoint-up(sm) {
 			height: rem(157);
 		}
