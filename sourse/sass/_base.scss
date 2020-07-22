@@ -563,29 +563,30 @@ body:not(.main-page) {
 
 .btn-primary{
 	color: #ffffff;
-	box-shadow: 0 4px 0 #2974b0;
 	border-radius: $border-radius;
 	// border-color:$primary;
 	border: none;
 	background: linear-gradient(180deg, #70ABDC 0%, #4F96D1 100%);
 	position: relative;
-	&::after{
-		content: '';
-		z-index: -1;
-		background: #83C7FF;
-		filter: blur(50px);
-		border-radius: 60px;
-		@include a-cent(x);
-		width: 90%;
-		height: rem(28px);
-		bottom: -6px;
-		@include mt;
-	}
+	box-shadow: 0 4px 0 #2974b0,
+							 0px rem(20) rem(20) 0px rgba($color: $primary, $alpha: .45);
+	// &::after{
+	// 	content: '';
+	// 	z-index: -1;
+	// 	background: #83C7FF;
+		
+	// 	filter: blur(50px);
+	// 	border-radius: 60px;
+	// 	@include a-cent(x);
+	// 	width: 90%;
+	// 	height: rem(28px);
+	// 	bottom: -10px;
+	// 	@include mt;
+	// }
 	&:hover{
 		// box-shadow: 0 0px 0 #2974b0;
-		&::after{
-			opacity: 0;
-		}
+	box-shadow: 0 4px 0 #2974b0,
+	0px rem(20) rem(20) 0px rgba($color: $primary, $alpha: 0);
 		// bsh
 		// background: linear-gradient(180deg, #70ABDC 0%, #4F96D1 100%);
 		// box-shadow: 0px 2px 0px #2974B0;
