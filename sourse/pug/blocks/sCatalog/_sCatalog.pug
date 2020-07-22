@@ -7,7 +7,7 @@ mixin itemProd(i, sl)
 				source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/prod-${i}.webp` type="image/webp")
 				img.object-fit-js.img-bg.swiper-lazy(src="#" data-src=`img/@2x/prod-${i}.jpg`, alt="")
 			else
-				source.lazy(src="#" data-src=`img/@2x/webp/prod-${i}.webp`)
+				source.lazy(srcset="#" data-srcset=`img/@2x/webp/prod-${i}.webp` type="image/webp")
 				img.object-fit-js.img-bg.lazy(src="#" data-src=`img/@2x/prod-${i}.jpg`, alt="")
 		+e.DIV.caption
 			table

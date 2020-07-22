@@ -12,7 +12,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 	var rootMargin = "500px 0px 500px 0px"
-	var lazyImages = [].slice.call(document.querySelectorAll("picture.lazy img, picture.lazy source, img.lazy"));
+	var lazyImages = [].slice.call(document.querySelectorAll("picture.lazy img, picture.lazy source, img.lazy, source.lazy"));
 	var lazyBackgrounds = [].slice.call(document.querySelectorAll('.lazy-background'));
 	var lazyBackgroundsData = [].slice.call(document.querySelectorAll('[data-bg]'));
 

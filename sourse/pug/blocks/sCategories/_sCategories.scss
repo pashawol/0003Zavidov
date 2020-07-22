@@ -76,8 +76,9 @@
 
 		&--sm {
 			padding-top: rem(10);
-			@include media-breakpoint-down(lg) {
-				padding-bottom: rem(10);
+			padding-bottom: rem(10);
+			@include media-breakpoint-up(lg) {
+				padding-bottom: var(--sPB);
 			}
 		}
 		 
