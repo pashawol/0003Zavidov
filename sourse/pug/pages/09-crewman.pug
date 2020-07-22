@@ -1,13 +1,10 @@
 extends layout/main.pug
-
-
-
-include ../blocks/sTeam/_sTeam.pug 
+include ../blocks/sCrewman/_sCrewman.pug 
 
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'Наша команда'
+	- let  title= 'Юрий Завидов'
 	title= title
 block pagecontent 
 	+mob-mnu()
@@ -18,8 +15,6 @@ block pagecontent
 				+top-nav()
 	+breadcrumb("Главная",title)
 	+page-title(title)
-	+sTeam
-		+cloud()(id="objectPageCloud")
-
+	+sCrewman(title)
 	+footer()
 	

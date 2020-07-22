@@ -82,13 +82,13 @@ $output-bourbon-deprecation-warnings: false;
 	@extend .page-item;
 	margin-left: rem(5);
 	margin-right: rem(5);
-	width: rem(30px);
-	height: rem(30px);
+	width: rem(35px);
+	height: rem(35px);
 	@include media-breakpoint-up(sm) {
 		margin-left: rem(6);
 		margin-right: rem(6);
-		width: rem(35px);
-		height: rem(35px);
+		// width: rem(35px);
+		// height: rem(35px);
 	}
 	font-size: $small;
 
@@ -119,12 +119,12 @@ $output-bourbon-deprecation-warnings: false;
 	}
 
 	.prev, .next {
-		width: rem(29px);
-		height: rem(29px);
-		@include media-breakpoint-up(sm) {
+		// width: rem(29px);
+		// height: rem(29px);
+		// @include media-breakpoint-up(sm) {
 			width: rem(35px);
 			height: rem(35px);
-		}
+		// }
 		border: 1px solid #eaeaea !important;
 		background-color: transparent !important;
 

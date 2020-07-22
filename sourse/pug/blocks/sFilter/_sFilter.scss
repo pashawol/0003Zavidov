@@ -3,6 +3,7 @@
 	position: relative;
 	&__btn {
 		@extend .btn;
+		@extend .btn-sm;
 		@extend .btn-primary;
 		display: block;
 		width: 100%;
@@ -18,7 +19,7 @@
 		padding: rem(18);
 		@include mt;
 		&:hover {
-			opacity: .6;
+			color: $primary;
 		}
 	}
 
@@ -26,6 +27,7 @@
 		background: #FFFFFF;
 		border: 1px solid #EAEAEA;
 		border-radius: $border-radius;
+		overflow: hidden;
 		margin-bottom: rem(22);
 		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(18);
@@ -36,6 +38,9 @@
 		@include media-breakpoint-down(lg) {
 			display: none;
 			// padding-top: rem(25);
+		}
+		@include media-breakpoint-up(lg) {
+			display: block !important;
 		}
 		padding: rem(16) rem(20);
 		@include media-breakpoint-up(xl) {

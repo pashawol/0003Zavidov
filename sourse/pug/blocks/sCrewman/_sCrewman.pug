@@ -1,0 +1,27 @@
+mixin sCrewman(name)
+	// start sCrewman
+	+b.sCrewman#sCrewman&attributes(attributes)
+		.container
+			+e.card
+				.row
+					.col-sm-6
+						+e.imgWrap
+							img.res-i(src="img/@2x/team-1.jpg", alt="")
+					+e.col.col-sm-6
+						+e.name.h5= name
+						+e.position Президент компании
+						+e.phone(href="tel:") 
+							+icon('tel')
+							span +7 (495) 660-20-21
+						+e.mail(href="mailto:yuriy@zavidov.realty")
+							+icon('mail')
+							span yuriy@zavidov.realty
+						+e.back.d-none.d-sm-flex(href="#")
+							+e.buttonImg
+								img.res-i(src="img/svg/prev-white.svg", alt="")
+							span Наша команда
+			+e.back.d-sm-none(href="#")
+				+e.buttonImg
+					img.res-i(src="img/svg/prev-white.svg", alt="")
+				span Наша команда
+	// end sCrewman

@@ -31,6 +31,7 @@
 		align-items: center;
 		min-height: rem(45);
 		padding: rem(5) rem(27);
+		color: $body-color;
 		@include media-breakpoint-up(lg) {
 			padding: rem(5) rem(36);
 		}
@@ -50,6 +51,12 @@
 		@include media-breakpoint-down(lg) {
 			display: none;
 			padding-top: rem(7);
+		}
+	}
+
+	&__mnuBody {
+		@include media-breakpoint-up(lg) {
+			display: block !important;
 		}
 	}
 
@@ -94,11 +101,12 @@
 
 .acardion-js {
 	position: relative;
+	@include mt;
 
 	&::before {
 		content: '';
 		@include a-cent(y);
-		right: rem(18);
+		left: calc(100% - #{rem(32)});
 		width: rem(14);
 		height: rem(8);
 		background-image: url('../img/chevron-down-primary.svg');
@@ -108,8 +116,11 @@
 	}
 
 	&.active{
+		background-color: $primary;
+		color: #fff;
 		&::before {
 			transform: rotate(180deg);
+			background-image: url('../img/svg/chevron-down.svg');
 		}
 	}
 }

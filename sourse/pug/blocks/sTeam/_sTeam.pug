@@ -1,10 +1,11 @@
 mixin sTeam(t)
 	// start sTeam
-	+b.SECTION.sTeam.section#sTeam&attributes(attributes)
+	+b.sTeam.section#sTeam&attributes(attributes)
 		.container
 			if t
 				+b.section-title.text-center.h2-sm
 					h2: strong= t
+			block
 			.row
 				mixin item(i,t,p)
 					+e.col.col(href="#")
