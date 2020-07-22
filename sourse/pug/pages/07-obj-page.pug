@@ -1,0 +1,34 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/sAdvantages/_sAdvantages.pug 
+include ../blocks/sCategories/_sCategories.pug 
+include ../blocks/sCatalog/_sCatalog.pug 
+include ../blocks/sDo/_sDo.pug 
+include ../blocks/sLogos/_sLogos.pug 
+include ../blocks/sAbout/_sAbout.pug 
+include ../blocks/sTeam/_sTeam.pug 
+include ../blocks/sRews/_sRews.pug 
+include ../blocks/sVideo/_sVideo.pug 
+include ../blocks/sMap/_sMap.pug
+
+include ../blocks/sObjectPage/_sObjectPage.pug
+
+block variables
+	- let  mainPage= 'prod-card-page'
+block title
+	- let  title= 'Главная'
+	title= title
+block pagecontent 
+	+mob-mnu()
+	+header()
+		.fixed-line
+			.container
+				+topLine()
+				+top-nav()
+	+breadcrumb("Главная","Каталог объектов","Загородная недвижимость")
+	+sObjectPage()
+	+footer()
+	

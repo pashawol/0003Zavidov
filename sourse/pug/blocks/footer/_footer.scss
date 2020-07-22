@@ -41,6 +41,10 @@
     }
 
     img{
+      margin: 0 auto;
+      @include media-breakpoint-up(sm){
+        margin: 0;
+      }
       max-width: 100%;
       width: auto;
       height: auto;

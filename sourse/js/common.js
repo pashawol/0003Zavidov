@@ -209,7 +209,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/blog.png);"></div>')
+	$(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/07-320.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -381,11 +381,68 @@ function eventHandler() {
  	//luckyone JS
 
 	$('.sContact__header').click(function () {
+		//
+		if (window.matchMedia("(min-width: 992px)").matches) {
+			return
+		}
+
 		$(this).toggleClass('active');
 		$(this.parentElement).find('.sContact__txt-block').slideToggle(function () {
 			$(this).toggleClass('active');
 		});
 	});
+	//07 object page
+
+	//03 slider
+	let objSliderThumb = new Swiper('.object-slider-thumb-js', {
+		slidesPerView: 'auto',
+		//bp
+		breakpoints: {
+			320 : {
+				spaceBetween: 18,
+			},
+			1200 : {
+				spaceBetween: 22,
+			},
+		},
+		//
+	});
+
+	let objSlider = new Swiper('.object-slider-js', {
+		slidesPerView: '1',
+		spaceBetween: 10,
+		loop: true,
+		//
+		navigation: {
+			nextEl: '.object-next-js',
+			prevEl: '.object-prev-js',
+		},
+		//
+		thumbs: {
+			swiper: objSliderThumb
+		},
+		//
+		lazy: {
+			loadPrevNext: true,
+		},
+	});
+
+	//chars toggle
+	$('.other-data__header').click(function () {
+		//
+		if (window.matchMedia("(min-width: 992px)").matches) {
+			return
+		}
+
+		$(this).toggleClass('active');
+		$(this.parentElement).find('.other-data__content').slideToggle(function () {
+			$(this).toggleClass('active');
+		});
+	});
+	//objectPageCloud
+
+
+	//end luckyone js
 
 	function animateCloud(el) {
 		var scene = document.getElementById(el);
@@ -406,6 +463,7 @@ function eventHandler() {
 		'sLogos-inner1',
 		'sAbout-inner',
 		'sVideo-inner',
+		'objectPageCloud',
 	];
 	blockWithAnimate.forEach(element => animateCloud(element));
  
