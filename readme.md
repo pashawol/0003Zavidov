@@ -10,7 +10,7 @@
 1. <https://pashawol.github.io/0003Zavidov/public/07.1-property.html>
 1. <https://pashawol.github.io/0003Zavidov/public/07.2-property.html>
 1. <https://pashawol.github.io/0003Zavidov/public/07.3-property.html>
-1. 
+1. <https://pashawol.github.io/0003Zavidov/public/09-crewman.html>
 1. 
 1. <https://pashawol.github.io/0003Zavidov/public/08-team.html>
 1. <https://pashawol.github.io/0003Zavidov/public/10-bSale.html>
