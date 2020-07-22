@@ -351,11 +351,62 @@ function eventHandler() {
 	//luckyone JS
 
 	$('.sContact__header').click(function () {
+		//
+		if (window.matchMedia("(min-width: 992px)").matches) {
+			return;
+		}
+
 		$(this).toggleClass('active');
 		$(this.parentElement).find('.sContact__txt-block').slideToggle(function () {
 			$(this).toggleClass('active');
 		});
+	}); //07 object page
+	//03 slider
+
+	var objSliderThumb = new Swiper('.object-slider-thumb-js', {
+		slidesPerView: 'auto',
+		//bp
+		breakpoints: {
+			320: {
+				spaceBetween: 18
+			},
+			1200: {
+				spaceBetween: 22
+			}
+		} //
+
 	});
+	var objSlider = new Swiper('.object-slider-js', {
+		slidesPerView: '1',
+		spaceBetween: 10,
+		loop: true,
+		//
+		navigation: {
+			nextEl: '.object-next-js',
+			prevEl: '.object-prev-js'
+		},
+		//
+		thumbs: {
+			swiper: objSliderThumb
+		},
+		//
+		lazy: {
+			loadPrevNext: true
+		}
+	}); //chars toggle
+
+	$('.other-data__header').click(function () {
+		//
+		if (window.matchMedia("(min-width: 992px)").matches) {
+			return;
+		}
+
+		$(this).toggleClass('active');
+		$(this.parentElement).find('.other-data__content').slideToggle(function () {
+			$(this).toggleClass('active');
+		});
+	}); //objectPageCloud
+	//end luckyone js
 
 	function animateCloud(el) {
 		var scene = document.getElementById(el);
@@ -370,7 +421,7 @@ function eventHandler() {
 		}
 	}
 
-	var blockWithAnimate = ['sCategories-inner', 'sForm-inner1', 'sForm-inner2', 'sMap-inner', 'sCatalog-inner', 'sDo-inner', 'sLogos-inner1', 'sAbout-inner', 'sVideo-inner', 'sContacts-inner', 'sBlog-inner', 'sFilter-inner'];
+	var blockWithAnimate = ['sCategories-inner', 'sForm-inner1', 'sForm-inner2', 'sMap-inner', 'sCatalog-inner', 'sDo-inner', 'sLogos-inner1', 'sAbout-inner', 'sVideo-inner', 'sContacts-inner', 'sBlog-inner', 'sFilter-inner', 'objectPageCloud'];
 	blockWithAnimate.forEach(function (element) {
 		return animateCloud(element);
 	});

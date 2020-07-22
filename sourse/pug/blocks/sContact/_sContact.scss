@@ -37,7 +37,24 @@
 				margin-bottom: 0;
 			}
 		}
+
+		&:first-child{
+			.sContact__header{
+				font-size: 16px;
+				@include media-breakpoint-up(sm){
+					font-size: rem(25px);
+				}
+			}
+		}
 	}
+
+	.sContact__header{
+		font-size: 14px;
+		@include media-breakpoint-up(sm){
+			font-size: rem(20px);
+		}
+	}
+
 	&__header{
 		font-weight: 700;
 		position: relative;

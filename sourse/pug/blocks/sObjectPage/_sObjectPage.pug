@@ -1,0 +1,150 @@
+mixin sObjectPage()
+	// start sObjectPage
+	+b.SECTION.sObjectPage.section#sObjectPage&attributes(attributes)
+		.container
+			+b.section-title
+				h1 г Москва, Ленинградский пр-кт, д 75 к 1 - 87 м2
+			+e.obj-row.row
+				+e.slider-col.col-lg-7
+					+e.slider
+						.object-prev-js.d-sm-none
+							+icon('arrow-left')
+						.object-next-js.d-sm-none
+							+icon('arrow-right')
+						.swiper-container.object-slider-js
+							.swiper-wrapper
+								+objSlide(0)
+								+objSlide(1)
+								+objSlide(2)
+								+objSlide(3)
+								+objSlide(4)
+								+objSlide(0)
+								+objSlide(1)
+					+e.slider-thumb
+						.swiper-container.object-slider-thumb-js
+							.swiper-wrapper
+								+objSlideThumb(0)
+								+objSlideThumb(1)
+								+objSlideThumb(2)
+								+objSlideThumb(3)
+								+objSlideThumb(4)
+								+objSlideThumb(0)
+								+objSlideThumb(1)
+				+e.obj-chars-col.col-lg-5
+					+e.obj-chars
+						+e.top-chars
+							+e.price 12 000 000 руб.
+							+e.chars-pills
+								+e.char-pill-item
+									+e.char-pill-img
+										img.lazy(src="" data-src="img/square-meters-img.svg" alt="")
+									+e.char-pill-txt 198 м2
+								+e.char-pill-item
+									+e.char-pill-img
+										img.lazy(src="" data-src="img/home-img.svg" alt="")
+									+e.char-pill-txt Продажа
+						+e.secondary-strip Вторичная недвижимость
+						+e.lower-chars
+							+e.agent-txt
+								span
+									| Агент:
+									|
+								span Оксана Путняя
+							+e.call-strip
+								+e.phone-icon
+									+icon('tel')
+								+e.A.call-link(href="") +7 (925) 933-71-17
+								+e.A.call-link(href="") +7 (495) 660-20-21
+							+e.lower-chars-btns
+								+e.A.look-btn(href='#') Записаться на просмотр
+								+e.A.ask-btn(href='#') Задать вопрос
+						+e.share-link
+							.share-txt Поделиться ссылкой:
+							+shareLinks()
+			+b.other-data
+				+e.txt
+					h3 Описание
+					p Предлагается в&nbsp;аренду в&nbsp;кирпичном доме 3-х комнатная квартира с&nbsp;новым ремонтом и&nbsp;мебелью 87&nbsp;кв.м.
+					p Функциональная планировка: просторная гостиная-кухня, две спальни, в&nbsp;том числе мастер-спальня со&nbsp;своим санузлом и&nbsp;гардеробной комнатой, просторный холл. Квартира оборудована всей необходимой техникой, мебелью, после капитального ремонта.
+					p Тихий двор, охрана, въезд через шлагбаум. Парковка.
+				+e.pills-link
+					+e.place
+						+e.place-img
+							img.lazy(src="#" data-src="img/metro-img.svg" alt="")
+						+e.place-txt Метро “Сокол”
+					+e.time 3 мин. Пешком
+				+e.map-block
+					img.lazy(src="#" data-src='img/@2x/07-map.jpg' alt="")
+				+e.row.row
+					+e.table-col.col-lg-8
+						+e.header.active Характеристики
+						+e.content.active
+							+e.table
+								+tableContentItem('Тип недвижимости', 'Вторичная недвижимость')
+								+tableContentItem('Тип здания', 'Кирпичный')
+								+tableContentItem('Этаж', '4')
+								+tableContentItem('Этажность', '8')
+								+tableContentItem('Состояние/ремонт', 'Дизайнерский')
+								+tableContentItem('Общая площадь (м2)', '87')
+								+tableContentItem('Жилая площадь (м2)', '67')
+								+tableContentItem('Площадь кухни (м2)', '12')
+								+tableContentItem('Тип комнат', 'Изолированная')
+								+tableContentItem('Количество комнат', '3')
+								+tableContentItem('Куда выходят окна', 'На улицу и двор')
+								+tableContentItem('Раздельный санузел', '2')
+								+tableContentItem('Пассажирских лифтов', '1')
+								+tableContentItem('Парковка', 'Наземная')
+					.col-lg-4
+						+e.header.active Документы
+						+e.content.active
+							+e.references-cont
+								+e.pdf-img
+									img.lazy(src="#" data-src="img/@2x/pdf-img.png" alt="")
+								+e.pdf-txt-bl
+									+e.pdf-type Презентация
+									+e.actions-list
+										a(href="#") Просмотр
+										a(href="#") Скачать
+										a(href="#") Сохранить
+								+e.cloud-wrap.d-none.d-xl-block
+									+cloud('cloud-3.png')(id="objectPageCloud")
+				+e.lower-nav
+					+e.A.nav-item(href="#")
+						+e.get-back-btn
+							+icon('chevron-left')
+						+e.nav-item-txt
+							| Вернуться к списку объектов
+					+e.A.nav-item(href="#")
+						+e.nav-item-txt
+							| Следующий объект
+						+e.get-back-btn
+							+icon('chevron-right')
+	// end sObjectPage
+mixin tableContentItem(headlineTxt, valueTxt)
+	+e.table-r
+		+e.table-c=headlineTxt
+		+e.table-c=valueTxt
+
+
+mixin objSlide(imgNum)
+	.swiper-slide
+		a.slide-img(href="#")
+			img.swiper-lazy(src='' data-src=`img/@2x/prod-${imgNum}.jpg` alt="")
+
+mixin objSlideThumb(imgNum)
+	.swiper-slide
+		.img-cont
+			img(src=`img/@2x/prod-${imgNum}.jpg` alt="")
+
+mixin shareLinks()
+	ul
+		+shareLinkItem('vk')
+		+shareLinkItem('fb')
+		+shareLinkItem('telegram')
+		+shareLinkItem('twitter')
+		+shareLinkItem('whats-up')
+
+mixin shareLinkItem(imgName)
+	li
+		a(href="#")
+			img.lazy(src="#" data-src=`img/share-links-${imgName}.svg` alt="")

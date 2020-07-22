@@ -16,7 +16,7 @@ html {
 	// background-position: center 18px;
 	//background-position: center -10021px;//-9888px
 	opacity: 0;
-	opacity: 0.6;
+	//opacity: 0.7;
 }
 @include media-breakpoint-up(xl) {
 
@@ -776,3 +776,19 @@ body:not(.main-page) {
 	}
 }
 
+
+//btn-empty
+.btn-empty{
+
+	color: $primary;
+	background-color: $white;
+
+	border-radius: $border-radius;
+	border: 2px solid #4999D9;
+
+	@include mt();
+	&:hover{
+		background-color: #4999D9;
+		color: $white;
+	}
+}

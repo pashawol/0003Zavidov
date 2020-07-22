@@ -386,16 +386,73 @@ function eventHandler() {
  	//luckyone JS
 
 	$('.sContact__header').click(function () {
+		//
+		if (window.matchMedia("(min-width: 992px)").matches) {
+			return
+		}
+
 		$(this).toggleClass('active');
 		$(this.parentElement).find('.sContact__txt-block').slideToggle(function () {
 			$(this).toggleClass('active');
 		});
 	});
+	//07 object page
+
+	//03 slider
+	let objSliderThumb = new Swiper('.object-slider-thumb-js', {
+		slidesPerView: 'auto',
+		//bp
+		breakpoints: {
+			320 : {
+				spaceBetween: 18,
+			},
+			1200 : {
+				spaceBetween: 22,
+			},
+		},
+		//
+	});
+
+	let objSlider = new Swiper('.object-slider-js', {
+		slidesPerView: '1',
+		spaceBetween: 10,
+		loop: true,
+		//
+		navigation: {
+			nextEl: '.object-next-js',
+			prevEl: '.object-prev-js',
+		},
+		//
+		thumbs: {
+			swiper: objSliderThumb
+		},
+		//
+		lazy: {
+			loadPrevNext: true,
+		},
+	});
+
+	//chars toggle
+	$('.other-data__header').click(function () {
+		//
+		if (window.matchMedia("(min-width: 992px)").matches) {
+			return
+		}
+
+		$(this).toggleClass('active');
+		$(this.parentElement).find('.other-data__content').slideToggle(function () {
+			$(this).toggleClass('active');
+		});
+	});
+	//objectPageCloud
+
+
+	//end luckyone js
 
 	function animateCloud(el) {
 		var scene = document.getElementById(el);
 		if (scene) {
-			
+
 			var parallaxInstance = new Parallax(scene, {
 				invertX: false,
 				invertY: false,
@@ -417,6 +474,7 @@ function eventHandler() {
 		'sContacts-inner',
 		'sBlog-inner',
 		'sFilter-inner',
+		'objectPageCloud',
 	];
 	blockWithAnimate.forEach(element => animateCloud(element));
  
