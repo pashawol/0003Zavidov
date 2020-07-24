@@ -129,15 +129,14 @@ const JSCCommon = {
 	// /inputMask
 	customRange() {
 		function InputFormat() {
-
-			$('.input_from, .input_to').priceFormat({
-				prefix: '',
-				thousandsSeparator: ' ',
-				clearOnEmpty: true,
-				centsLimit: 0
-			});
+			// $('.input_from, .input_to').toFixed(2,0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '0')
 		}
 		InputFormat();
+						function currencyFormat(num) {
+							return num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')
+						}
+			
+						// currencyFormat(num)
 		$(".range-wrap").each(function () {
 			let _this = $(this);
 			var $range= _this.find(".slider-js");
@@ -163,27 +162,25 @@ const JSCCommon = {
 				from = data.from;
 				to = data.to;
 
-				$inputFrom.prop("value", from);
-				$inputTo.prop("value", to);
-				InputFormat();
+				$inputFrom.prop("value", currencyFormat(from));
+				$inputTo.prop("value", currencyFormat(to));
+				// InputFormat();
 			}
 
 			$inputFrom.on("change input ", function () {
 				var val = +($(this).prop("value").replace(/\s/g, ''));
-
 				// validate
 				if (val < min) {
 					val = min;
 				} else if (val > to) {
 					val = to;
 				}
-
+				
 				instance.update({
 					from: val
-				});
-
-				$(this).prop("value", val);
-
+				}); 
+				$(this).prop("value", currencyFormat(val)); 
+				console.log(val)
 			});
 
 			$inputTo.on("change input ", function () {
@@ -198,9 +195,8 @@ const JSCCommon = {
 
 				instance.update({
 					to: val
-				});
-
-				$(this).prop("value", val);
+				}); 
+				$(this).prop("value", currencyFormat(val));
 			});
 
 		})
