@@ -9,12 +9,12 @@ mixin checkbox(typ="checkbox", text, name= typ )
 		+e.INPUT.input(type= typ , name= name)&attributes(attributes)
 		+e.SPAN.lab= text
 
-mixin sFilter()
+mixin sFilter(t="Сортировать")
 	// start sFilter
 	+b.sFilter#sFilter&attributes(attributes)
 		+cloud()(id="sFilter-inner")
 		+e.filter
-			+e.sort.d-lg-none.acardion-js Сортировать
+			+e.sort.d-lg-none.acardion-js.active= t
 			+e.body.acardion-toggle
 				+e.block
 					.row
@@ -26,5 +26,5 @@ mixin sFilter()
 				+e.buttons
 					+e.btn(type="button") Показать
 					+e.discharge.btn(type="button") Сбросить
-		+e.result.d-none.d-lg-block Найдено #[span 132] объекта по Вашему запросы
+		+e.result.d-none.d-lg-block Найдено #[span 132] объекта по Вашему запросу
 	// end sFilter

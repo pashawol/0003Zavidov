@@ -128,7 +128,16 @@ const JSCCommon = {
 	},
 	// /inputMask
 	customRange() {
+		function InputFormat() {
 
+			$('.input_from, .input_to').priceFormat({
+				prefix: '',
+				thousandsSeparator: ' ',
+				clearOnEmpty: true,
+				centsLimit: 0
+			});
+		}
+		InputFormat();
 		$(".range-wrap").each(function () {
 			let _this = $(this);
 			var $range= _this.find(".slider-js");
@@ -156,10 +165,11 @@ const JSCCommon = {
 
 				$inputFrom.prop("value", from);
 				$inputTo.prop("value", to);
+				InputFormat();
 			}
 
-			$inputFrom.on("change", function () {
-				var val = $(this).prop("value");
+			$inputFrom.on("change input ", function () {
+				var val = +($(this).prop("value").replace(/\s/g, ''));
 
 				// validate
 				if (val < min) {
@@ -176,8 +186,8 @@ const JSCCommon = {
 
 			});
 
-			$inputTo.on("change", function () {
-				var val = $(this).prop("value");
+			$inputTo.on("change input ", function () {
+				var val = +($(this).prop("value").replace(/\s/g, ''));
 
 				// validate
 				if (val < from) {
@@ -207,27 +217,7 @@ function eventHandler() {
 	JSCCommon.inputMask();
 	JSCCommon.customRange();
 
-	// JSCCommon.CustomInputFile();
-	// добавляет подложку для pixel perfect
-	// $(".main-wrapper").after('<div class="pixel-perfect" style="background-image: url(screen/09-mob.jpg);"></div>')
-	// /добавляет подложку для pixel perfect
-
-
-
-	// const url = document.location.href;
-	// $.each($(".top-nav__nav a "), function() {
-
-	// 	if (this.href == url) {
-	// 		if ($(this).hasClass("top-nav__link") == true) {
-
-	// 			$(this).addClass('top-nav__link-active');
-	// 		}
-	// 		if ($(this).hasClass("footer__link") == true) {
-
-	// 			$(this).addClass('footer__link-active');
-	// 		} 
-	// 	}; 
-	// }); 
+ 
 
 	// /закрыть/открыть мобильное меню
 

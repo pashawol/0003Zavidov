@@ -36,7 +36,7 @@
 
 	&__body {
 		@include media-breakpoint-down(lg) {
-			display: none;
+			// display: none;
 			// padding-top: rem(25);
 		}
 		@include media-breakpoint-up(lg) {

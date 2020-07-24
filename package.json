@@ -60,6 +60,7 @@
     "intl-tel-input": "^17.0.3",
     "ion-rangeslider": "^2.3.1",
     "jquery": "^3.5.1",
+    "jquery-price-format": "git+https://github.com/flaviosilveira/Jquery-Price-Format.git",
     "parallax-js": "^3.1.0",
     "popper.js": "^1.16.1",
     "select2": "^4.0.13",

@@ -107,11 +107,12 @@
 		content: '';
 		@include a-cent(y);
 		left: calc(100% - #{rem(32)});
-		width: rem(14);
-		height: rem(8);
+		width: rem(14 * 1.6);
+		height: rem(8 * 1.6);
 		background-image: url('../img/chevron-down-primary.svg');
 		background-position: center;
 		background-repeat: no-repeat;
+		background-size: 100% 100%;
 		@include mt;
 	}
 
@@ -119,7 +120,7 @@
 		background-color: $primary;
 		color: #fff;
 		&::before {
-			transform: rotate(180deg);
+			transform: translateY(-50%) rotateX(180deg);
 			background-image: url('../img/svg/chevron-down.svg');
 		}
 	}

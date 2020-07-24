@@ -12,8 +12,8 @@ mixin sCategories()
 							+e.item(href="#")
 								+e.img-wrap.bg-wrap
 									picture.picture-bg
-										source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/sCategories-${i}.webp` type="image/webp")
-										img.object-fit-js.swiper-lazy(src="#" data-src=`img/@2x/sCategories-${i}.jpg`, alt="")
+										source(s srcset=`img/@2x/webp/sCategories-${i}.webp` type="image/webp")
+										img.object-fit-js( src=`img/@2x/sCategories-${i}.jpg`, alt="")
 									+e.center Посмотреть предложения
 										+icon('arrow-right')
 								+e.DIV.title= t
@@ -37,8 +37,8 @@ mixin sCategories-sm()
 							+e.item(href="#")
 								+e.img-wrap.bg-wrap
 									picture.picture-bg
-										source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/sCategories-${i}.webp`)
-										img.object-fit-js.swiper-lazy(src="#" data-src=`img/@2x/sCategories-${i}.jpg`, alt="")
+										source(srcset=`img/@2x/webp/sCategories-${i}.webp`)
+										img.object-fit-js(src=`img/@2x/sCategories-${i}.jpg`, alt="")
 									+e.center Посмотреть предложения
 										+icon('arrow-right')
 								+e.DIV.title= t
