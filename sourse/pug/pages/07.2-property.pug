@@ -64,6 +64,12 @@ block pagecontent
 					+e.block
 						.strong.mb-2 Общая площадь (м2):
 						+range("20", "2200")
+					+e.block
+						.strong.mb-2 Этаж:
+						+range("1", "100")
+					+e.block
+						.strong.mb-2 Этажность:
+						+range("1", "125")
 			.col-lg-9
 				+input('Сортировать по цене (сначала дешёвые)','select')(class="form-control-standart ") 
 				+sMap-xsm()

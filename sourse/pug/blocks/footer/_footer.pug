@@ -16,10 +16,12 @@ mixin footer()
 							li: a(href="#") Отзывы клиентов
 				+socLinksFooter('d-lg-none')
 			+e.lower-row.row
-				+e.txt-col.col
+				+e.txt-col.col-md-auto
 					| © 2020. All Rights Reserved. Design by
 					|
 					a(href="#") ZAVIDOV.
+				.col.text-lg-center.text-md-right.text-center.my-2
+					a.text-white(href="doc.pdf") Договор оферты
 				+socLinksFooter('d-none d-lg-block')
 
 mixin socLinksFooter(DisplayClasses)
